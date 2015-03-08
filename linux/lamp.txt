@@ -1,0 +1,16 @@
+Apache install dir:             /usr/local/apache
+
+Database install dir:           /usr/local/mysql
+Database data dir:              /data/mysql
+Database user:                  root
+Database password:              xiaolong
+
+PHP install dir:                /usr/local/php
+
+phpMyAdmin dir:                 /home/wwwroot/default/phpMyAdmin
+phpMyAdmin Control Panel url:   http://192.168.1.15/phpMyAdmin
+
+memcached install dir:          /usr/local/memcached
+
+index url:                      http://192.168.1.15/
+

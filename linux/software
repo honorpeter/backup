@@ -1,0 +1,5 @@
+软件管理中心 安装的软件一般安装在	/usr/share里面
+ 
+通过 apt-get install 安装的软件一般安装在 /opt
+
+lamp 安装在  	/usr/local/里面
