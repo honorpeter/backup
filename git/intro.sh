@@ -9,9 +9,15 @@ git仓库：
                                                     用于控制 文件的修改记录
             远程仓库
                     可以建立多个仓库    每个库里面都有 .git目录
-                    主仓库是 master
+                    主分支是 master
 
             远程仓库可以和本地仓库进行各种操作
+
+            本地分支和远程分支
+                    本地和远程都可以创建各种分支
+                        默认是在mater分支中进行的
+            工作区和暂存区:
+                    git add 添加到暂存区
                     
 创建版本库:
     初始化：
@@ -41,6 +47,19 @@ git仓库：
         git log         告诉我们历史记录
                         提交的历史
                         --pretty=oneline 可以简化信息
+            用HEAD表示当前版本
+            上一个版本就是HEAD^，上上一个版本就是HEAD^^  ....
+            HEAD~100    或则这样写方面
+        退回上一个版本：
+            git reset --hard HEAD^
+        还可以使用 commit id来 退回：
+             git reset --hard 3628164  
+                    可以只用git log来查找
+        如果你退回了以前的版本 那么 git log 变没有了 以前版本修改后的内容
+            可以使用 git reflog
+                        用来记录你的每一次命令
+                        这样你就可以恢复每一次的操作
+
 
 
 
@@ -60,6 +79,56 @@ git仓库：
         从远程库克隆:
             git clone git@github.com:michaelliao/gitskills.git
 
+分支管理：
+        创建并切换到dev分支
+            git checkout -b dev
+        相当于：
+            git branch dev      创建分支
+            git checkout dev    切换分支
+
+        删除分支：
+            git branch -d dev
+
+        查看分支：
+            git branch
+
+
+    合并dev和master分支：
+            git merge dev
+                这种合并是没有冲突的 没有对同一个文件进行修改
+                合并指定分支到当前分支 合并完变可以删除了
+
+
+        合并中的冲突解决：
+            git merge dev 
+                便会报错  git status 可以查看
+            手动修改 有冲突的文件
+                git会标出 文件中那个位置有冲突
+            
+
+        git log --graph命令可以看到分支合并图
+
+
+        
+        
+工作区和暂存区:
+        git add 添加到暂存区
+
+    管理修改:
+        git diff HEAD -- readme.txt
+            查看暂存区和库中的区别
+        git checkout -- readme.txt：
+            两种含义：
+                一种是readme.txt自修改后还没有被放到暂存区
+                    销修改就回到和版本库一模一样的状态；
+
+                一种是readme.txt已经添加到暂存区后，又作了修改
+                    撤销修改就回到添加到暂存区后的状态。
+
+        git rm
+            从版本库中删除该文件，那就用命令git rm删掉，并且git commit
+        还原：
+             git checkout -- test.txt
 
 
 
