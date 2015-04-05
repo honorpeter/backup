@@ -113,6 +113,11 @@ const执行整形常量 初始化后 不允许改变
                 b = f(2); 
                 b = (*p)(2);
                 b = p(2);
+        使用typedef来声明函数指针：
+            typedef void (*MEM_ErrorHandler)(MEM_Controller, 
+                                        char *, int, char *);
+                        这样你就可以使用 MEM_ErrorHandler pfun;
+                            定义了一个pfun的函数指针 可以放在结构体中
     void 类型指针：
         可以指向任何 类型 但是在使用的时候 必须先声明那种类型
     回调函数：
