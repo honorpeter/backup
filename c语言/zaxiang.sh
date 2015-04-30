@@ -178,6 +178,7 @@ IO: c语言操作：
             int fprintf(FILE *stream, char const *format,...);
             int printf( char const *format,...);
             int spintf(char *buffer, char const *format,...);
+            vfprintf();     下面详见:
             格式代码：
             %   零个或多个标志符    可选最小字段宽度    可选精度    可选修改符      转化类型
 
@@ -211,6 +212,21 @@ IO: c语言操作：
             x X                 加0x前缀
             e E f               确保有小数点
             g G
+
+        vprintf:
+                vprintf() (and friends) allow to use va_list as argument,
+                which is useful when your function has a variable amount of
+                arguments:
+
+                void log(FILE *file, const char* format, ... )
+                {
+                  va_list args;
+                  va_start (args, format);
+                  fprintf(file, "%s: ", getTimestamp());
+                  vfprintf (file, format, args);
+                  va_end (args);
+                }
+            
                 
 
                         

@@ -7,6 +7,7 @@ Read from the file:
 
         %option noyywrap        at the top of your scanner to tell
                                 :it not to call yywrap
+        %option noyywrap nodefault yylineno case-insensitive
 Input:
     The three levels of input management:
         Setting yyin to read the desired file(s)
@@ -35,6 +36,8 @@ Start States and Nested Input Files:
             in which patterns not marked with any state
             详见：/example/fb2-3.l  包含多重文件夹
 
+Command options:
+    flex -o hh.c   hh.l         specify the file name which is created
 
 The Flex Library:
     Define:

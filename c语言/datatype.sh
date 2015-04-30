@@ -25,7 +25,12 @@ const执行整形常量 初始化后 不允许改变
         定义类型： enum type { fish, dog, cat = 45, pig};
                                 默认：fish = 0 dog = 1 .....
                                     可以改变  如上面 cat = 45 那么pig为46
+                            fish dog ...这些是常量可以直接使用
         定义变量   enum type hh;    hh只能是 type其中的一个 不能出这个范围
+                    变量赋值的:  hh = fish;
+                                hh = (enum type)2;
+                                hh = 2;这个是错的 只有上面两种方法
+                    
                     
 
 浮点类型：
