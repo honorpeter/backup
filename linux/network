@@ -1,0 +1,7 @@
+修改dns服务器IP
+    修改 /etc/resolv.conf
+        nameserver ......
+        nameserver 202.196.64.1
+    将原有的注释掉
+    
+        
