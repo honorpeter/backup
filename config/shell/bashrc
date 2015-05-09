@@ -97,6 +97,7 @@ alias x='chmod u+x'
 alias lm='ls -F | more'
 alias yule='sudo mount /dev/sda6 /media/xiaolong/娱乐'
 alias push='git push origin master'
+alias add='git add *'
 #地址别名
 alias test='cd ~/test/'
 alias shell='cd ~/test/shell/'
@@ -228,8 +229,13 @@ function incre {
 }
 
 #github
+function commit {
+    git commit -m $1
+}
+
+
 function gittoremote {
-    git add * && git commit -m "$1" && git push origin master
+git add * && git commit -m "$1" && git push origin master
 }
 
 
