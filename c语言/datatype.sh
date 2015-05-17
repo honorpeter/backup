@@ -123,6 +123,30 @@ const执行整形常量 初始化后 不允许改变
                                         char *, int, char *);
                         这样你就可以使用 MEM_ErrorHandler pfun;
                             定义了一个pfun的函数指针 可以放在结构体中
+    函数作为参数传递：
+        声明： 
+            void List_map(T list, void apply(void **x, void *cl),*cl)
+            {
+                assert(apply);
+                for( ; list; list->rest){
+                apply(&list->first,cl);
+            }
+
+            或者：
+            Node *search_list(Node *node, void const *value, 
+                            int (*compare)(void const *, void const *))
+            {
+                while(node != NULL){
+                    if( compare(&node->value, value)==0)
+                        break;
+                    node = node -> link;
+                }
+                return node;
+            }
+            调用：search_list(root ,&desired_value, compare_ints);
+    
+
+
     void 类型指针：
         可以指向任何 类型 但是在使用的时候 必须先声明那种类型
     回调函数：
