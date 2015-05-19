@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/xiaolong/Documents/config/vim'
+let g:netrw_dirhist_2='/home/xiaolong/Documents/config'
+let g:netrw_dirhist_3='/home/xiaolong/Documents/config/vim'
+let g:netrw_dirhist_4='/home/xiaolong/test/c'
+let g:netrw_dirhist_5='/home/xiaolong/Documents/config/vim'
+let g:netrw_dirhist_6='/home/xiaolong/test/cinterface/doc/function/table'
+let g:netrw_dirhist_7='/home/xiaolong/test/c'
+let g:netrw_dirhist_8='/home/xiaolong'
+let g:netrw_dirhist_9='/home/xiaolong/test/c'
