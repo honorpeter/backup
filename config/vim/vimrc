@@ -117,7 +117,7 @@ set ambiwidth=double                    "防止特殊符号无法正常显示
 set smarttab
 "不生成备份文件，如~index.html
 set nobackup
-"set nowritebackup
+set nowritebackup
 "不生成swap文件
 "set noswapfile
 "设置多少行 多少列
@@ -127,6 +127,9 @@ set nobackup
 
 "设置相关快捷键
 imap ff <Esc>
+
+"设置都为 可写的空间
+set virtualedit=all
 
 
 

@@ -1,0 +1,191 @@
+# Set up the prompt
+
+autoload -Uz promptinit
+promptinit
+prompt adam1
+
+setopt histignorealldups sharehistory
+
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
+
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+# shell file
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+#alias hh='sudo shutdown -h now'
+#alias hh='sudo poweroff'
+alias reboot='sudo reboot'
+alias my='mysql -u root -pxiaolong'
+alias up='cd ..'
+alias x='chmod u+x'
+alias lm='ls -F | more'
+alias yule='sudo mount /dev/sda6 /media/xiaolong/娱乐'
+alias push='git push origin master'
+alias add='git add *'
+alias vpn='service openvpn restart'
+#地址别名
+alias test='cd ~/test/'
+alias shell='cd ~/test/shell/'
+alias www='cd /home/wwwroot/default/'
+alias linux='cd ~/test/linux'
+alias c='cd ~/test/c'
+alias cu='cd ~/test/wangyi/c'
+alias bianyi='cd ~/test/wangyi/bianyiqi'
+alias kernel='cd ~/test/wangyi/linuxkernel'
+alias v='cd ~/test/vim/'
+alias long='cd /media/xiaolong'
+alias network='cd /media/xiaolong/娱乐/video/network'
+alias sys='cd /media/xiaolong/娱乐/video/systerm'
+alias lisan='cd /media/xiaolong/娱乐/video/lisanshuxue'
+alias bian='cd /media/xiaolong/娱乐/video/bianyiyuanli'
+alias signal='cd /media/xiaolong/娱乐/video/keben/signals'
+alias digital='cd /media/xiaolong/娱乐/video/keben/digital'
+alias algri='cd /media/xiaolong/娱乐/video/algri'
+alias elec='cd /media/xiaolong/娱乐/video/keben/elec'
+alias hui='cd ~/test/huibian'
+alias doc='cd ~/Documents'
+alias blog='cd ~/Blog/longriyao.github.io'
+alias lookc='cat count'
+#常用快捷键
+alias pic='rm ~/Desktop/pic/*'
+alias bashrc='vi ~/.bashrc'
+
+function sea {
+    ls | grep $1
+}
+function help {
+    $1 --help | more 
+}
+#export COM=/media/xiaolong/娱乐/小燕燕/计算机网络视频教/
+#挂在 硬盘
+#function yule {
+   #sudo mount /dev/sda6 /media/xiaolong/娱乐
+#}
+#汇编指令
+function ass {
+                #这里不能用as做为函数名 他会递归调用他自己
+     
+    name=`echo $1 | gawk -F. '{ print $1}'` 
+                                            #使用这个方法 可以是 shell中的
+                                            #变量个 gawk中 通信
+    name1="$name.s -o $name.o"
+    as $name1  
+                #如果用了的话 在这里递归调用他自己
+    name2="$name.o -o $name"
+    ld $name2
+} 
+
+function ec {
+    ass $1
+    ./$1
+    echo $?
+}
+
+#c语言编译
+function gg {
+    name=`echo $1 | gawk -F. '{ print $1}'` 
+                                            #使用这个方法 可以是 shell中的
+                                            #变量个 gawk中 通信
+    name1="$name.c -o $name"
+    name1=`gcc $name1`
+    
+}
+    
+function hh {
+    echo "  Are you sure to shudown ?"
+    read whether
+    #enter="\n"
+    if [ $whether = $enter ]
+    then
+        shutdown -h now
+    else
+        echo "Have A Good Time !!!!"
+    fi
+}
+
+#delete something carefully
+function del {
+    echo "Are you sure to delete $1"
+    read whether
+    #enter="\n"
+    if [ $whether = $enter ]
+    then
+        rm -fr $1
+    else
+        echo "Have a good time!!!"
+    fi
+}
+
+#查看 电磁场    正确的顺序
+function lookat {
+    l |  gawk 'BEGIN{FS="."} {print $2,$1}' | sort  | more
+}
+function incre {
+    file=count
+    num=`sed -n '1s/\([0-9]*\)/\1/p' $file`
+    newnum=$[$num + 1] 
+    text=`sed '1s/[0-9]*/'$newnum'/' $file`   #使用引号可以让shell和sed通信
+    echo $text > $file 
+    cat count
+}
+
+#github
+function commit {
+    if [ $1 ]
+    then
+        git commit -m $1
+    else
+        git commit -m "update"
+    fi
+}
+
+
+function gittoremote {
+git add * && git commit -m "$1" && git push origin master
+
+
+}
+
+
+
+
