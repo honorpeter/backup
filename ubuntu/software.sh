@@ -22,3 +22,8 @@ apt-get dist-upgrade # ---------升级系统
 apt-file search filename -----查找filename属于哪个软件包
 apt-file list packagename -----列出软件包的内容
 
+安装为之笔记:
+        sudo add-apt-repository ppa:wiznote-team/ppa
+        sudo apt-get udpate
+        sudo apt-gte install wiznote
+    

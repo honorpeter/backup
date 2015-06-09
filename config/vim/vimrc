@@ -91,7 +91,6 @@ source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-
 "窗口样式相关
 colo desert                             "配色方案为desert   
 set guioptions-=T                       "关闭上侧工具栏 
@@ -127,9 +126,15 @@ set nowritebackup
 
 "设置相关快捷键
 imap ff <Esc>
+"() brakets/ parentheses 括号 
+imap ;p ()<Esc>i
+imap ;b []<Esc>i
+imap ;a <Esc>A
+imap ;d <Esc>I{}<Esc>i<CR><Esc>O
 
 "设置都为 可写的空间
 set virtualedit=all
+
 
 
 
