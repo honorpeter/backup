@@ -185,11 +185,11 @@ function commit {
 }
 
 
-function gittoremote {
-git add * && git commit -m "$1" && git push origin master
+#function gittoremote {
+    #git add * && git commit -m "$1" && git push origin master
 
 
-}
+#}
 #sed '/^\ *[\*\/*]/d' hhh.c >> good.c   去掉注释
 function help {
     $1 --help | more

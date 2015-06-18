@@ -130,7 +130,12 @@ imap ff <Esc>
 imap ;p ()<Esc>i
 imap ;b []<Esc>i
 imap ;a <Esc>A
-imap ;d <Esc>I{}<Esc>i<CR><Esc>O
+imap ;d <Esc>o<Esc>I{}<Esc>i<CR><Esc>O
+imap ;s <Esc>A{}<Esc>i<CR><Esc>O
+imap ;g <Esc>la
+"normal模式下可以使用m开头和tg的
+nmap ml i<CR><CR><CR><CR><CR><CR><CR><CR><CR><Esc>gg
+
 
 "设置都为 可写的空间
 set virtualedit=all
@@ -168,8 +173,8 @@ let Tlist_Show_Menu=1
 " "nnoremap <silent>  :TlistOpen<CR>
 "Tlist_WinHeight和Tlist_WinWidth可以设置taglist窗口的高度和宽度。
 "Tlist_Use_Horiz_Window为1设置taglist窗口横向显示
-nmap tg :TlistOpen<CR>
-nmap tg :TlistToggle<CR>
+nmap mg :TlistOpen<CR>
+nmap mg :TlistToggle<CR>
 " "end taglist ============================== 
 
 
@@ -177,7 +182,7 @@ nmap tg :TlistToggle<CR>
 " Netrw ========= settings
 """""""""""""""""""""""""""'
 let g:netrw_winsize = 30
-nmap tn :Sexplore!<cr> 
+nmap mn :Sexplore!<cr> 
 
 """"""""""""""""""""""""""""""
 " BufExplorer
@@ -190,7 +195,7 @@ let g:bufExplorerSplitVertical=1     " Split vertically.
 let g:bufExplorerSplitVertSize = 30  " Split width
 let g:bufExplorerUseCurrentWindow=1  " Open in new window.
 autocmd BufWinEnter \[Buf\ List\] setl nonumber 
-nmap tb :BufExplorerVerticalSplit<cr>
+nmap mb :BufExplorerVerticalSplit<cr>
 """"""""""""""""""""""""""""""
 " winManager setting
 """"""""""""""""""""""""""""""
@@ -204,7 +209,7 @@ nmap <C-W><C-F> :FirstExplorerWindow<cr>
 "ctrl w ctrl b
 nmap <C-W><C-B> :BottomExplorerWindow<cr>
 "使用wm打开它
-nmap wm :WMToggle<CR>
+nmap mm :WMToggle<CR>
            
 " visualmark ==============================
 " " 根据背景色设置标签颜色，cterm表示为原生vim设置样式
