@@ -158,6 +158,25 @@ x86 中断处理：
                  处理完时候：通过 iret返回 执行
             软中断：
                 和硬件中断差不多
+
+
+lab1:   bootloader的加载
+            编译运行bootloader的过程
+            调试bootloader的方法
+            PC启动bootloader的过程
+            ELF执行文件格式和加载
+            外设访问：读硬盘 显示字符
+        ucore OS软件：
+            编译运行ucore OS的过程
+            ucore OS的启动过程
+            调试ucore OS的方法
+            函数调用关系
+            中断管理:中断处理 
+            外设管理：时钟
+        计算机原理
+            CPU的编址与寻址:	基于分段机制的内存管理
+            CPU的中断机制
+            外设:串口/并口/CGA,时钟,硬盘
                         
 
 

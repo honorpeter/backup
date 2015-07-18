@@ -91,6 +91,7 @@ alias doc='cd ~/Documents'
 alias blog='cd ~/Blog/longriyao.github.io'
 alias lookc='cat count'
 #常用快捷键
+alias sound='alsamixer'
 alias pic='rm ~/Desktop/pic/*'
 alias zshrc='vi ~/.zshrc'
 alias vimrc='vi ~/Documents/config/vim/vimrc'

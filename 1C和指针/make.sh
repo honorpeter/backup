@@ -58,7 +58,7 @@ make
                     cp myapp ${INSTDIR} ;\
                 else \
                     echo "Sorry "
-                fi
+               fi
 
                 clean:
                     -rm main.o 2.o 3.o
@@ -74,6 +74,46 @@ make
         makefile文件和子目录
         。。。。
 
+
+        makefile中使用变量:
+            In some other versions of make, variables are called macros
+            声明：
+                    objects = main.o kbd.o command.o display.o /
+                    insert.o search.o files.o utils.o
+            调用：
+                    $(objects)
+
+                Simply expanded variables are defined by lines using 
+                        ‘:=’ or ‘::=’
+
+                variable is a recursively expanded variable:
+                    For example,
+                            foo = $(bar)
+                            bar = $(ugh)
+                            ugh = Huh?
+                            all:;echo $(foo)
+                        will echo ‘Huh?’
+        让make自动推导:
+            只要make看到一个[.o]文件，它就会自动的把[.c]文件加在依赖关系中
+
+
+        The call Function:
+            You can write a complex expression as the value of a variable, 
+                    then use call to expand it with different values.
+            syntax:
+                    $(call variable,param,param,…)
+
+                    This macro simply reverses its arguments:
+
+                    reverse = $(2) $(1)           #$(1) 代表a $(2) 代表b
+                    
+                    foo = $(call reverse,a,b)       
+        The shell function:
+            contents := $(shell cat foo)
+                sets contents to the contents of the file foo, with a space 
+                (rather than a newline) separating each line. 
+                
+                
     gdb 调试：
         启动gdb
              cc -g -o debug1 debug2.c
