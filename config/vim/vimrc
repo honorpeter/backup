@@ -118,7 +118,7 @@ set smarttab
 set nobackup
 set nowritebackup
 "不生成swap文件
-"set noswapfile
+set noswapfile
 "设置多少行 多少列
 "set lines=60
 "set columns=210
@@ -259,6 +259,9 @@ function! s:my_cr_function()
      " For no inserting <CR> key.
      "   "return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
 endfunction
+"understand plugin
+":command! UMenu silent: exe “!understand -existing -contextmenu %:p -line ” line(‘.’) ” -col ” col(‘.’) ” -text <cword> &” | redraw!
+"map <C-u> :UMenu<CR>
 
 
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
@@ -284,3 +287,4 @@ let g:neocomplcache_enable_auto_select = 1
 "autocmd BufNewFile  * call Hh()
 "autocmd VimResized  * call Hh()
 "autocmd FileWritePre * call Hh()
+
