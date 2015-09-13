@@ -112,6 +112,12 @@ make
             contents := $(shell cat foo)
                 sets contents to the contents of the file foo, with a space 
                 (rather than a newline) separating each line. 
+
+        Makefile  $@, $^, $<
+            $@  表示目标文件
+            $^  表示所有的依赖文件  注意依赖
+            $<  表示第一个依赖文件   依赖
+            $?  表示比目标还要新的依赖文件列表  依赖
                 
                 
     gdb 调试：
