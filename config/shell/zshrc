@@ -71,7 +71,6 @@ alias soft='cd ~/Soft'
 alias down='cd ~/Downloads'
 alias test='cd ~/test/'
 alias shell='cd ~/test/shell/'
-alias www='cd /home/wwwroot/default/'
 alias linux='cd ~/test/linux'
 alias c='cd ~/test/c'
 alias cu='cd ~/test/wangyi/c'
@@ -82,7 +81,7 @@ alias long='cd /media/xiaolong'
 alias hui='cd ~/test/huibian'
 alias doc='cd ~/Documents'
 alias blog='cd ~/Blog/longriyao.github.io'
-alias lookc='cat count'
+#alias lookc='cat count'
 #常用快捷键
 alias sound='alsamixer'
 alias pic='rm ~/Desktop/pic/*'
@@ -96,10 +95,7 @@ function help {
     $1 --help | more 
 }
 #export COM=/media/xiaolong/娱乐/小燕燕/计算机网络视频教/
-#挂在 硬盘
-#function yule {
-   #sudo mount /dev/sda6 /media/xiaolong/娱乐
-#}
+
 #汇编指令
 function ass {
                 #这里不能用as做为函数名 他会递归调用他自己
@@ -156,17 +152,18 @@ function del {
 }
 
 #查看 电磁场    正确的顺序
-function lookat {
-    l |  gawk 'BEGIN{FS="."} {print $2,$1}' | sort  | more
-}
-function incre {
-    file=count
-    num=`sed -n '1s/\([0-9]*\)/\1/p' $file`
-    newnum=$[$num + 1] 
-    text=`sed '1s/[0-9]*/'$newnum'/' $file`   #使用引号可以让shell和sed通信
-    echo $text > $file 
-    cat count
-}
+#
+#function lookat {
+    #l |  gawk 'BEGIN{FS="."} {print $2,$1}' | sort  | more
+#}
+#function incre {
+    #file=count
+    #num=`sed -n '1s/\([0-9]*\)/\1/p' $file`
+    #newnum=$[$num + 1] 
+    #text=`sed '1s/[0-9]*/'$newnum'/' $file`   #使用引号可以让shell和sed通信
+    #echo $text > $file 
+    #cat count
+#}
 
 #github
 function commit {
