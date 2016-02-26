@@ -63,6 +63,7 @@ alias x='chmod u+x'
 alias lm='ls -F | more'
 alias yule='sudo mount /dev/sda6 /media/xiaolong/娱乐'
 alias push='git push origin master'
+alias pushsina='git push sae master:1'
 alias pull='git pull origin master'
 alias add='git add *'
 alias vpn='service openvpn restart'
@@ -73,12 +74,15 @@ alias test='cd ~/test/'
 alias shell='cd ~/test/shell/'
 alias linux='cd ~/test/linux'
 alias c='cd ~/test/c'
-alias cu='cd ~/test/wangyi/c'
-alias bianyi='cd ~/test/wangyi/bianyiqi'
-alias kernel='cd ~/test/wangyi/linuxkernel'
-alias v='cd ~/test/vim/'
+alias alg='cd /media/xiaolong/娱乐/video/algebra'
+alias real='cd /media/xiaolong/娱乐/video/real'
+
+#alias cu='cd ~/test/wangyi/c'
+#alias bianyi='cd ~/test/wangyi/bianyiqi'
+#alias kernel='cd ~/test/wangyi/linuxkernel'
+#alias v='cd ~/test/vim/'
 alias long='cd /media/xiaolong'
-alias hui='cd ~/test/huibian'
+#alias hui='cd ~/test/huibian'
 alias doc='cd ~/Documents'
 alias blog='cd ~/Blog/longriyao.github.io'
 #alias lookc='cat count'
@@ -151,8 +155,6 @@ function del {
     fi
 }
 
-#查看 电磁场    正确的顺序
-#
 #function lookat {
     #l |  gawk 'BEGIN{FS="."} {print $2,$1}' | sort  | more
 #}
@@ -162,8 +164,31 @@ function del {
     #newnum=$[$num + 1] 
     #text=`sed '1s/[0-9]*/'$newnum'/' $file`   #使用引号可以让shell和sed通信
     #echo $text > $file 
-    #cat count
+    #cat $file
 #}
+
+#function decAlg () {
+    #file='/media/xiaolong/娱乐/video/algebra/count'
+    #num=`gawk '{print $1}' $file`
+    #newNum=$[$num - 1] 
+    #forNum=`printf %2d $newNum` #限定两个字符的格式
+    #zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
+    #echo $zeroNum > $file
+    #cat $file
+#}
+#
+#function decReal () {
+    #file='/media/xiaolong/娱乐/video/real/count'
+    #num=`gawk '{print $1}' $file`
+    #newNum=$[$num - 1] 
+    #forNum=`printf %2d $newNum` #限定两个字符的格式
+    #zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
+    #echo $zeroNum > $file
+    #cat $file
+#}
+
+
+
 
 #github
 function commit {
@@ -185,6 +210,42 @@ function commit {
 function help {
     $1 --help | more
 }
+
+function startUp () {
+    sudo zsh /etc/init.d/httpd
+    sudo service mysqld start
+}
+
+#方便看视频
+#function lookReal () {
+    #file='/media/xiaolong/娱乐/video/real/count'
+    #dir='/media/xiaolong/娱乐/video/real/'
+#
+    #num=`gawk '{print $1}' $file`
+    #newNum=$[$num + 1] 
+    #forNum=`printf %2d $newNum` #限定两个字符的格式
+    #zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
+    #echo $zeroNum > $file
+    #cat $file
+    #
+    #name=$dir'实变'$num'.flv'
+    #vlc -f --rate 1.5 $name
+#}
+
+#function lookAlg () {
+    #file='/media/xiaolong/娱乐/video/algebra/count'
+    #dir='/media/xiaolong/娱乐/video/algebra/'
+#
+    #num=`gawk '{print $1}' $file`
+    #newNum=$[$num + 1] 
+    #forNum=`printf %2d $newNum` #限定两个字符的格式
+    #zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
+    #echo $zeroNum > $file
+    #cat $file
+    #
+    #name=$dir'抽象代数'$num'.flv'
+    #vlc -f --rate 1.5 $name
+#}
 
 
 
