@@ -17,6 +17,7 @@
             ∋ is -
             ¯ is 'm
             ·is .M 
+            ∇is BN
             
 
  

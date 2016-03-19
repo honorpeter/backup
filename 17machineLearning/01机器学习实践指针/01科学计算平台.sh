@@ -31,6 +31,86 @@
             python写的 一个HTMl/XMl的解析器 
         Neurolab
             python的神经网络库
+        mlpy:
+            提供了SVM算法的相关函数
+                提供一下核函数
+                    线性函数 linear
+                    多项式函数 poly
+                    径向函数    rbf
+                    sigmoid函数 sigmoid
+            
+
+python各种库:
+        导入库:
+                from numpy import *
+                or
+                import numpy as np
+        Numpy库:
+            提供了ndarray数组对象 可以进行方面的计算和读取
+                比python提供的数组array模块要强大
+
+            创建数组
+                可以使用array函数 参数为python的序列对象
+                a = np.array([[1,23,4,],[3,4,3.]])
+            ndarray拥有的属性:
+                ndarray.ndim    数组行数
+                ndarray.shape   维数
+                ndarray.size     总数
+                ndarray.dtype    元素类型
+                ndarray.itemsize  每个元素占有的字节
+                ndarray.data       数组元素的缓冲区
+            特殊数组:
+                zeros 全为0 使用zeros函数创建
+                ones       1    ones
+                        ones((2,3,4),dtype=int16)
+                empty   近似为0  empty
+            序列数组:
+                arange函数  与python的range函数很相似
+                    参数为 开始值 终止值 步长
+
+                    linspace函数 创建等差序列数组:
+                        起始值 终止值 元素数量
+            输出数组:
+                可以使用print输出numpy的数组对象
+            数组索引:
+                Numpy 每个元素都可以被访问到 索引从0开始
+            数组运算:
+                对应位置元素分别计算  
+            数组拷贝:
+                浅拷贝 
+                    拷贝数组引用
+                    b = a
+                深拷贝 
+                    d = a.copy()
+        矩阵:
+            Numpy的矩阵对象和数组对象相似 主要不同在于矩阵的计算
+                遵循矩阵数学运算规律
+
+            创建:
+                B = matrix([1.2,32,3],[3,2,3])
+                type(B)
+            矩阵运算:
+                常用的 转置 乘法 求逆
+                B.T 装置
+                B*A 乘法
+                B.I 求逆
+
+                solve(A,Y)  求解线性方程组
+                    
+    pylab matplotlib绘图
+            sin函数 绘制:
+                import numpy as np
+                import matplotlib.pyplot as plt
+                x = np.arange(0,5,0.1)
+                y = np.sin(x)
+                plt.plot(x,y)
+                plt.show()
+
+
+    cv2 绑定python绑定库 opencv
+                
+                
+
 
 
 
