@@ -256,6 +256,14 @@ python基本数据类型:
                     setdefault:
                         setdefault sets the value corresponding to the
                             given key if it is not already in the dictionary
+
+                    对字典进行排序:
+                        降序: 升序 去掉False
+                        sorted(d.items(), lambda x, y: cmp(x[0], y[0]),\
+                            reverse=True)
+                        不改变d的值 重新生成一个值 list
+                       重点是cmp x[这里面可以写0 1 2 代表按照排序的是第几个]
+                            
                         
                     update:
                         The update method updates one dictionary with the 
@@ -284,6 +292,7 @@ python基本数据类型:
                 无先后顺序,也不能用索引进行管理
                     a = [1,23]
                     b = set(a)
+                    b.add(32)
                     23 in b    判断是否有23
                     运算: & | 交 并 - ^ 差 对称差
                         

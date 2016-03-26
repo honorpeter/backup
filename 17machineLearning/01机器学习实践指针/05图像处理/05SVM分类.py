@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+'''
 基于SVM的图像分类:
         在样本量少的情况下 SVM分类的效果是最佳的 SVM算法相比神经网络的
             优势在于:只需要少量样本 就能达到较高的识别精度
@@ -10,11 +13,10 @@
             将待分类图像的特征码送入SVM仿真测试 根据SVM输出判断所属类别
                 输出目标可以直接使用类别序号(1,2,3)
 
+'''
 
 
 
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
 #code:myhaspl@qq.com
 #9-9.py
 #PCA加上SVM识别图片类型
@@ -52,6 +54,7 @@ def readpic(fn):
             rtz=np.mean(r)
             alltz.append([btz,gtz,rtz])
     result_alltz=np.array(alltz).T
+    
     pca = mlpy.PCA() 
     pca.learn(result_alltz) 
     result_alltz = pca.transform(result_alltz, k=len(result_alltz)/2)   

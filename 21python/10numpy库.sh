@@ -113,6 +113,10 @@ python各种库:
                     array([ 2.,  3.])
                     >>> np.mean(a, axis=1)
                     array([ 1.5,  3.5])
+                    axis = 0 :column
+                    axis = 1 : row
+            求和，平均值，方差：比较简单，分别是np.sum(), np.mean(), 
+                        np.var(), np.std()(这个是标准差)
         numpy.unique
                 (ar, return_index=False, return_inverse=False, 
                                                     return_counts=False)
@@ -136,6 +140,7 @@ python各种库:
                 B.T 装置
                 B*A 乘法
                 B.I 求逆
+            np.asmatrix(mat)  
 
                 solve(A,Y)  求解线性方程组
         内积：np.dot(a,b) 就可以来计算a，b的内积
@@ -161,6 +166,22 @@ python各种库:
                     array([[[1, 2],
                             [2, 3],
                             [3, 4]]])
+                    
+                numpy.argsort(a, axis=-1, kind='quicksort', order=None)
+                    Returns the indices that would sort an array.
+                    a[index_array] yields a sorted a.
+                    
+                    >>> x = np.array([3, 1, 2])
+                    >>> np.argsort(x)
+                    array([1, 2, 0])
+        计算PCA相关的:
+                numpy.linalg.eigh(a, UPLO='L')
+                        return 求特征值和特征向量  
+                        Return the eigenvalues and eigenvectors of
+                             a Hermitian or symmetric matrix.
+
+
+
                     
     pylab matplotlib绘图
             sin函数 绘制:

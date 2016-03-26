@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+#-*- coding: utf-8 -*-
+'''
 PCA提取:
         PCA算法基于变量协方差矩阵对信息进行压缩和处理的
         
@@ -16,10 +19,9 @@ PCA提取:
                         2: [0,1,0]
                         3: [0,1,1]
 
+'''
 
 
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
 #code:myhaspl@qq.com
 #9-8.py
 #PCA加上ann人工神经网络识别图片类型
@@ -67,10 +69,12 @@ def readpic(fn):
             rtz=np.mean(r)
             alltz.append([btz,gtz,rtz])
     result_alltz=np.array(alltz).T
+    print result_alltz
     pca = mlpy.PCA()    #进行PCA 降为提取
     pca.learn(result_alltz) 
     result_alltz = pca.transform(result_alltz, k=len(result_alltz)/2)   
     result_alltz =result_alltz.reshape(len(result_alltz))
+    print result_alltz
     return result_alltz  
         
 

@@ -8,6 +8,9 @@ Define function:
 
     The Magic of Parameters
         some can not change some can change outside value
+
+    访问全局变量:   
+        如果想在函数中使用全局变量，则需要使用global进行声明
 自带的函数:
         pow(2,3)
         abs(-10)
@@ -42,6 +45,15 @@ Define function:
                 supplying argument
 
 
+    排序:
+        sorted():
+            sorted() 函数，它将返回一个经过排序的新列表 不改变原来的
+            >>> sorted([5, 2, 3, 1, 4])
+            [1, 2, 3, 4, 5]
+            key 参数，该参数接受一个函数作为它的值，
+                    可以通过那个函数定义排序应该遵循的规则
+                >>> sorted("This is a test string from Andrew".split(), key=str.lower)
+                ['a', 'Andrew', 'from', 'is', 'string', 'test', 'This']
 
 
 

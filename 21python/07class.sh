@@ -12,6 +12,10 @@ Making Your Own Classes :
         simply start its name with two underscores:
         def __inaccessible(self):
 
+    isinstance:
+
+Attributes, Functions, and Methods:
+    
 
 
 
