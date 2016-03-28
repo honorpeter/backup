@@ -5,8 +5,9 @@ python基本数据类型:
             ** is the power operator
                 2 ** 3 = 8  
         数值型
-            integer:
-                    // is integer division 
+            integer:        
+                    // is integer division  in python3
+                        in python2.7  must from __future__ import division
                     / is float division 
                     ex: 1//2 = 0    1/2 = 0.5  1.0 // 2.0 = 0
             long integer:

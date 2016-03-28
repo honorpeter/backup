@@ -2,6 +2,14 @@
     先下载包
         如jieba  
         然后 python setup.py install    (setup.py jieba里面自带的)
+导入包:
+        import jieba sa jb
+                每次应用的时候 需要加上前缀: jb or jieba
+        from jieba iomport *
+                不需要加前缀 但是可以定制导入那些函数
+添加导入文件的路径:
+        sys.path.append("..")   把当前目录添加进去
+        
 
 python有的安装包:
     os:

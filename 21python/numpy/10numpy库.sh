@@ -59,6 +59,11 @@ python各种库:
                 ndarray.dtype    元素类型
                 ndarray.itemsize  每个元素占有的字节
                 ndarray.data       数组元素的缓冲区
+
+                X.flags    #数组的存储情况信息
+            Converting ndarray to list
+                larr = arr.tolist()
+
             特殊数组:
                 zeros 全为0 使用zeros函数创建
                 ones       1    ones
@@ -66,7 +71,8 @@ python各种库:
                 empty   近似为0  empty
             序列数组:
                 arange函数  与python的range函数很相似
-                    参数为 开始值 终止值 步长
+                    参数为 开始值 终止值 步长 类型有dtype决定
+                    range()函数python built-in function 返回integer
 
                     linspace函数 创建等差序列数组:
                         起始值 终止值 元素数量
@@ -76,12 +82,52 @@ python各种库:
                 Numpy 每个元素都可以被访问到 索引从0开始
             数组运算:
                 对应位置元素分别计算  
+            生成序列:
+                    
+                    c2=np.linspace(1,4,10)  
+                    起点，终点，区间内点数。起点终点均包括在内
             数组拷贝:
                 浅拷贝 
                     拷贝数组引用
                     b = a
                 深拷贝 
                     d = a.copy()
+        functions:
+                finfo('float')
+                        返回 float的最大值 最小值
+                flatten():
+                    >>> a = np.array([[1,2], [3,4]])
+                    >>> a.flatten()
+                    array([1, 2, 3, 4])
+                vstack: join the np.array to one
+                    Stack arrays in sequence vertically (row wise).
+                    >>> a = np.array([1, 2, 3])
+                    >>> b = np.array([2, 3, 4])
+                    >>> np.vstack((a,b))
+                    array([[1, 2, 3],
+                        [2, 3, 4]])
+                hstack:
+                    Stack arrays in sequence horizontally (column wise).
+                    >>> a = np.array((1,2,3))
+                    >>> b = np.array((2,3,4))
+                    >>> np.hstack((a,b))
+                    array([1, 2, 3, 2, 3, 4])
+                dstack:
+                    Stack arrays in sequence depth wise (along third axis).
+                    >>> a = np.array((1,2,3))
+                    >>> b = np.array((2,3,4))
+                    >>> np.dstack((a,b))
+                    array([[[1, 2],
+                            [2, 3],
+                            [3, 4]]])
+                    
+                numpy.argsort(a, axis=-1, kind='quicksort', order=None)
+                    Returns the indices that would sort an array.
+                    a[index_array] yields a sorted a.
+                    
+                    >>> x = np.array([3, 1, 2])
+                    >>> np.argsort(x)
+                    array([1, 2, 0])
             asarray: (a, dtype=None, order=None)
                 Convert the input to an array.
 
@@ -116,6 +162,7 @@ python各种库:
                     axis = 0 :column
                     axis = 1 : row
             求和，平均值，方差：比较简单，分别是np.sum(), np.mean(), 
+                        max()   min()都可以这样用
                         np.var(), np.std()(这个是标准差)
         numpy.unique
                 (ar, return_index=False, return_inverse=False, 
@@ -126,7 +173,46 @@ python各种库:
                     >>> a = np.array([[1, 1], [2, 3]])
                     >>> np.unique(a)
                     array([1, 2, 3])
-        numpy.linalg.svd(a, full_matrices=1, compute_uv=1)
+        linalg:
+                numpy.linalg.svd(a, full_matrices=1, compute_uv=1)
+                numpy.linalg.norm(x, ord=None, axis=None, keepdims=False):
+                        范数的计算工具:
+                        np.linalg.norm(a,ord=None)  
+                            #计算向量a的范数
+                            
+                    ord	norm for matrices	norm for vectors
+                    None	Frobenius norm	2-norm
+                    ‘fro’	Frobenius norm	–
+                    ‘nuc’	nuclear norm	–
+                    inf	max(sum(abs(x), axis=1))	max(abs(x))
+                    -inf	min(sum(abs(x), axis=1))	min(abs(x))
+                    0	–	sum(x != 0)
+                    1	max(sum(abs(x), axis=0))	as below
+                    -1	min(sum(abs(x), axis=0))	as below
+                    2	2-norm (largest sing. value)	as below
+                    -2	smallest singular value	as below
+                    other	–	sum(abs(x)**ord)**(1./ord)
+                numpy.linalg.eigh(a, UPLO='L')
+                        return 求特征值和特征向量  
+                        Return the eigenvalues and eigenvectors of
+                             a Hermitian or symmetric matrix.
+                np.linalg.cond(a,p=None)  
+                    #矩阵a的条件数
+                np.linalg.inv(a)  
+                    #矩阵a的逆矩阵
+                d1=np.linalg.companion(a)  
+                        伴随矩阵
+                e1=np.random.rand(3,2)  
+                        #产生一个3行2列的随机数组
+
+        exp()函数: 
+                expm()使Pade近似算法、expm2()使用特征值分析算法、expm3()
+                    使用泰勒级数算法。在numpy中，也有一个计算矩阵的函数：
+                    funm(A,func)
+                
+
+
+        Unlike the ndarray objects, matrix objects can and only will be two dimensional
                         
         矩阵:
             Numpy的矩阵对象和数组对象相似 主要不同在于矩阵的计算
@@ -143,43 +229,19 @@ python各种库:
             np.asmatrix(mat)  
 
                 solve(A,Y)  求解线性方程组
-        内积：np.dot(a,b) 就可以来计算a，b的内积
-        functions:
-                vstack: join the np.array to one
-                    Stack arrays in sequence vertically (row wise).
-                    >>> a = np.array([1, 2, 3])
-                    >>> b = np.array([2, 3, 4])
-                    >>> np.vstack((a,b))
-                    array([[1, 2, 3],
-                        [2, 3, 4]])
-                hstack:
-                    Stack arrays in sequence horizontally (column wise).
-                    >>> a = np.array((1,2,3))
-                    >>> b = np.array((2,3,4))
-                    >>> np.hstack((a,b))
-                    array([1, 2, 3, 2, 3, 4])
-                dstack:
-                    Stack arrays in sequence depth wise (along third axis).
-                    >>> a = np.array((1,2,3))
-                    >>> b = np.array((2,3,4))
-                    >>> np.dstack((a,b))
-                    array([[[1, 2],
-                            [2, 3],
-                            [3, 4]]])
-                    
-                numpy.argsort(a, axis=-1, kind='quicksort', order=None)
-                    Returns the indices that would sort an array.
-                    a[index_array] yields a sorted a.
-                    
-                    >>> x = np.array([3, 1, 2])
-                    >>> np.argsort(x)
-                    array([1, 2, 0])
+
+            np.dot(a,b)用来计算数组的点积；
+            vdot(a,b)专门计算矢量的点积，
+                和dot()的区别在于对complex数据类型的处理不一样；
+            innner(a,b)用来计算内积；outer(a,b)计算外积
         计算PCA相关的:
                 numpy.linalg.eigh(a, UPLO='L')
                         return 求特征值和特征向量  
                         Return the eigenvalues and eigenvectors of
                              a Hermitian or symmetric matrix.
 
+        载入txt文件:
+                traindata = loadtxt("data",delimiter = ',',usecols = (0,1,2,3),dtype = float)  
 
 
                     
