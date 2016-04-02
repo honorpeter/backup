@@ -1,3 +1,4 @@
+操作的时候 一定要注意格式问题
 修改类型:
         as.Date
             ufo$Date <- as.Date(ufo$DateOccurred, format="%Y%m%d")

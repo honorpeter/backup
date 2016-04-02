@@ -100,8 +100,18 @@ Listing Packages in Local Libraries:
 常用包:
         reshape 包:
             函数 cast
-        pylr:     家族函数
+        plyr:     家族函数
             ddply()
+        ggplot2:各种画图的文件包
+            geom_histogram()   
+            hh <- ggplot(userAction,aes(x=Ds))+geom_histogram()+
+                        scale_x_date(major="50 years")
+                    ggplot2操作的对象必须是数据框
+                    scale_x_date指定间隔跨度 50 years
+            print hh        显示图形
+
+
+              
             
 
 
