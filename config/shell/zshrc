@@ -1,5 +1,10 @@
 # path
 export PATH="$HOME/.linuxbrew/bin:$HOME/Soft/understand/scitools/bin/linux64:$PATH"
+export PATH=/usr/local/cuda-7.5/bin:$PATH
+#export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/xiaolong/Soft/cudnn-7.0/cuda/lib64:$LD_LIBRARY_PATH
+
+
 # Set up the prompt
 
 autoload -Uz promptinit
@@ -56,6 +61,7 @@ alias la='ls -A'
 alias l='ls -CF'
 #alias hh='sudo shutdown -h now'
 #alias hh='sudo poweroff'
+alias shot='gnome-screenshot -a -f /tmp/`date +%s`'
 alias jj='exit'
 alias reboot='sudo reboot'
 alias my='mysql -u root -pxiaolong'

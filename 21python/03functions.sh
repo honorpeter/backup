@@ -16,6 +16,14 @@ Define function:
         abs(-10)
         rand(1.0/2.0):
             round rounds floating-point numbers to the nearest integer:
+        range:
+                range([start,] stop[, step])
+                根据start与stop指定的范围以及step设定的步长，生成一个序列。
+        xrange:
+                xrange 用法与 range 完全相同，所不同的是生成的不是一个
+                list对象，而是一个生成器    range 调用就在内存中生成好了
+                xrange使用算法代替空间
+                
 
     chang type:
         >>> int(math.floor(32.9))   change to the integer
@@ -45,6 +53,7 @@ Define function:
                 supplying argument
 
 
+
     排序:
         sorted():
             sorted() 函数，它将返回一个经过排序的新列表 不改变原来的
@@ -54,7 +63,29 @@ Define function:
                     可以通过那个函数定义排序应该遵循的规则
                 >>> sorted("This is a test string from Andrew".split(), key=str.lower)
                 ['a', 'Andrew', 'from', 'is', 'string', 'test', 'This']
+        zip()
+            zip([seql, ...])接受一系列可迭代对象作为参数，将对象中对应的
+                元素打包成一个个tuple（元组），然后返回由这些tuples组成的
+                list（列表）。
+                1 >>> name=('jack','beginman','sony','pcky')
+                2 >>> age=(2001,2003,2005,2000)
+                3 >>> for a,n in zip(name,age):
+                4     print a,n
+                5 
+                6 输出：
+                7 jack 2001
+                8 beginman 2003
+                9 sony 2005
+                10 pcky 2000
 
+                 1 >>> z1=[1,2,3]
+                2 >>> z2=[4,5,6]
+                3 >>> result=zip(z1,z2)
+                4 >>> result
+                5 [(1, 4), (2, 5), (3, 6)
+
+
+数学函数:
 
 
 

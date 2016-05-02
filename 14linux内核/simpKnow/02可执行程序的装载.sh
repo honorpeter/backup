@@ -55,6 +55,11 @@ ELF文件格式 :
                 func();  //调用函数
                 dlclose(handle);       //关闭函数
 
+        另一种方法添加动态链接库:
+                sudo bash -c "echo /usr/local/cuda/lib64/ > /etc/ld.so.conf.d/cuda.conf"
+                将链接库的目录 放到 链接库的加载目录中 
+                sudo ldconfig
+                重新加载
 
 
 

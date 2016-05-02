@@ -26,4 +26,12 @@ apt-file list packagename -----列出软件包的内容
         sudo add-apt-repository ppa:wiznote-team/ppa
         sudo apt-get udpate
         sudo apt-gte install wiznote
+
+安装cuda:
+        先下载在官方 先按照官方的命令执行   执行完之后
+        在 zshrc中
+        export PATH=/usr/local/cuda-7.5/bin:$PATH
+        export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+            
+        
     

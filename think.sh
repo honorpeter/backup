@@ -22,6 +22,19 @@
             怎么求思考
 
 
+怎么更快的了解一个领域 比较前沿的领域:
+    比如 RBM
+    论文:
+        难度的维度:
+            先搜索 学术论文 Introduction
+                    An Introduction to Restricted Boltzmann Machines
+        语言的维度: 
+            Chinese     English
+    博客:
+        ....
+
+
+
 
 
 

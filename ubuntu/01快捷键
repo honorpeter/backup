@@ -1,0 +1,13 @@
+定制快捷键:
+    在设置里面: 输入命令后 点击disabled 修改
+        bash -c  'gnome-screenshot -a -f /tmp/`date +%s`'
+            命令中执行 命令 需要 加bash -c
+
+
+
+
+
+
+
+
+

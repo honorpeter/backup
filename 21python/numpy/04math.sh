@@ -46,6 +46,8 @@ Math:
                     matrix is simplest, array is the most practical
                     array less bugs and faster
 
+    math函数:
+        exp(z)  如果z为vector时 自动计算每个element的exp
 
 
 
