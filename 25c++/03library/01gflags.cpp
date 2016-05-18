@@ -6,6 +6,15 @@
  *          可以替代getopt。
  * gflags使用起来比getopt方便，但是不支持参数的简写（例如getopt支持--list
  *          缩写成-l，gflags不支持）。
+ *  现在的命名空间是 google 以前的是gflags 
+ *  不过现在 两个命令空间都可以运行
+ *      感觉不管用     
+        #ifdef GFLAGS_GFLAGS_H_ 
+            namespace gflags = google;
+        #endif
+ *  
+ *      
+ *
  */
 
 //添加头文件
@@ -32,15 +41,31 @@ using namespace std;
  */
 //DEFINE 宏有三个参数：flag名、默认值、描述使用方法的帮助。
 //帮助会在执行 --help flag时显示。
+//big_menu不会记录在 argc中 他们的存在不影响argc的值
 DEFINE_bool(big_menu, true, "Include 'advanced' options in the menu listing");
 DEFINE_string(languages, "english,french,german",
               "comma-separated list of languages to offer in the 'lang' menu");
 
-int main(int argc, char **argv){
+int main(int argc, char **argv){    //这里不能写 const char **argv 下面true
+                                    //要修改 
+    //放到 ParseCommandLineFlags前面 输出提示信息
+    gflags::SetUsageMessage("Convert a set of images to the leveldb/lmdb\n"
+        "format used as input for Caffe.\n"
+        "Usage:\n"
+        "    http://www.image-net.org/download-images\n");
+    
     //在main函数中加入：（一般是放在main函数的头几行）
-    //如果设为true，则该函数处理完成后，argv中只保留argv[0]，argc会被设置为1
+    //如果设为true，则该函数处理完成后，还可以访问 
+    //      agrc 是参数个数
+    //      argv[1] 可以直接访问第二字符串
     //如果为false，则argv和argc会被保留，但是注意函数会调整argv中的顺序
     google::ParseCommandLineFlags(&argc, &argv, true);
+
+    if (argc < 4) {
+        //显示 usage
+        gflags::ShowUsageWithFlagsRestrict(argv[0], 
+                    "tools");
+    
 
     //使用gflags
     //定义的flag可以像正常的变量一样使用，只需在前面加上 FLAGS_ 前缀

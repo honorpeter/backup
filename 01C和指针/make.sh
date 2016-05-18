@@ -96,6 +96,13 @@ make
         让make自动推导:
             只要make看到一个[.o]文件，它就会自动的把[.c]文件加在依赖关系中
 
+    赋值：
+        :=   :
+                foo := $(bar)
+                将bar的值赋给foo
+        条件赋值：
+            foo ?= 1
+                只有当foo变量还没有被定义的时候，才会将1的值赋给foo。 
 
         The call Function:
             You can write a complex expression as the value of a variable, 
@@ -113,12 +120,131 @@ make
                 sets contents to the contents of the file foo, with a space 
                 (rather than a newline) separating each line. 
 
+        自带函数：
+            wildcard:
+            在Makefile规则中，通配符会被自动展开。但在变量的定义和函数引用
+                时，通配符将失效。这种情况下如果需要通配符有效，就需要使用
+                函数“wildcard”，它的用法是：$(wildcard PATTERN...) 
+                在Makefile中，它被展开为已经存在的、使用空格分开的、匹配此
+                    模式的所有文件列表。
+                $(wildcard *.c)”来获取工作目录下的所有的.c文件列表
+                $(patsubst %.c,%.o,$(wildcard *.c))”，首先使用“wildcard”
+                    函数获取工作目录下的.c文件列表；之后将列表中所有文件名
+                    的后缀.c替换为.o
+                    objects := $(patsubst %.c,%.o,$(wildcard *.c))
+                    foo : $(objects)
+                        cc -o foo $(objects)
+            wildcard : 扩展通配符
+            notdir ： 去除路径
+                    dir=$(notdir $(src))
+            patsubst ：替换通配符
+
+            error:
+                    #判断文件是否存在 和 空 比较一下
+                    ifeq ($(wildcard $(CONFIG_FILE)),)
+                        
+                        $(error $(CONFIG_FILE) not found. )
+                    endif
+            foreach:
+                遍历加载动态库：
+                LDFLAGS += $(foreach librarydir,$(LIBRARY_DIRS),\
+                    -L$(librarydir)) $(PKG_CONFIG) \
+		            $(foreach library,$(LIBRARIES),-l$(library))
+                PYTHON_LDFLAGS := $(LDFLAGS) $(foreach library,\
+                    $(PYTHON_LIBRARIES), -l$(library))
+                遍历加载头文件：
+                COMMON_FLAGS += $(foreach includedir,$(INCLUDE_DIRS),\
+                        -I$(includedir))
+                    把变量INCLUDE_DIRS(空格分割) 遍历 赋值给 includedir 
+                
+                    
+
+                    
         Makefile  $@, $^, $<
             $@  表示目标文件
             $^  表示所有的依赖文件  注意依赖
             $<  表示第一个依赖文件   依赖
             $?  表示比目标还要新的依赖文件列表  依赖
                 
+    包含其他文件：
+            include $(hhh)
+
+
+    递归 make
+            对于规模比较大的程序，需要多个人在多个目录下进行开发。
+                如果只用一个 Makefile 来维护就会比较麻烦，因此可以在每个
+                目录下建立自己的 Makefile ，然后在总控 Makefile 中调用子
+                目录的 Makefile 文件。
+
+        目录结构如下：
+
+        .
+        ├── add
+        │   ├── add_float.c
+        │   ├── add.h
+        │   ├── add_int.c
+        │   └── Makefile
+        ├── main.c
+        ├── Makefile
+        └── sub
+            ├── Makefile
+            ├── sub_float.c
+            ├── sub.h
+            └── sub_int.c
+        1.递归调用的方式
+
+        add：
+            cd add && $(MAKE)
+        它等价于
+
+        add：
+            $(MAKE) -C add
+        2.总控Makefile
+
+        CC = gcc
+        CFLAGS = -O2
+        TARGET = cacu
+        export OBJSDIR = $(shell pwd)/objs
+
+        $(TARGET):$(OBJSDIR) main.o
+            $(MAKE) -C add
+            $(MAKE) -C sub
+            $(CC) -o $(TARGET) $(OBJSDIR)/*.o
+
+        $(OBJSDIR):
+            mkdir -p $@
+
+        main.o:%.o:%.c
+            $(CC) -c $< -o $(OBJSDIR)/$@ $(CFLAGS) -Iadd -Isub
+
+        clean:
+            -$(RM) $(TARGET)
+            -$(RM) $(OBJSDIR)/*.o
+        如果总控 Makefile 中的一些变量需要传递给下层的 Makefile，
+            可以使用 export 命令。如：export OBJSDIR = ./objs
+
+        3.子目录Makefile的编写
+
+        Add 目录下的 Makefile 如下：
+
+        OBJS = add_int.o add_float.o
+        all:$(OBJS)
+
+        $(OBJS):%.o:%.c
+            $(CC) -c $< -o $(OBJSDIR)/$@ $(CFLAGS)
+
+        clean:
+            $(RM) $(OBJS)
+        Sub 目录下的 Makefile 如下：
+
+        OBJS = sub_int.o sub_float.o
+        all:$(OBJS)
+
+        $(OBJS):%.o:%.c
+            $(CC) -c $< -o $(OBJSDIR)/$@ $(CFLAGS)
+
+        clean:
+            $(RM) $(OBJS)
                 
     gdb 调试：
         启动gdb

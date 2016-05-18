@@ -61,6 +61,11 @@ Opening Files:
                 1: There is nothing here except
                 2: This stupid haiku
                 >>> f.close()
+        一次读取所有内容：
+                f = open('thefile.txt').read( ) 
+                all_the_text = f.read()
+                    放到字符串 all_the_text中
+                f.close()
         Iterating over File Contents:
             Doing It Byte by Byte:
                 f = open(filename)

@@ -1,0 +1,75 @@
+PROJECT := caffe
+
+#设置编译器 
+CC := g++
+
+#设置头文件 路径
+#ROOT := /home/xiaolong/test/caffe/train
+ROOT := .
+INCLUDE_DIRS :=$(ROOT)/include 
+SRC := $(ROOT)/src/caffe
+
+INCLUDE_FLAGS += $(foreach includedir,$(INCLUDE_DIRS), -I$(includedir))
+                
+#设置动态链接库名字
+LIBRARY_NAME := glog gflags
+#设置标志
+LIBRARY_FLAGS += $(foreach libraryname,$(LIBRARY_NAME), -l$(libraryname))
+
+#设置动态链接库 目录
+#LIBRARY_DIRS := /usr/local/cuda/lib64
+LIBRARY_DIRS_FLAGS += $(foreach librarydir, $(LIBRARY_DIRS),-L$(librarydir))
+
+
+
+# 设置文件路径
+SUFFIX := .cpp
+CAFFE := $(ROOT)/tools/caffe
+COMMON := $(SRC)/common
+
+$(PROJECT): 					#$(CAFFE)$(SUFFIX) $(COMMON)$(SUFFIX)
+	$(CC)  $(CAFFE)$(SUFFIX) \
+		$(COMMON)$(SUFFIX) \
+		-o $(CAFFE)\
+		$(INCLUDE_FLAGS) $(LIBRARY_FLAGS) $(LIBRARY_DIRS_FLAGS) 
+#g++ src/caffe/common.cpp tools/caffe.cpp -Iinclude -lgflags -lglog
+
+
+
+
+#protoc 处理proto文件	
+#设置文件 目录
+#protoDir := $(ROOT)/src/caffe/proto
+#protoc -I=./ --cpp_out=./ caffe.proto
+#$(shell protoc -I=$(protoDir) --cpp_out=$(protoDir) $(protoDir)/caffe.proto )
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

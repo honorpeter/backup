@@ -127,7 +127,7 @@
                 还可以使用 
                 int killpg(int pgrp,int signo); pgrp是整数
     重入：
-            程序和信号处理函数 左这同样的时间 会很麻烦。。。。
+            程序和信号处理函数 在这同样的时间 会很麻烦。。。。
         确保可重入的函数：
             POSIX定义了很多 系统调用函数 可以重入 不会发生意外
     信号集：
@@ -182,6 +182,8 @@
                         int sa_flags;   
                         void (*sa_restorer)(void);
                     };
+                            // Block every signal during the handler
+                            sigfillset(&sa.sa_mask);
 
                 flags：
                     SA_NOCLDSTOP
@@ -191,6 +193,8 @@
                     SA_ONSTACK
                         ...
                     SA_RESTART
+                        那么当信号处理函数返回后, 被该信号中断的系统调用
+                                将自动恢复.
                     SA_SIGINFO
                         使用sigaction作为操作函数
             结构体：

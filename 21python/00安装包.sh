@@ -1,3 +1,4 @@
+#coding: utf-8
 安装包:
     先下载包
         如jieba  
@@ -8,6 +9,7 @@
         from jieba iomport *
                 不需要加前缀 但是可以定制导入那些函数
 添加导入文件的路径:
+        import sys
         sys.path.append("..")   把当前目录添加进去
         
 

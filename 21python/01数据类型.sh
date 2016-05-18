@@ -114,6 +114,7 @@ python基本数据类型:
                             >>> knights = ['We', 'are', 'the', 'knights', 'who', 'say', 'ni']
                             >>> knights.index('who')
                             4
+                            如果没有找到 发生一个异常
                         insert:
                             numbers = [1, 2, 3, 5, 6, 7]
                             numbers.insert(3, 'four')
@@ -138,6 +139,17 @@ python基本数据类型:
                             numbers.sort(cmp)  
                                                 
                             x.sort(reverse=True) sorted in reverse
+                遍历列表： 使用enumerate()函数
+                        用于遍历序列中的元素以及它们的下标
+                        寻找bar在list中的index
+                        for i, j in enumerate(['foo', 'bar', 'baz']):
+                            if j == 'bar':
+                                print i
+                        可以简写为：
+                        [i for i, j in enumerate(['foo', 'bar', 'baz']) 
+                                        if j == 'foo']
+                        
+
                 二维列表:
                         声明方式:
                             myList = [[0] * 3] * 4

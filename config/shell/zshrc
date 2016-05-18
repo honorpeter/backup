@@ -1,7 +1,7 @@
-# path
+# path  以后这些文件 存放到 /etc/profile
 export PATH="$HOME/.linuxbrew/bin:$HOME/Soft/understand/scitools/bin/linux64:$PATH"
-export PATH=/usr/local/cuda-7.5/bin:$PATH
-#export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
+export PATH=/usr/local/cuda-7.5/bin:$PATH 
+export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/xiaolong/Soft/cudnn-7.0/cuda/lib64:$LD_LIBRARY_PATH
 
 
