@@ -7,6 +7,9 @@
         g++     C++编译器   其他的编译器都是他的别名 cc
                 有不同的版本 g++-4.8 g++-5.0  。。。。。
 
+让编译器支持 c++11
+        g++ vector.cpp -std=c++11
+    
 
 Source Code Extensions:
         C++ Implementation Source Code Extension(s)

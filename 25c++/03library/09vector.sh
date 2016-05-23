@@ -13,6 +13,10 @@ vector是一个十分有用的容器:
                 vector<int>::iterator it;
                 for(it=vec.begin();it!=vec.end();it++)
                     cout<<*it<<endl;
+
+                for(auto val : it)  c++11遍历方法
+                    cout val
+
             插入元素：    
                 vec.insert(vec.begin()+i,a);在第i+1个元素前面插入a;
 
@@ -25,6 +29,7 @@ vector是一个十分有用的容器:
             向量大小:vec.size();
 
             清空:vec.clear();
+
 
         2 vector的元素不仅仅可以使int,double,string,还可以是结构体
             要注意：结构体要定义为全局的，否则会出错下面是一段简短的程序代码
