@@ -7,6 +7,10 @@ git仓库：
                     可以建立多个    仓库默认master
                     每一个本地仓库都会有一个      .git目录文件  
                                                     用于控制 文件的修改记录
+
+                    三个重要的区：
+                        工作区      暂存区      HEAD区
+                        
             远程仓库
                     可以建立多个仓库    每个库里面都有 .git目录
                     主分支是 master
@@ -18,6 +22,15 @@ git仓库：
                         默认是在mater分支中进行的
             工作区和暂存区:
                     git add 添加到暂存区
+
+
+            工作区和暂存区比较：
+                git diff
+            暂存区和HEAD比较： 
+                git diff --cached
+
+            工作区和HEAD比较：
+                git diff HEAD
                     
 创建版本库:
     初始化：
@@ -29,20 +42,17 @@ git仓库：
         git add readme.txt              这样可以连续添加多个文件
                                         然后使用 commmt便可以一起
                                         提交到库中
+                                添加到 暂存区 .git/index文件记录工作区中的
+                                文件的创建时间和大小
         git commit -m "wrote a readme file"
                                     -m后面输入的是本次提交的说明
                                     从历史记录里方便地找到改动记录
+                                添加到HEAD区
 
 时光机穿梭:
         添加到 文件之后 就可以操作 这些文件了
         git status命令可以让我们时刻掌握仓库当前的状态
     
-        git diff顾名思义就是查看difference
-
-        修改之后 然后还要提交：
-            git add readme.txt
-            git commit -m "add distributed"
-
     版本回退：
         git log         告诉我们历史记录
                         提交的历史
@@ -58,10 +68,57 @@ git仓库：
         如果你退回了以前的版本 那么 git log 变没有了 以前版本修改后的内容
             可以使用 git reflog
                         用来记录你的每一次命令
-                        这样你就可以恢复每一次的操作
+                        这样你就可以恢复每一次的操作    
 
+工作区和暂存区 HEAD区:  HEAD表示当前分支的游标 如果当前在master那么HEAD和
+                        master一样 如果在dev分支那么HEAD就是dev
+        git add 添加到暂存区
 
+        暂存区：    .git/index文件存放的是暂存区
+        HEAD区：    .git/objects文件存放的HEAD区    对象
+                对象：  对象树  
+                    每一次提交 保存的信息：提交者 本次ID ParentID
+                                本次ID和 ParentID组成一个对象树
 
+    管理修改:
+        git diff HEAD -- readme.txt
+            查看暂存区和库中的区别
+        git checkout -- readme.txt：
+            两种含义：
+                一种是readme.txt自修改后还没有被放到暂存区
+                    撤销修改就回到和版本库一模一样的状态；
+
+                一种是readme.txt已经添加到暂存区后，又作了修改
+                    撤销修改就回到添加到暂存区后的状态。
+                这两种情况说白了就是使用 暂存区覆盖工作区
+
+        git rm
+            从版本库中删除该文件，那就用命令git rm删掉，并且git commit
+        还原：
+             git checkout -- test.txt 使用暂存区中的test.txt覆盖工作区
+             git checkout . 使用暂存区覆盖工作区
+        git reset:
+            git reset file or dir or .
+                从暂存区撤销    取消上一次add
+            git reset --soft commitID  
+                回到 某个版本 但是暂存区和工作区的内容不变
+                
+git stash用法：
+    
+        git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，
+            让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保
+            存到Git栈中。
+        git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关
+            内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从
+            最近的一个stash中读取内容并恢复。
+        git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从
+
+git log:
+        git log --graph命令可以看到分支合并图
+        可以查看 commit的历史
+            那个地方恢复。
+        git stash clear: 清空Git栈。此时使用gitg等图形化工具会发现，原来
+            stash的哪些节点都消失了。
 
 
 远程仓库：
@@ -101,6 +158,8 @@ git仓库：
                 合并指定分支到当前分支 合并完变可以删除了
 
 
+
+
         合并中的冲突解决：
             git merge dev 
                 便会报错  git status 可以查看
@@ -108,29 +167,10 @@ git仓库：
                 git会标出 文件中那个位置有冲突
             
 
-        git log --graph命令可以看到分支合并图
 
 
         
         
-工作区和暂存区:
-        git add 添加到暂存区
-
-    管理修改:
-        git diff HEAD -- readme.txt
-            查看暂存区和库中的区别
-        git checkout -- readme.txt：
-            两种含义：
-                一种是readme.txt自修改后还没有被放到暂存区
-                    销修改就回到和版本库一模一样的状态；
-
-                一种是readme.txt已经添加到暂存区后，又作了修改
-                    撤销修改就回到添加到暂存区后的状态。
-
-        git rm
-            从版本库中删除该文件，那就用命令git rm删掉，并且git commit
-        还原：
-             git checkout -- test.txt
 
 
 
