@@ -75,6 +75,7 @@ alias pull='git pull origin master'
 alias add='git add *'
 alias vpn='service openvpn restart'
 alias spark-shell='~/Soft/spark/spark-1.2.0-bin-hadoop2.4/bin/spark-shell'
+alias mendeley='/home/xiaolong/Soft/mendeley/bin/mendeleydesktop'
 #地址别名
 alias soft='cd ~/Soft'
 alias down='cd ~/Downloads'
@@ -91,6 +92,7 @@ alias real='cd /media/xiaolong/娱乐/video/real'
 #alias v='cd ~/test/vim/'
 alias long='cd /media/xiaolong'
 alias train='cd ~/test/caffe/train'
+alias deep='cd ~/test/restart/neural-networks-and-deep-learning-master'
 #alias hui='cd ~/test/huibian'
 alias doc='cd ~/Documents'
 alias blog='cd ~/Blog/longriyao.github.io'
@@ -186,15 +188,15 @@ function del {
     #cat $file
 #}
 #
-#function decReal () {
-    #file='/media/xiaolong/娱乐/video/real/count'
-    #num=`gawk '{print $1}' $file`
-    #newNum=$[$num - 1] 
-    #forNum=`printf %2d $newNum` #限定两个字符的格式
-    #zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
-    #echo $zeroNum > $file
-    #cat $file
-#}
+function decNat () {
+    file='/media/xiaolong/娱乐/video/natural language/count'
+    num=`gawk '{print $1}' $file`
+    newNum=$[$num - 1] 
+    forNum=`printf %2d $newNum` #限定两个字符的格式
+    zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
+    echo $zeroNum > $file
+    cat $file
+}
 
 
 
@@ -226,20 +228,23 @@ function startUp () {
 }
 
 #方便看视频
-#function lookReal () {
-    #file='/media/xiaolong/娱乐/video/real/count'
-    #dir='/media/xiaolong/娱乐/video/real/'
+function lookNat () {
+    file='/media/xiaolong/娱乐/video/natural language/count'
+    dir='/media/xiaolong/娱乐/video/natural language/'
 #
-    #num=`gawk '{print $1}' $file`
-    #newNum=$[$num + 1] 
-    #forNum=`printf %2d $newNum` #限定两个字符的格式
-    #zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
-    #echo $zeroNum > $file
-    #cat $file
-    #
+    num=`gawk '{print $1}' $file`
+    newNum=$[$num + 1] 
+    forNum=`printf %2d $newNum` #限定两个字符的格式
+    zeroNum=`echo $forNum | sed 's/ /0/'`        #前面要有0 ; 01 02...
+    echo $zeroNum > $file
+    cat $file
+    
+    #查找名字
+    name=`find $dir -name $zeroNum\*`
+    echo $name
     #name=$dir'实变'$num'.flv'
-    #vlc -f --rate 1.5 $name
-#}
+    vlc -f --rate 1.2 $name
+}
 
 #function lookAlg () {
     #file='/media/xiaolong/娱乐/video/algebra/count'

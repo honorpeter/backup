@@ -47,6 +47,14 @@ cscope使用
 
 
 
+Cscope缺省只解析C文件(.c和.h)、lex文件(.l)和yacc文件(.y)，虽然它也可以支持C++以及Java，但它在扫描目录时会跳过C++及Java后缀的文件。如果你希望cscope解析C++或Java文件，需要把这些文件的名字和路径保存在一个名为cscope.files的文件。当cscope发现在当前目录中存在cscope.files时，就会为cscope.files中列出的所有文件生成索引数据库。通常我们使用find来生成cscope.files文件，仍以vim 7.0的源代码为例：
+
+        cd ~/src/vim70 
+        find . –type f > cscope.files
+        cscope -bq 
+        这条命令把~src/vim70目录下的所有普通文件都加入了cscope.files，这样，cscope会解析该目录下的每一个文件。上面的cscope命令并没有使用”-R“参数递归查找子目录，因为在cscope.files中已经包含了子目录中的文件
+
+
 
 
 

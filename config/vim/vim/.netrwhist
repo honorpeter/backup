@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/xiaolong/test/caffe/train/src/caffe'
-let g:netrw_dirhist_2='/home/xiaolong/test/caffe/train/src/caffe/layers'
-let g:netrw_dirhist_3='/home/xiaolong/test/caffe/train/src/caffe'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/xiaolong/hh/vimm'
