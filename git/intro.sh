@@ -69,6 +69,8 @@ git仓库：
             可以使用 git reflog
                         用来记录你的每一次命令
                         这样你就可以恢复每一次的操作    
+            git reset HEAD <filename>使用取消 filename的 add操作
+                        好像是 使用HEAD区覆盖 暂存区
 
 工作区和暂存区 HEAD区:  HEAD表示当前分支的游标 如果当前在master那么HEAD和
                         master一样 如果在dev分支那么HEAD就是dev
