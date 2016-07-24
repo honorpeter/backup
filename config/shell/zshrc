@@ -167,6 +167,15 @@ function del {
     fi
 }
 
+function hosts {
+    wget http://www.scholarnet.cn/hosts
+    if [ ! -f "hosts" ]; then
+        echo "can't download hosts file"
+    fi
+    sudo  mv hosts /etc/
+}
+
+
 #function lookat {
     #l |  gawk 'BEGIN{FS="."} {print $2,$1}' | sort  | more
 #}
