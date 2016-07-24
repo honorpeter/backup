@@ -69,6 +69,8 @@ git仓库：
             可以使用 git reflog
                         用来记录你的每一次命令
                         这样你就可以恢复每一次的操作    
+            git reset HEAD <filename>使用取消 filename的 add操作
+                        好像是 使用HEAD区覆盖 暂存区
 
 工作区和暂存区 HEAD区:  HEAD表示当前分支的游标 如果当前在master那么HEAD和
                         master一样 如果在dev分支那么HEAD就是dev
@@ -108,10 +110,14 @@ git stash用法：
         git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，
             让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保
             存到Git栈中。
+            git stash save -a "messeag" 
+                -a 选项将新加入的文件 也加入到暂存区
+                message 写一些信息吧
         git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关
             内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从
             最近的一个stash中读取内容并恢复。
         git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从
+        git stash drop <stash@{id}>  如果不加stash编号，默认的就是删除最新的
 
 git log:
         git log --graph命令可以看到分支合并图
