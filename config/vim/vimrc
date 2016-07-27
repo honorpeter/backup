@@ -24,6 +24,8 @@ syntax enable
 set nocompatible            "关闭兼容模式
 filetype plugin on          "开启插件
 set scrolloff=8                 "距离下面5行
+set noundofile              "关闭生成 .un~文件
+"verbose set undofile
 
 "colorscheme darkblue 配色方案
 

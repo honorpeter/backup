@@ -25,6 +25,7 @@ Positive mode: healthy model
 Stop blaming others, Take responsibility for your life.
     
 
+努力让自己更美好 让家人更美好  让生活更美好 让。。。。。更美好
 
 
 
