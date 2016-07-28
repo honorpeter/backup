@@ -45,6 +45,9 @@ Stop blaming others, Take responsibility for your life.
 
     积极情绪    上行螺旋    越来越快乐  创造力提高 有人接触更好
 
+People mostly do what you do, rather than what you say
+    多数人都是按照你做的做而不是按照你说的做
+
 
 
 
