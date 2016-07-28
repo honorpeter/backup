@@ -25,6 +25,21 @@ Positive mode: healthy model
 Stop blaming others, Take responsibility for your life.
     
 
+指数函数增长：
+    纸叠41次可以到达月亮
+    象棋    
+    make a difference   指数传播 该可以改变很多
+
+幸福六个月恢复原来水平：   
+    当你一个人中彩票 得到某个职位 出车祸残疾 六个月恢复自己原来幸福水平
+
+政治对人性的观点：
+    一种认为 人性是不能改变的 要引导
+    一种认为 人性是可以改变的 要改变        
+            所以政策不同
+        保持：  人性是不能改变的 要接受 理解它 应用它
+            接受自己 一直压制会更强
+
 
 
 
