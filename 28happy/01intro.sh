@@ -40,6 +40,11 @@ Stop blaming others, Take responsibility for your life.
         保持：  人性是不能改变的 要接受 理解它 应用它
             接受自己 一直压制会更强
 
+负面影响：
+    下行螺旋    一直下降    越来越消极
+
+    积极情绪    上行螺旋    越来越快乐  创造力提高 有人接触更好
+
 
 
 
