@@ -48,6 +48,15 @@ Stop blaming others, Take responsibility for your life.
 People mostly do what you do, rather than what you say
     多数人都是按照你做的做而不是按照你说的做
 
+相信自己 you can do it      一定要自信相信自己
+    一直努力        
+使用积极的眼光看世界    乐观的眼光看世界  will be better
+    屡败屡战    相信自己那只是暂时的失败  勇敢的面对现实  根据现实灵活应对
+
+现实的自信 
+盲目的自信
+    不可取
+
 
 
 
