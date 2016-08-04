@@ -121,6 +121,19 @@
 
 
     一括号为移动 %  什么括号都可以
+        % 可以让光标从它当前所在的括号跳转到与它相匹配的括号上去, 
+            对花括号和 圆括号, 方括号都有效, 常用于手工检查括号是否匹对.
+
+            { (左大括号) 跳到上一段的开头
+            } (右大括号) 跳到下一段的的开头.
+
+            ( (左小括号) 移到这个句子的开头
+            ) (右小括号) 移到下一个句子的开头
+            
+            [[ 跳往上一个函式
+            ]] 跳往下一个函式
+
+        
 
 
 
@@ -145,5 +158,19 @@
     s 修改一个字符
     S 修改一行
 
+文本对象：
+    a会选择一个对象（an object）包括空格在内，而i只会选择一个对象的内部
+            （an inner object）不包含空格。
+        aw   a word
+        iw   inner word
+        aW   a WORD   
+        iW   inner WORD
+        as   a sentence
+        is   inner sentence
+        ap   a paragraph
+        ip   inner paragraph
+        a[|]   a[] block （这里的'|'是或的意思，也就是说'a['和'a]'都
+                表示一个[]块） '{} &al;>()与[]作用类似 at   a  tag 
+                （这里的tag可以是html或xml中任何标签对） it   inner tag
 
     

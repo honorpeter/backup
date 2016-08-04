@@ -57,6 +57,9 @@ People mostly do what you do, rather than what you say
 盲目的自信
     不可取
 
+幸福一直 起起落落 一直到在基点处徘徊
+    所以提高幸福的方法是提高基点
+        提高基点的方法
 
 
 
