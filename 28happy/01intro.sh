@@ -48,6 +48,10 @@ Stop blaming others, Take responsibility for your life.
 People mostly do what you do, rather than what you say
     多数人都是按照你做的做而不是按照你说的做
 
+环境对人的影响非常大：
+    创造积极的环境， 挂个画 名言
+        犯人实验    自我心里暗示
+
 
 
 
