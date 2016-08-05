@@ -64,6 +64,31 @@ People mostly do what you do, rather than what you say
 幸福一直 起起落落 一直到在基点处徘徊
     所以提高幸福的方法是提高基点
         提高基点的方法
+            面对他  把自己置位危险之中      幸福还是up and download 
+                                            但是上升的
+                            自我总结 我是一个勇敢的人 自尊水平上升
+                            当经历过失败后 我们感觉不想我们想象的那么糟
+                                当恢复到正常幸福水平 我可以应对它 
+                                我一定是一个有适应力的人
+如果变得更加乐观： 不是盲目的乐观  盲目的相信自己
+    1 First is to take action; to just do it
+            to put ourselves on the line
+            失败后 才能看淡失败 感觉失败也就那么回事 更加从容 适应能力提升
+                    自尊 自信提升
+
+            当我们不允许失败的时候，会形成一个下降的螺旋 是自尊下降
+    2 Second, I'm going to talk about the power of imagination
+            想象自己成功后的场景 潜意识无法区别
+            但也要想象 你成功的过程 通过自己努力 奋斗过程 成功场景
+            构建美好的蓝图
+
+    3 认知疗法  cognitive therapy
+            Event - Evaduation - Emotion
+                改变： Evaudation
+                    如要归纳过度 一次考试考不好就说自己不行 不能考好
+                    要看全部 不要视野过小 只关注一次    
+                        隧道视野
+                        归纳过度
 
 
 
