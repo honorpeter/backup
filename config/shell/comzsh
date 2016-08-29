@@ -1,0 +1,36 @@
+#环境变量
+# added by Anaconda2 4.1.1 installer
+export PATH="/home/longriyao/Soft/anaconda2/bin:$PATH"
+export PYTHONPATH=/home/longriyao/Soft/caffe/python:/home/longriyao/Soft/py-faster-rcnn/lib:$PYTHONPATH
+
+
+
+#别名
+#连接 服务器
+alias titanx='ssh -l titanx 192.168.0.125'
+
+#启动pycharm
+alias pycharm='~/Soft/pycharm-2016.2.1/bin/pycharm.sh'
+#启动clion
+alias clion='~/Soft/clion-2016.2.1/bin/clion.sh'
+
+#传输文件
+function trans {
+    if [ $1 = -r ]
+    then
+        scp -r $2  titanx@192.168.0.125:$3  
+    else
+        scp $1  titanx@192.168.0.125:$2  
+    fi
+}
+#接受文件
+function download {
+    if [ $1 = -r ]
+    then
+        scp -r titanx@192.168.0.125:$2 $3
+    else
+        scp titanx@192.168.0.125:$1 $2
+    fi
+}
+
+
