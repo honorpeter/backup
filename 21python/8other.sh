@@ -8,6 +8,8 @@ execfile( filename[, globals[, locals]])
         import sys
         sys.argv    sys.argc
 
+@property 可以将python定义的函数“当做”属性访问
+
 
 
 

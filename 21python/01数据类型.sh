@@ -47,6 +47,9 @@ python基本数据类型:
                         >>> u'Hello, world!'
                         u'Hello, world!'
         Lists and Tuples:
+                list 类型相乘  按倍数增加 元素个数
+                    a = [12,3]
+                    a *2 = [12,3,12,3]
                 Sequence:
                     Indexing:
                         >>> greeting = 'Hello'
