@@ -16,6 +16,12 @@ tee 重定向输出到多个文件
             ls "*" 2>&1 | tee ls.txt 
     
 
+zerotier:
+    commond: sudo zerotier-cli join     -h
+            新建网络
+            添加到本地
+            生成ip
+
 
 
 
