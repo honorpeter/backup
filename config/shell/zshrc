@@ -4,11 +4,15 @@ export PATH=/usr/local/cuda-7.5/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/xiaolong/Soft/cudnn-7.0/cuda/lib64:$LD_LIBRARY_PATH
 
-# 加载 .myzsh文件 如果存在的话
+# 加载 .comzsh文件 如果存在的话
 if [ -f "$HOME/.comzsh" ]; then
     . "$HOME/.comzsh"
 fi
 
+# 加载 .myzsh文件 如果存在的话
+if [ -f "$HOME/.myzsh" ]; then
+    . "$HOME/.myzsh"
+fi
 # Set up the prompt
 
 autoload -Uz promptinit

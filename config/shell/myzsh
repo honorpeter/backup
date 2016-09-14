@@ -1,0 +1,23 @@
+#别名
+#连接 服务器
+alias titanx='ssh -l titanx 10.147.17.246'
+
+#传输文件
+function trans {
+    if [ $1 = -r ]
+    then
+        scp -r $2  titanx@10.147.17.246:$3  
+    else
+        scp $1  titanx@10.147.17.246:$2  
+    fi
+}
+#接受文件
+function download {
+    if [ $1 = -r ]
+    then
+        scp -r titanx@10.147.17.246:$2 $3
+    else
+        scp titanx@10.147.17.246:$1 $2
+    fi
+}
+
