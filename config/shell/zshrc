@@ -4,9 +4,10 @@ export PATH=/usr/local/cuda-7.5/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/xiaolong/Soft/cudnn-7.0/cuda/lib64:$LD_LIBRARY_PATH
 
-# added by Anaconda2 4.1.1 installer
-export PATH="/home/longriyao/Soft/anaconda2/bin:$PATH"
-export PYTHONPATH=/home/longriyao/Soft/caffe/python:$PYTHONPATH
+# 加载 .myzsh文件 如果存在的话
+if [ -f "$HOME/.comzsh" ]; then
+    . "$HOME/.comzsh"
+fi
 
 # Set up the prompt
 
@@ -107,9 +108,8 @@ alias sound='alsamixer'
 alias pic='rm ~/Desktop/pic/*'
 alias zshrc='vi ~/.zshrc'
 alias vimrc='vi ~/Documents/config/vim/vimrc'
-#连接 服务器
 
-alias titanx='ssh -l titanx 192.168.0.125'
+
 
 function sea {
     ls | grep $1
@@ -277,17 +277,6 @@ function lookNat () {
     #name=$dir'抽象代数'$num'.flv'
     #vlc -f --rate 1.5 $name
 #}
-#传输文件
-function trans {
-    if [ $1 = -r ]
-    then
-        scp -r $2  titanx@192.168.0.125:$3  
-    else
-        scp $1  titanx@192.168.0.125:$2  
-    fi
-}
-
-
 
 
 
