@@ -22,6 +22,10 @@ zerotier:
             添加到本地
             生成ip
 
+终端下面打开图形界面：
+         startx         startX
+         xinit
+
 
 
 
