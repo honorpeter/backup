@@ -4,6 +4,19 @@ import:
         from math import sqrt       
                 import just the sqrt function
                 can use the function without its module prefix.
+
+        修改加载路径：
+            方法一:函数添加
+                1 import sys
+                2 查看sys.path
+                3 添加sys.path.append("c:\\")
+
+            方法二:修改环境变量
+                w用户可以修改系统环境变量PYTHONPATH
+
+            方法三:增加.pth文件，推荐！
+                在site-packages添加一个路径文件，如mypkpath.pth，必须以
+                    .pth为后缀，写上你要加入的模块文件所在的目录名称就是了。
 math:
         >>> import math
         >>> math.floor(32.9)    round a given number down

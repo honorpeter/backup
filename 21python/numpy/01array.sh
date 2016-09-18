@@ -51,6 +51,22 @@ Numpy库:    数组
                 a *2        数组a中的元素分别乘以2
                 a **2       数组a中的元素分别 2次方
                 2 ** a      数组a中的元素分别 2的几次方
+                a + 2       都加2
+                    不同空间维度的数组想＋
+                        不同维数的数组直接相加在matlab中显然是不允许的。
+                        利用这一特性可以方便的用一个n行列向量和一个m列行向
+                        量构造出一个n×m矩阵。
+
+                            >>> aa=array([[1],[2]])
+                            >>> shape(aa)
+                                (2, 1)
+                            >>> bb=([[10,20,30]])
+                            >>> shape(bb)
+                                (1, 3)
+                            >>> cc=aa+bb
+                            >>> cc
+                                array([[11, 21, 31],
+                                    [12, 22, 32]])
             生成序列:
                     
                     c2=np.linspace(1,4,10)  
@@ -112,6 +128,25 @@ Numpy库:    数组
                  If an integer, then the result will be a 1-D array of that 
                     length.
                     -1 meaning all
+
+                a.reshape();
+                    a = np.array([1,2,2,2,3,6,7,8])
+                    d = a.reshape((2,4)) 改为2,4的数组  维数相乘必须等于原来
+                            元素个数
+
+                    想把x从一行,变成一列,如下直接转置会失败
+                        y=transpose(x) 
+                       正确的做法是: 
+                                x.shape=(5,1)  
+                                y=transpose(x)  
+                        原来transpose的操作依赖于shape参数,对于一维的
+                                shape,转置是不起作用的
+
+                numpy.transpose:
+                        >>> x = np.ones((1, 2, 3))
+                        >>> np.transpose(x, (1, 0, 2)).shape
+                        (2, 1, 3)
+                        transpose
             append:
                 ...
 
