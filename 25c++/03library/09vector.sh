@@ -1,6 +1,25 @@
 vector是一个十分有用的容器:
         头文件#include<vector>
 
+    1、vector对象的定义和初始化
+            在vector中主要有四种定义和初始化的方法：
+
+    1.1、定义空的vector
+            定义的方法为：
+                vector<T> v;
+    1.2、定义一个vector的副本
+            定义的方法为：
+                vector<T> v1(v);
+    1.3、定义并初始化
+            定义的方法为：
+                vector<T> v2(n, i);
+        定义了长度为n的vector v2，并且每个元素都是i。
+
+    1.4、定义并指定初始长度
+            定义的方法为：
+                vector<T> v3(n)；
+                采用的初始化方法为默认初始化。
+
     1 基本操作:
             创建vector对象，vector<int> vec;
 
