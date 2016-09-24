@@ -1,6 +1,9 @@
 #别名
 #连接 服务器
 alias titanx='ssh -l titanx 10.147.17.246'
+alias com='ssh -l longriyao 10.147.17.159'
+alias comcon='sudo Xorg -terminate -query 10.147.17.159 :5'
+
 
 #传输文件
 function trans {

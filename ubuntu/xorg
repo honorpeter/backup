@@ -1,0 +1,11 @@
+sudo Xorg -terminate -query 10.147.17.246 :5
+
+/usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+
+sudo startx gnome-session -- :1 vt1
+
+
+startx调用的是xinit    startx是一个shell脚本
+    xinit是二进制执行文件
+
+Xorg    X 都是调用的/usr/lib/xorg/Xorg二进制文件
