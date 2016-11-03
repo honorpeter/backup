@@ -1,0 +1,514 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADD_EXPRESSION	crowbar.h	/^    ADD_EXPRESSION,$/;"	e	enum:__anon9
+ALIGN_SIZE	memory/memory.c	33;"	d	file:
+ARGUMENT_TOO_FEW_ERR	crowbar.h	/^    ARGUMENT_TOO_FEW_ERR,$/;"	e	enum:__anon6
+ARGUMENT_TOO_MANY_ERR	crowbar.h	/^    ARGUMENT_TOO_MANY_ERR,$/;"	e	enum:__anon6
+ASSIGN_EXPRESSION	crowbar.h	/^    ASSIGN_EXPRESSION,$/;"	e	enum:__anon9
+Align	memory/memory.c	/^} Align;$/;"	t	typeref:union:__anon31	file:
+ArgumentList	crowbar.h	/^} ArgumentList;$/;"	t	typeref:struct:ArgumentList_tag
+ArgumentList_tag	crowbar.h	/^typedef struct ArgumentList_tag {$/;"	s
+AssignExpression	crowbar.h	/^} AssignExpression;$/;"	t	typeref:struct:__anon10
+BAD_OPERAND_TYPE_ERR	crowbar.h	/^    BAD_OPERAND_TYPE_ERR,$/;"	e	enum:__anon6
+BAD_OPERATOR_FOR_STRING_ERR	crowbar.h	/^    BAD_OPERATOR_FOR_STRING_ERR,$/;"	e	enum:__anon6
+BOOLEAN_EXPRESSION	crowbar.h	/^    BOOLEAN_EXPRESSION = 1,$/;"	e	enum:__anon9
+BREAK_STATEMENT	crowbar.h	/^    BREAK_STATEMENT,$/;"	e	enum:__anon20
+BREAK_STATEMENT_RESULT	crowbar.h	/^    BREAK_STATEMENT_RESULT,$/;"	e	enum:__anon26
+BinaryExpression	crowbar.h	/^} BinaryExpression;$/;"	t	typeref:struct:__anon11
+Block	crowbar.h	/^} Block;$/;"	t	typeref:struct:__anon14
+CC	Makefile	/^CC=gcc$/;"	m
+CC	debug/Makefile	/^CC=gcc$/;"	m
+CC	memory/Makefile	/^CC=gcc$/;"	m
+CELL_SIZE	memory/storage.c	12;"	d	file:
+CFLAGS	Makefile	/^CFLAGS = -c -g -Wall -Wswitch-enum -ansi -pedantic -DDEBUG$/;"	m
+CFLAGS	debug/Makefile	/^CFLAGS = -c -g -Wall -DDBG_NO_DEBUG -ansi -pedantic$/;"	m
+CFLAGS	memory/Makefile	/^CFLAGS = -c -g -DDEBUG -Wall -ansi -pedantic$/;"	m
+CHARACTER_INVALID_ERR	crowbar.h	/^    CHARACTER_INVALID_ERR,$/;"	e	enum:__anon5
+CHARACTER_MESSAGE_ARGUMENT	crowbar.h	/^    CHARACTER_MESSAGE_ARGUMENT,$/;"	e	enum:__anon7
+COMPILE_ERROR_COUNT_PLUS_1	crowbar.h	/^    COMPILE_ERROR_COUNT_PLUS_1$/;"	e	enum:__anon5
+CONTINUE_STATEMENT	crowbar.h	/^    CONTINUE_STATEMENT,$/;"	e	enum:__anon20
+CONTINUE_STATEMENT_RESULT	crowbar.h	/^    CONTINUE_STATEMENT_RESULT,$/;"	e	enum:__anon26
+CRB_BOOLEAN_VALUE	CRB_dev.h	/^    CRB_BOOLEAN_VALUE = 1,$/;"	e	enum:__anon37
+CRB_Boolean	CRB_dev.h	/^} CRB_Boolean;$/;"	t	typeref:enum:__anon35
+CRB_DOUBLE_VALUE	CRB_dev.h	/^    CRB_DOUBLE_VALUE,$/;"	e	enum:__anon37
+CRB_FALSE	CRB_dev.h	/^    CRB_FALSE = 0,$/;"	e	enum:__anon35
+CRB_INT_VALUE	CRB_dev.h	/^    CRB_INT_VALUE,$/;"	e	enum:__anon37
+CRB_Interpreter	CRB.h	/^typedef struct CRB_Interpreter_tag CRB_Interpreter;$/;"	t	typeref:struct:CRB_Interpreter_tag
+CRB_Interpreter_tag	crowbar.h	/^struct CRB_Interpreter_tag {$/;"	s
+CRB_NATIVE_POINTER_VALUE	CRB_dev.h	/^    CRB_NATIVE_POINTER_VALUE,$/;"	e	enum:__anon37
+CRB_NULL_VALUE	CRB_dev.h	/^    CRB_NULL_VALUE$/;"	e	enum:__anon37
+CRB_NativeFunctionProc	CRB_dev.h	/^typedef CRB_Value CRB_NativeFunctionProc(CRB_Interpreter *interpreter,$/;"	t
+CRB_NativePointer	CRB_dev.h	/^} CRB_NativePointer;$/;"	t	typeref:struct:__anon38
+CRB_NativePointerInfo	CRB_dev.h	/^} CRB_NativePointerInfo;$/;"	t	typeref:struct:__anon36
+CRB_STRING_VALUE	CRB_dev.h	/^    CRB_STRING_VALUE,$/;"	e	enum:__anon37
+CRB_String	CRB_dev.h	/^typedef struct CRB_String_tag CRB_String;$/;"	t	typeref:struct:CRB_String_tag
+CRB_String_tag	crowbar.h	/^struct CRB_String_tag {$/;"	s
+CRB_TRUE	CRB_dev.h	/^    CRB_TRUE = 1$/;"	e	enum:__anon35
+CRB_Value	CRB_dev.h	/^} CRB_Value;$/;"	t	typeref:struct:__anon39
+CRB_ValueType	CRB_dev.h	/^} CRB_ValueType;$/;"	t	typeref:enum:__anon37
+CRB_add_global_variable	util.c	/^CRB_add_global_variable(CRB_Interpreter *inter, char *identifier,$/;"	f
+CRB_add_native_function	interface.c	/^CRB_add_native_function(CRB_Interpreter *interpreter,$/;"	f
+CRB_compile	interface.c	/^CRB_compile(CRB_Interpreter *interpreter, FILE *fp)$/;"	f
+CRB_create_interpreter	interface.c	/^CRB_create_interpreter(void)$/;"	f
+CRB_dispose_interpreter	interface.c	/^CRB_dispose_interpreter(CRB_Interpreter *interpreter)$/;"	f
+CRB_interpret	interface.c	/^CRB_interpret(CRB_Interpreter *interpreter)$/;"	f
+CROWBAR_FUNCTION_DEFINITION	crowbar.h	/^    CROWBAR_FUNCTION_DEFINITION = 1,$/;"	e	enum:__anon22
+Cell	memory/storage.c	/^} Cell;$/;"	t	typeref:union:__anon33	file:
+CompileError	crowbar.h	/^} CompileError;$/;"	t	typeref:enum:__anon5
+DBG_Boolean	DBG.h	/^} DBG_Boolean;$/;"	t	typeref:enum:__anon34
+DBG_CURRENT_CONTROLLER	DBG.h	19;"	d
+DBG_CURRENT_CONTROLLER	DBG.h	21;"	d
+DBG_Controller	DBG.h	/^typedef struct DBG_Controller_tag *DBG_Controller;$/;"	t	typeref:struct:DBG_Controller_tag
+DBG_Controller_tag	debug/debug.h	/^struct DBG_Controller_tag {$/;"	s
+DBG_FALSE	DBG.h	/^    DBG_FALSE = 0$/;"	e	enum:__anon34
+DBG_TRUE	DBG.h	/^    DBG_TRUE = 1,$/;"	e	enum:__anon34
+DBG_assert	DBG.h	14;"	d
+DBG_assert	DBG.h	30;"	d
+DBG_assert_func	debug/debug.c	/^DBG_assert_func(char *fmt, ...)$/;"	f
+DBG_create_controller	DBG.h	11;"	d
+DBG_create_controller	DBG.h	25;"	d
+DBG_create_controller_func	debug/debug.c	/^DBG_create_controller_func(void)$/;"	f
+DBG_debug_write	DBG.h	16;"	d
+DBG_debug_write	DBG.h	38;"	d
+DBG_debug_write_func	debug/debug.c	/^DBG_debug_write_func(int level, char *fmt, ...)$/;"	f
+DBG_panic	DBG.h	15;"	d
+DBG_panic	DBG.h	35;"	d
+DBG_panic_func	debug/debug.c	/^DBG_panic_func(char *fmt, ...)$/;"	f
+DBG_set	debug/debug.c	/^DBG_set(DBG_Controller controller, char *file, int line)$/;"	f
+DBG_set_debug_level	DBG.h	12;"	d
+DBG_set_debug_level	DBG.h	26;"	d
+DBG_set_debug_level_func	debug/debug.c	/^DBG_set_debug_level_func(DBG_Controller controller, int level)$/;"	f
+DBG_set_debug_write_fp	DBG.h	13;"	d
+DBG_set_debug_write_fp	DBG.h	28;"	d
+DBG_set_debug_write_fp_func	debug/debug.c	/^DBG_set_debug_write_fp_func(DBG_Controller controller, FILE *fp)$/;"	f
+DBG_set_expression	debug/debug.c	/^DBG_set_expression(char *expression)$/;"	f
+DEFAULT_PAGE_SIZE	memory/storage.c	13;"	d	file:
+DIVISION_BY_ZERO_ERR	crowbar.h	/^    DIVISION_BY_ZERO_ERR,$/;"	e	enum:__anon6
+DIV_EXPRESSION	crowbar.h	/^    DIV_EXPRESSION,$/;"	e	enum:__anon9
+DOUBLE_EXPRESSION	crowbar.h	/^    DOUBLE_EXPRESSION,$/;"	e	enum:__anon9
+DOUBLE_MESSAGE_ARGUMENT	crowbar.h	/^    DOUBLE_MESSAGE_ARGUMENT,$/;"	e	enum:__anon7
+EQ_EXPRESSION	crowbar.h	/^    EQ_EXPRESSION,$/;"	e	enum:__anon9
+EXPRESSION_STATEMENT	crowbar.h	/^    EXPRESSION_STATEMENT = 1,$/;"	e	enum:__anon20
+EXPRESSION_TYPE_COUNT_PLUS_1	crowbar.h	/^    EXPRESSION_TYPE_COUNT_PLUS_1$/;"	e	enum:__anon9
+Elsif	crowbar.h	/^} Elsif;$/;"	t	typeref:struct:Elsif_tag
+Elsif_tag	crowbar.h	/^typedef struct Elsif_tag {$/;"	s
+Expression	crowbar.h	/^typedef struct Expression_tag Expression;$/;"	t	typeref:struct:Expression_tag
+ExpressionType	crowbar.h	/^} ExpressionType;$/;"	t	typeref:enum:__anon9
+Expression_tag	crowbar.h	/^struct Expression_tag {$/;"	s
+FCLOSE_ARGUMENT_TYPE_ERR	crowbar.h	/^    FCLOSE_ARGUMENT_TYPE_ERR,$/;"	e	enum:__anon6
+FGETS_ARGUMENT_TYPE_ERR	crowbar.h	/^    FGETS_ARGUMENT_TYPE_ERR,$/;"	e	enum:__anon6
+FOPEN_ARGUMENT_TYPE_ERR	crowbar.h	/^    FOPEN_ARGUMENT_TYPE_ERR,$/;"	e	enum:__anon6
+FOR_STATEMENT	crowbar.h	/^    FOR_STATEMENT,$/;"	e	enum:__anon20
+FPUTS_ARGUMENT_TYPE_ERR	crowbar.h	/^    FPUTS_ARGUMENT_TYPE_ERR,$/;"	e	enum:__anon6
+FUNCTION_CALL_EXPRESSION	crowbar.h	/^    FUNCTION_CALL_EXPRESSION,$/;"	e	enum:__anon9
+FUNCTION_MULTIPLE_DEFINE_ERR	crowbar.h	/^    FUNCTION_MULTIPLE_DEFINE_ERR,$/;"	e	enum:__anon5
+FUNCTION_NOT_FOUND_ERR	crowbar.h	/^    FUNCTION_NOT_FOUND_ERR,$/;"	e	enum:__anon6
+ForStatement	crowbar.h	/^} ForStatement;$/;"	t	typeref:struct:__anon18
+FunctionCallExpression	crowbar.h	/^} FunctionCallExpression;$/;"	t	typeref:struct:__anon12
+FunctionDefinition	crowbar.h	/^} FunctionDefinition;$/;"	t	typeref:struct:FunctionDefinition_tag
+FunctionDefinitionType	crowbar.h	/^} FunctionDefinitionType;$/;"	t	typeref:enum:__anon22
+FunctionDefinition_tag	crowbar.h	/^typedef struct FunctionDefinition_tag {$/;"	s
+GE_EXPRESSION	crowbar.h	/^    GE_EXPRESSION,$/;"	e	enum:__anon9
+GLOBAL_STATEMENT	crowbar.h	/^    GLOBAL_STATEMENT,$/;"	e	enum:__anon20
+GLOBAL_STATEMENT_IN_TOPLEVEL_ERR	crowbar.h	/^    GLOBAL_STATEMENT_IN_TOPLEVEL_ERR,$/;"	e	enum:__anon6
+GLOBAL_VARIABLE_DEFINE	interface.c	3;"	d	file:
+GLOBAL_VARIABLE_NOT_FOUND_ERR	crowbar.h	/^    GLOBAL_VARIABLE_NOT_FOUND_ERR,$/;"	e	enum:__anon6
+GT_EXPRESSION	crowbar.h	/^    GT_EXPRESSION,$/;"	e	enum:__anon9
+GlobalStatement	crowbar.h	/^} GlobalStatement;$/;"	t	typeref:struct:__anon15
+GlobalVariableRef	crowbar.h	/^} GlobalVariableRef;$/;"	t	typeref:struct:GlobalVariableRef_tag
+GlobalVariableRef_tag	crowbar.h	/^typedef struct GlobalVariableRef_tag {$/;"	s
+HEADER_ALIGN_SIZE	memory/memory.c	35;"	d	file:
+Header	memory/memory.h	/^typedef union Header_tag Header;$/;"	t	typeref:union:Header_tag
+HeaderStruct	memory/memory.c	/^} HeaderStruct;$/;"	t	typeref:struct:__anon32	file:
+Header_tag	memory/memory.c	/^union Header_tag {$/;"	u	file:
+IDENTIFIER_EXPRESSION	crowbar.h	/^    IDENTIFIER_EXPRESSION,$/;"	e	enum:__anon9
+IF_STATEMENT	crowbar.h	/^    IF_STATEMENT,$/;"	e	enum:__anon20
+INCLUDES	Makefile	/^INCLUDES = \\$/;"	m
+INCLUDES	debug/Makefile	/^INCLUDES = -I..$/;"	m
+INT_EXPRESSION	crowbar.h	/^    INT_EXPRESSION,$/;"	e	enum:__anon9
+INT_MESSAGE_ARGUMENT	crowbar.h	/^    INT_MESSAGE_ARGUMENT = 1,$/;"	e	enum:__anon7
+IdentifierList	crowbar.h	/^} IdentifierList;$/;"	t	typeref:struct:IdentifierList_tag
+IdentifierList_tag	crowbar.h	/^typedef struct IdentifierList_tag {$/;"	s
+IfStatement	crowbar.h	/^} IfStatement;$/;"	t	typeref:struct:__anon16
+LE_EXPRESSION	crowbar.h	/^    LE_EXPRESSION,$/;"	e	enum:__anon9
+LINE_BUF_SIZE	crowbar.h	12;"	d
+LOGICAL_AND_EXPRESSION	crowbar.h	/^    LOGICAL_AND_EXPRESSION,$/;"	e	enum:__anon9
+LOGICAL_OR_EXPRESSION	crowbar.h	/^    LOGICAL_OR_EXPRESSION,$/;"	e	enum:__anon9
+LT_EXPRESSION	crowbar.h	/^    LT_EXPRESSION,$/;"	e	enum:__anon9
+LocalEnvironment	crowbar.h	/^} LocalEnvironment;$/;"	t	typeref:struct:__anon29
+MARK	memory/memory.c	36;"	d	file:
+MARK_SIZE	memory/memory.c	22;"	d	file:
+MEM_CURRENT_CONTROLLER	MEM.h	19;"	d
+MEM_CURRENT_CONTROLLER	MEM.h	21;"	d
+MEM_Controller	MEM.h	/^typedef struct MEM_Controller_tag *MEM_Controller;$/;"	t	typeref:struct:MEM_Controller_tag
+MEM_Controller_tag	memory/memory.h	/^struct MEM_Controller_tag {$/;"	s
+MEM_ErrorHandler	MEM.h	/^typedef void (*MEM_ErrorHandler)(MEM_Controller, char *, int, char *);$/;"	t
+MEM_FAIL_AND_EXIT	MEM.h	/^    MEM_FAIL_AND_EXIT,$/;"	e	enum:__anon1
+MEM_FAIL_AND_RETURN	MEM.h	/^    MEM_FAIL_AND_RETURN$/;"	e	enum:__anon1
+MEM_FailMode	MEM.h	/^} MEM_FailMode;$/;"	t	typeref:enum:__anon1
+MEM_Storage	MEM.h	/^typedef struct MEM_Storage_tag *MEM_Storage;$/;"	t	typeref:struct:MEM_Storage_tag
+MEM_Storage_tag	memory/storage.c	/^struct MEM_Storage_tag {$/;"	s	file:
+MEM_check_all_blocks	MEM.h	75;"	d
+MEM_check_all_blocks	MEM.h	80;"	d
+MEM_check_all_blocks_func	memory/memory.c	/^void MEM_check_all_blocks_func(MEM_Controller controller,$/;"	f
+MEM_check_block	MEM.h	73;"	d
+MEM_check_block	MEM.h	79;"	d
+MEM_check_block_func	memory/memory.c	/^MEM_check_block_func(MEM_Controller controller, char *filename, int line,$/;"	f
+MEM_create_controller	memory/memory.c	/^MEM_create_controller(void)$/;"	f
+MEM_dispose_storage	MEM.h	68;"	d
+MEM_dispose_storage_func	memory/storage.c	/^MEM_dispose_storage_func(MEM_Controller controller, MEM_Storage storage)$/;"	f
+MEM_dump_blocks	MEM.h	71;"	d
+MEM_dump_blocks	MEM.h	78;"	d
+MEM_dump_blocks_func	memory/memory.c	/^MEM_dump_blocks_func(MEM_Controller controller, FILE *fp)$/;"	f
+MEM_free	MEM.h	67;"	d
+MEM_free_func	memory/memory.c	/^MEM_free_func(MEM_Controller controller, void *ptr)$/;"	f
+MEM_malloc	MEM.h	54;"	d
+MEM_malloc_func	memory/memory.c	/^MEM_malloc_func(MEM_Controller controller, char *filename, int line,$/;"	f
+MEM_open_storage	MEM.h	61;"	d
+MEM_open_storage_func	memory/storage.c	/^MEM_open_storage_func(MEM_Controller controller,$/;"	f
+MEM_realloc	MEM.h	57;"	d
+MEM_realloc_func	memory/memory.c	/^MEM_realloc_func(MEM_Controller controller, char *filename, int line,$/;"	f
+MEM_set_error_handler	memory/memory.c	/^MEM_set_error_handler(MEM_Controller controller, MEM_ErrorHandler handler)$/;"	f
+MEM_set_fail_mode	memory/memory.c	/^MEM_set_fail_mode(MEM_Controller controller, MEM_FailMode mode)$/;"	f
+MEM_storage_malloc	MEM.h	64;"	d
+MEM_storage_malloc_func	memory/storage.c	/^MEM_storage_malloc_func(MEM_Controller controller,$/;"	f
+MEM_strdup	MEM.h	59;"	d
+MEM_strdup_func	memory/memory.c	/^MEM_strdup_func(MEM_Controller controller, char *filename, int line,$/;"	f
+MESSAGE_ARGUMENT_END	crowbar.h	/^    MESSAGE_ARGUMENT_END$/;"	e	enum:__anon7
+MESSAGE_ARGUMENT_MAX	crowbar.h	11;"	d
+MINUS_EXPRESSION	crowbar.h	/^    MINUS_EXPRESSION,$/;"	e	enum:__anon9
+MINUS_OPERAND_TYPE_ERR	crowbar.h	/^    MINUS_OPERAND_TYPE_ERR,$/;"	e	enum:__anon6
+MOD_EXPRESSION	crowbar.h	/^    MOD_EXPRESSION,$/;"	e	enum:__anon9
+MUL_EXPRESSION	crowbar.h	/^    MUL_EXPRESSION,$/;"	e	enum:__anon9
+MemoryPage	memory/storage.c	/^typedef struct MemoryPage_tag MemoryPage;$/;"	t	typeref:struct:MemoryPage_tag	file:
+MemoryPageList	memory/storage.c	/^typedef MemoryPage *MemoryPageList;$/;"	t	file:
+MemoryPage_tag	memory/storage.c	/^struct MemoryPage_tag {$/;"	s	file:
+MessageArgument	error.c	/^} MessageArgument;$/;"	t	typeref:struct:__anon3	file:
+MessageArgumentType	crowbar.h	/^} MessageArgumentType;$/;"	t	typeref:enum:__anon7
+MessageFormat	crowbar.h	/^} MessageFormat;$/;"	t	typeref:struct:__anon8
+NATIVE_FUNCTION_DEFINITION	crowbar.h	/^    NATIVE_FUNCTION_DEFINITION$/;"	e	enum:__anon22
+NATIVE_LIB_NAME	native.c	8;"	d	file:
+NE_EXPRESSION	crowbar.h	/^    NE_EXPRESSION,$/;"	e	enum:__anon9
+NORMAL_STATEMENT_RESULT	crowbar.h	/^    NORMAL_STATEMENT_RESULT = 1,$/;"	e	enum:__anon26
+NOT_BOOLEAN_OPERATOR_ERR	crowbar.h	/^    NOT_BOOLEAN_OPERATOR_ERR,$/;"	e	enum:__anon6
+NOT_BOOLEAN_TYPE_ERR	crowbar.h	/^    NOT_BOOLEAN_TYPE_ERR,$/;"	e	enum:__anon6
+NOT_NULL_OPERATOR_ERR	crowbar.h	/^    NOT_NULL_OPERATOR_ERR,$/;"	e	enum:__anon6
+NULL_EXPRESSION	crowbar.h	/^    NULL_EXPRESSION,$/;"	e	enum:__anon9
+OBJS	Makefile	/^OBJS = \\$/;"	m
+OBJS	debug/Makefile	/^OBJS = debug.o$/;"	m
+OBJS	memory/Makefile	/^OBJS = memory.o storage.o$/;"	m
+PARSE_ERR	crowbar.h	/^    PARSE_ERR = 1,$/;"	e	enum:__anon5
+POINTER_MESSAGE_ARGUMENT	crowbar.h	/^    POINTER_MESSAGE_ARGUMENT,$/;"	e	enum:__anon7
+PRIVATE_CROWBAR_H_INCLUDED	crowbar.h	2;"	d
+PRIVATE_DBG_H_INCLUDED	debug/debug.h	2;"	d
+PRIVATE_MEM_H_INCLUDED	memory/memory.h	2;"	d
+PUBLIC_CRB_DEV_H_INCLUDED	CRB_dev.h	2;"	d
+PUBLIC_CRB_H_INCLUDED	CRB.h	2;"	d
+PUBLIC_DBG_H_INCLUDED	DBG.h	2;"	d
+PUBLIC_MEM_H	MEM.h	2;"	d
+ParameterList	crowbar.h	/^} ParameterList;$/;"	t	typeref:struct:ParameterList_tag
+ParameterList_tag	crowbar.h	/^typedef struct ParameterList_tag {$/;"	s
+RETURN_STATEMENT	crowbar.h	/^    RETURN_STATEMENT,$/;"	e	enum:__anon20
+RETURN_STATEMENT_RESULT	crowbar.h	/^    RETURN_STATEMENT_RESULT,$/;"	e	enum:__anon26
+RUNTIME_ERROR_COUNT_PLUS_1	crowbar.h	/^    RUNTIME_ERROR_COUNT_PLUS_1$/;"	e	enum:__anon6
+ReturnStatement	crowbar.h	/^} ReturnStatement;$/;"	t	typeref:struct:__anon19
+RuntimeError	crowbar.h	/^} RuntimeError;$/;"	t	typeref:enum:__anon6
+STATEMENT_RESULT_TYPE_COUNT_PLUS_1	crowbar.h	/^    STATEMENT_RESULT_TYPE_COUNT_PLUS_1$/;"	e	enum:__anon26
+STATEMENT_TYPE_COUNT_PLUS_1	crowbar.h	/^    STATEMENT_TYPE_COUNT_PLUS_1$/;"	e	enum:__anon20
+STRING_ALLOC_SIZE	string.c	6;"	d	file:
+STRING_EXPRESSION	crowbar.h	/^    STRING_EXPRESSION,$/;"	e	enum:__anon9
+STRING_MESSAGE_ARGUMENT	crowbar.h	/^    STRING_MESSAGE_ARGUMENT,$/;"	e	enum:__anon7
+SUB_EXPRESSION	crowbar.h	/^    SUB_EXPRESSION,$/;"	e	enum:__anon9
+Statement	crowbar.h	/^typedef struct Statement_tag Statement;$/;"	t	typeref:struct:Statement_tag
+StatementList	crowbar.h	/^} StatementList;$/;"	t	typeref:struct:StatementList_tag
+StatementList_tag	crowbar.h	/^typedef struct StatementList_tag {$/;"	s
+StatementResult	crowbar.h	/^} StatementResult;$/;"	t	typeref:struct:__anon27
+StatementResultType	crowbar.h	/^} StatementResultType;$/;"	t	typeref:enum:__anon26
+StatementType	crowbar.h	/^} StatementType;$/;"	t	typeref:enum:__anon20
+Statement_tag	crowbar.h	/^struct Statement_tag {$/;"	s
+StringPool	crowbar.h	/^} StringPool;$/;"	t	typeref:struct:__anon30
+TARGET	Makefile	/^TARGET = crowbar$/;"	m
+TARGET	debug/Makefile	/^TARGET = dbg.o$/;"	m
+TARGET	memory/Makefile	/^TARGET = mem.o$/;"	m
+VARIABLE_NOT_FOUND_ERR	crowbar.h	/^    VARIABLE_NOT_FOUND_ERR = 1,$/;"	e	enum:__anon6
+VString	error.c	/^} VString;$/;"	t	typeref:struct:__anon2	file:
+Variable	crowbar.h	/^} Variable;$/;"	t	typeref:struct:Variable_tag
+Variable_tag	crowbar.h	/^typedef struct Variable_tag {$/;"	s
+WHILE_STATEMENT	crowbar.h	/^    WHILE_STATEMENT,$/;"	e	enum:__anon20
+WhileStatement	crowbar.h	/^} WhileStatement;$/;"	t	typeref:struct:__anon17
+add_character	error.c	/^add_character(VString *v, int ch)$/;"	f	file:
+add_native_functions	interface.c	/^add_native_functions(CRB_Interpreter *inter)$/;"	f	file:
+add_string	error.c	/^add_string(VString *v, char *str)$/;"	f	file:
+alloc_crb_string	string_pool.c	/^alloc_crb_string(CRB_Interpreter *inter, char *str, CRB_Boolean is_literal)$/;"	f	file:
+alloc_local_environment	eval.c	/^alloc_local_environment()$/;"	f	file:
+alloc_statement	create.c	/^alloc_statement(StatementType type)$/;"	f	file:
+argument	crowbar.h	/^    ArgumentList        *argument;$/;"	m	struct:__anon12
+assert_func	debug/debug.c	/^assert_func(FILE *fp, char *file, int line, char *expression,$/;"	f	file:
+assign_expression	crowbar.h	/^        AssignExpression        assign_expression;$/;"	m	union:Expression_tag::__anon13
+binary_expression	crowbar.h	/^        BinaryExpression        binary_expression;$/;"	m	union:Expression_tag::__anon13
+block	crowbar.h	/^            Block               *block;$/;"	m	struct:FunctionDefinition_tag::__anon23::__anon24
+block	crowbar.h	/^    Block       *block;$/;"	m	struct:Elsif_tag
+block	crowbar.h	/^    Block       *block;$/;"	m	struct:__anon17
+block	crowbar.h	/^    Block       *block;$/;"	m	struct:__anon18
+block_header	memory/memory.h	/^    Header      *block_header;$/;"	m	struct:MEM_Controller_tag
+boolean_value	CRB_dev.h	/^        CRB_Boolean     boolean_value;$/;"	m	union:__anon39::__anon40
+boolean_value	crowbar.h	/^        CRB_Boolean             boolean_value;$/;"	m	union:Expression_tag::__anon13
+call_crowbar_function	eval.c	/^call_crowbar_function(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+call_native_function	eval.c	/^call_native_function(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+cell	memory/storage.c	/^    Cell                cell[1];$/;"	m	struct:MemoryPage_tag	file:
+cell_num	memory/storage.c	/^    int                 cell_num;$/;"	m	struct:MemoryPage_tag	file:
+chain_block	memory/memory.c	/^chain_block(MEM_Controller controller, Header *new_header)$/;"	f	file:
+chain_string	eval.c	/^chain_string(CRB_Interpreter *inter, CRB_String *left, CRB_String *right)$/;"	f
+character_val	error.c	/^        int     character_val;$/;"	m	union:__anon3::__anon4	file:
+check_mark	memory/memory.c	/^check_mark(Header *header)$/;"	f
+check_mark_sub	memory/memory.c	/^check_mark_sub(unsigned char *mark, int size)$/;"	f
+check_native_pointer	native.c	/^check_native_pointer(CRB_Value *value)$/;"	f	file:
+clear_v_string	error.c	/^clear_v_string(VString *v)$/;"	f	file:
+condition	crowbar.h	/^    Expression  *condition;$/;"	m	struct:Elsif_tag
+condition	crowbar.h	/^    Expression  *condition;$/;"	m	struct:__anon16
+condition	crowbar.h	/^    Expression  *condition;$/;"	m	struct:__anon17
+condition	crowbar.h	/^    Expression  *condition;$/;"	m	struct:__anon18
+convert_value_to_expression	create.c	/^convert_value_to_expression(CRB_Value *v)$/;"	f	file:
+crb_add_local_variable	util.c	/^crb_add_local_variable(LocalEnvironment *env,$/;"	f
+crb_add_std_fp	native.c	/^crb_add_std_fp(CRB_Interpreter *inter)$/;"	f
+crb_add_string_literal	string.c	/^crb_add_string_literal(int letter)$/;"	f
+crb_alloc_expression	create.c	/^crb_alloc_expression(ExpressionType type)$/;"	f
+crb_chain_argument_list	create.c	/^crb_chain_argument_list(ArgumentList *list, Expression *expr)$/;"	f
+crb_chain_elsif_list	create.c	/^crb_chain_elsif_list(Elsif *list, Elsif *add)$/;"	f
+crb_chain_identifier	create.c	/^crb_chain_identifier(IdentifierList *list, char *identifier)$/;"	f
+crb_chain_parameter	create.c	/^crb_chain_parameter(ParameterList *list, char *identifier)$/;"	f
+crb_chain_statement_list	create.c	/^crb_chain_statement_list(StatementList *list, Statement *statement)$/;"	f
+crb_close_string_literal	string.c	/^crb_close_string_literal(void)$/;"	f
+crb_compile_error	error.c	/^crb_compile_error(CompileError id, ...)$/;"	f
+crb_compile_error_message_format	error_message.c	/^MessageFormat crb_compile_error_message_format[] = {$/;"	v
+crb_compile_error_message_format	error_message_not_gcc.c	/^MessageFormat crb_compile_error_message_format[] = {$/;"	v
+crb_create_argument_list	create.c	/^crb_create_argument_list(Expression *expression)$/;"	f
+crb_create_assign_expression	create.c	/^crb_create_assign_expression(char *variable, Expression *operand)$/;"	f
+crb_create_binary_expression	create.c	/^crb_create_binary_expression(ExpressionType operator,$/;"	f
+crb_create_block	create.c	/^crb_create_block(StatementList *statement_list)$/;"	f
+crb_create_boolean_expression	create.c	/^crb_create_boolean_expression(CRB_Boolean value)$/;"	f
+crb_create_break_statement	create.c	/^Statement *crb_create_break_statement(void)$/;"	f
+crb_create_continue_statement	create.c	/^Statement *crb_create_continue_statement(void)$/;"	f
+crb_create_crowbar_string	string_pool.c	/^crb_create_crowbar_string(CRB_Interpreter *inter, char *str)$/;"	f
+crb_create_elsif	create.c	/^crb_create_elsif(Expression *expr, Block *block)$/;"	f
+crb_create_expression_statement	create.c	/^crb_create_expression_statement(Expression *expression)$/;"	f
+crb_create_for_statement	create.c	/^crb_create_for_statement(Expression *init, Expression *cond,$/;"	f
+crb_create_function_call_expression	create.c	/^crb_create_function_call_expression(char *func_name, ArgumentList *argument)$/;"	f
+crb_create_global_identifier	create.c	/^crb_create_global_identifier(char *identifier)$/;"	f
+crb_create_global_statement	create.c	/^crb_create_global_statement(IdentifierList *identifier_list)$/;"	f
+crb_create_identifier	string.c	/^crb_create_identifier(char *str)$/;"	f
+crb_create_identifier_expression	create.c	/^crb_create_identifier_expression(char *identifier)$/;"	f
+crb_create_if_statement	create.c	/^crb_create_if_statement(Expression *condition,$/;"	f
+crb_create_minus_expression	create.c	/^crb_create_minus_expression(Expression *operand)$/;"	f
+crb_create_null_expression	create.c	/^crb_create_null_expression(void)$/;"	f
+crb_create_parameter	create.c	/^crb_create_parameter(char *identifier)$/;"	f
+crb_create_return_statement	create.c	/^crb_create_return_statement(Expression *expression)$/;"	f
+crb_create_statement_list	create.c	/^crb_create_statement_list(Statement *statement)$/;"	f
+crb_create_while_statement	create.c	/^crb_create_while_statement(Expression *condition, Block *block)$/;"	f
+crb_eval_binary_expression	eval.c	/^crb_eval_binary_expression(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f
+crb_eval_expression	eval.c	/^crb_eval_expression(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f
+crb_eval_minus_expression	eval.c	/^crb_eval_minus_expression(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f
+crb_execute_malloc	util.c	/^crb_execute_malloc(CRB_Interpreter *inter, size_t size)$/;"	f
+crb_execute_statement_list	execute.c	/^crb_execute_statement_list(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f
+crb_function_define	create.c	/^crb_function_define(char *identifier, ParameterList *parameter_list,$/;"	f
+crb_get_current_interpreter	util.c	/^crb_get_current_interpreter(void)$/;"	f
+crb_get_operator_string	util.c	/^crb_get_operator_string(ExpressionType type)$/;"	f
+crb_literal_to_crb_string	string_pool.c	/^crb_literal_to_crb_string(CRB_Interpreter *inter, char *str)$/;"	f
+crb_malloc	util.c	/^crb_malloc(size_t size)$/;"	f
+crb_nv_fclose_proc	native.c	/^CRB_Value crb_nv_fclose_proc(CRB_Interpreter *interpreter,$/;"	f
+crb_nv_fgets_proc	native.c	/^CRB_Value crb_nv_fgets_proc(CRB_Interpreter *interpreter,$/;"	f
+crb_nv_fopen_proc	native.c	/^CRB_Value crb_nv_fopen_proc(CRB_Interpreter *interpreter,$/;"	f
+crb_nv_fputs_proc	native.c	/^CRB_Value crb_nv_fputs_proc(CRB_Interpreter *interpreter,$/;"	f
+crb_nv_print_proc	native.c	/^CRB_Value crb_nv_print_proc(CRB_Interpreter *interpreter,$/;"	f
+crb_open_string_literal	string.c	/^crb_open_string_literal(void)$/;"	f
+crb_refer_string	string_pool.c	/^crb_refer_string(CRB_String *str)$/;"	f
+crb_release_string	string_pool.c	/^crb_release_string(CRB_String *str)$/;"	f
+crb_reset_string_literal_buffer	string.c	/^crb_reset_string_literal_buffer(void)$/;"	f
+crb_runtime_error	error.c	/^crb_runtime_error(int line_number, RuntimeError id, ...)$/;"	f
+crb_runtime_error_message_format	error_message.c	/^MessageFormat crb_runtime_error_message_format[] = {$/;"	v
+crb_runtime_error_message_format	error_message_not_gcc.c	/^MessageFormat crb_runtime_error_message_format[] = {$/;"	v
+crb_search_function	util.c	/^crb_search_function(char *name)$/;"	f
+crb_search_global_variable	util.c	/^crb_search_global_variable(CRB_Interpreter *inter, char *identifier)$/;"	f
+crb_search_local_variable	util.c	/^crb_search_local_variable(LocalEnvironment *env, char *identifier)$/;"	f
+crb_set_current_interpreter	util.c	/^crb_set_current_interpreter(CRB_Interpreter *inter)$/;"	f
+create_message_argument	error.c	/^create_message_argument(MessageArgument *arg, va_list ap)$/;"	f	file:
+crowbar_f	crowbar.h	/^        } crowbar_f;$/;"	m	union:FunctionDefinition_tag::__anon23	typeref:struct:FunctionDefinition_tag::__anon23::__anon24
+current_debug_level	debug/debug.h	/^    int         current_debug_level;$/;"	m	struct:DBG_Controller_tag
+current_line_number	crowbar.h	/^    int                 current_line_number;$/;"	m	struct:CRB_Interpreter_tag
+current_page_size	memory/storage.c	/^    int                 current_page_size;$/;"	m	struct:MEM_Storage_tag	file:
+d_dummy	memory/memory.c	/^    double      d_dummy;$/;"	m	union:__anon31	file:
+d_dummy	memory/storage.c	/^    double      d_dummy;$/;"	m	union:__anon33	file:
+dbg_default_controller	debug/debug.c	/^DBG_Controller  dbg_default_controller = &st_default_controller;$/;"	v
+debug_write_fp	debug/debug.h	/^    FILE        *debug_write_fp;$/;"	m	struct:DBG_Controller_tag
+default_error_handler	memory/memory.c	/^default_error_handler(MEM_Controller controller,$/;"	f	file:
+dispose_local_environment	eval.c	/^dispose_local_environment(CRB_Interpreter *inter, LocalEnvironment *env)$/;"	f	file:
+dkc_is_compare_operator	crowbar.h	88;"	d
+dkc_is_logical_operator	crowbar.h	93;"	d
+dkc_is_math_operator	crowbar.h	83;"	d
+double_val	error.c	/^        double  double_val;$/;"	m	union:__anon3::__anon4	file:
+double_value	CRB_dev.h	/^        double          double_value;$/;"	m	union:__anon39::__anon40
+double_value	crowbar.h	/^        double                  double_value;$/;"	m	union:Expression_tag::__anon13
+dump_buffer	memory/main.c	/^dump_buffer(unsigned char *buf, int size)$/;"	f	file:
+else_block	crowbar.h	/^    Block       *else_block;$/;"	m	struct:__anon16
+elsif_list	crowbar.h	/^    Elsif       *elsif_list;$/;"	m	struct:__anon16
+error_fp	memory/memory.h	/^    FILE        *error_fp;$/;"	m	struct:MEM_Controller_tag
+error_handler	memory/memory.c	/^error_handler(MEM_Controller controller, char *filename, int line, char *msg)$/;"	f	file:
+error_handler	memory/memory.h	/^    MEM_ErrorHandler    error_handler;$/;"	m	struct:MEM_Controller_tag
+eval_assign_expression	eval.c	/^eval_assign_expression(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+eval_binary_boolean	eval.c	/^eval_binary_boolean(CRB_Interpreter *inter, ExpressionType operator,$/;"	f	file:
+eval_binary_double	eval.c	/^eval_binary_double(CRB_Interpreter *inter, ExpressionType operator,$/;"	f	file:
+eval_binary_int	eval.c	/^eval_binary_int(CRB_Interpreter *inter, ExpressionType operator,$/;"	f	file:
+eval_binary_null	eval.c	/^eval_binary_null(CRB_Interpreter *inter, ExpressionType operator,$/;"	f	file:
+eval_boolean_expression	eval.c	/^eval_boolean_expression(CRB_Boolean boolean_value)$/;"	f	file:
+eval_compare_string	eval.c	/^eval_compare_string(ExpressionType operator,$/;"	f	file:
+eval_double_expression	eval.c	/^eval_double_expression(double double_value)$/;"	f	file:
+eval_expression	eval.c	/^eval_expression(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+eval_function_call_expression	eval.c	/^eval_function_call_expression(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+eval_identifier_expression	eval.c	/^eval_identifier_expression(CRB_Interpreter *inter,$/;"	f	file:
+eval_int_expression	eval.c	/^eval_int_expression(int int_value)$/;"	f	file:
+eval_logical_and_or_expression	eval.c	/^eval_logical_and_or_expression(CRB_Interpreter *inter,$/;"	f	file:
+eval_null_expression	eval.c	/^eval_null_expression(void)$/;"	f	file:
+eval_string_expression	eval.c	/^eval_string_expression(CRB_Interpreter *inter, char *string_value)$/;"	f	file:
+execute_break_statement	execute.c	/^execute_break_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_continue_statement	execute.c	/^execute_continue_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_elsif	execute.c	/^execute_elsif(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_expression_statement	execute.c	/^execute_expression_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_for_statement	execute.c	/^execute_for_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_global_statement	execute.c	/^execute_global_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_if_statement	execute.c	/^execute_if_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_return_statement	execute.c	/^execute_return_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_statement	execute.c	/^execute_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+execute_storage	crowbar.h	/^    MEM_Storage         execute_storage;$/;"	m	struct:CRB_Interpreter_tag
+execute_while_statement	execute.c	/^execute_while_statement(CRB_Interpreter *inter, LocalEnvironment *env,$/;"	f	file:
+expression	crowbar.h	/^    Expression *expression;$/;"	m	struct:ArgumentList_tag
+expression_s	crowbar.h	/^        Expression      *expression_s;$/;"	m	union:Statement_tag::__anon21
+fail_mode	memory/memory.h	/^    MEM_FailMode        fail_mode;$/;"	m	struct:MEM_Controller_tag
+filename	memory/memory.c	/^    char        *filename;$/;"	m	struct:__anon32	file:
+fill_buffer	memory/main.c	/^fill_buffer(unsigned char *buf, int size)$/;"	f	file:
+for_s	crowbar.h	/^        ForStatement    for_s;$/;"	m	union:Statement_tag::__anon21
+format	crowbar.h	/^    char *format;$/;"	m	struct:__anon8
+format_message	error.c	/^format_message(MessageFormat *format, VString *v, va_list ap)$/;"	f	file:
+function_call_expression	crowbar.h	/^        FunctionCallExpression  function_call_expression;$/;"	m	union:Expression_tag::__anon13
+function_list	crowbar.h	/^    FunctionDefinition  *function_list;$/;"	m	struct:CRB_Interpreter_tag
+global_s	crowbar.h	/^        GlobalStatement global_s;$/;"	m	union:Statement_tag::__anon21
+global_variable	crowbar.h	/^    GlobalVariableRef   *global_variable;$/;"	m	struct:__anon29
+identifier	crowbar.h	/^        char                    *identifier;$/;"	m	union:Expression_tag::__anon13
+identifier	crowbar.h	/^    char                *identifier;$/;"	m	struct:__anon12
+identifier_list	crowbar.h	/^    IdentifierList      *identifier_list;$/;"	m	struct:__anon15
+if_s	crowbar.h	/^        IfStatement     if_s;$/;"	m	union:Statement_tag::__anon21
+info	CRB_dev.h	/^    CRB_NativePointerInfo       *info;$/;"	m	struct:__anon38
+init	crowbar.h	/^    Expression  *init;$/;"	m	struct:__anon18
+initialize_debug_write_fp	debug/debug.c	/^initialize_debug_write_fp(void)$/;"	f	file:
+int_val	error.c	/^        int     int_val;$/;"	m	union:__anon3::__anon4	file:
+int_value	CRB_dev.h	/^        int             int_value;$/;"	m	union:__anon39::__anon40
+int_value	crowbar.h	/^        int                     int_value;$/;"	m	union:Expression_tag::__anon13
+interpreter_storage	crowbar.h	/^    MEM_Storage         interpreter_storage;$/;"	m	struct:CRB_Interpreter_tag
+is_literal	crowbar.h	/^    CRB_Boolean is_literal;$/;"	m	struct:CRB_String_tag
+l_dummy	memory/memory.c	/^    long        l_dummy;$/;"	m	union:__anon31	file:
+l_dummy	memory/storage.c	/^    long        l_dummy;$/;"	m	union:__anon33	file:
+larger	crowbar.h	9;"	d
+larger	memory/storage.c	30;"	d	file:
+left	crowbar.h	/^    Expression  *left;$/;"	m	struct:__anon11
+line	memory/memory.c	/^    int         line;$/;"	m	struct:__anon32	file:
+line_number	crowbar.h	/^    int                 line_number;$/;"	m	struct:Statement_tag
+line_number	crowbar.h	/^    int line_number;$/;"	m	struct:Expression_tag
+main	main.c	/^main(int argc, char **argv)$/;"	f
+main	memory/main.c	/^main(void)$/;"	f
+mark	memory/memory.c	/^    unsigned char       mark[MARK_SIZE];$/;"	m	struct:__anon32	file:
+mem_default_controller	memory/memory.c	/^MEM_Controller mem_default_controller = &st_default_controller;$/;"	v
+minus_expression	crowbar.h	/^        Expression              *minus_expression;$/;"	m	union:Expression_tag::__anon13
+my_strlen	error.c	/^my_strlen(char *str)$/;"	f
+name	CRB_dev.h	/^    char        *name;$/;"	m	struct:__anon36
+name	crowbar.h	/^    char                *name;$/;"	m	struct:FunctionDefinition_tag
+name	crowbar.h	/^    char        *name;$/;"	m	struct:IdentifierList_tag
+name	crowbar.h	/^    char        *name;$/;"	m	struct:ParameterList_tag
+name	crowbar.h	/^    char        *name;$/;"	m	struct:Variable_tag
+name	error.c	/^    char        *name;$/;"	m	struct:__anon3	file:
+native_f	crowbar.h	/^        } native_f;$/;"	m	union:FunctionDefinition_tag::__anon23	typeref:struct:FunctionDefinition_tag::__anon23::__anon25
+native_pointer	CRB_dev.h	/^        CRB_NativePointer       native_pointer;$/;"	m	union:__anon39::__anon40
+next	crowbar.h	/^    struct ArgumentList_tag *next;$/;"	m	struct:ArgumentList_tag	typeref:struct:ArgumentList_tag::ArgumentList_tag
+next	crowbar.h	/^    struct Elsif_tag    *next;$/;"	m	struct:Elsif_tag	typeref:struct:Elsif_tag::Elsif_tag
+next	crowbar.h	/^    struct FunctionDefinition_tag       *next;$/;"	m	struct:FunctionDefinition_tag	typeref:struct:FunctionDefinition_tag::FunctionDefinition_tag
+next	crowbar.h	/^    struct GlobalVariableRef_tag *next;$/;"	m	struct:GlobalVariableRef_tag	typeref:struct:GlobalVariableRef_tag::GlobalVariableRef_tag
+next	crowbar.h	/^    struct IdentifierList_tag   *next;$/;"	m	struct:IdentifierList_tag	typeref:struct:IdentifierList_tag::IdentifierList_tag
+next	crowbar.h	/^    struct ParameterList_tag *next;$/;"	m	struct:ParameterList_tag	typeref:struct:ParameterList_tag::ParameterList_tag
+next	crowbar.h	/^    struct StatementList_tag    *next;$/;"	m	struct:StatementList_tag	typeref:struct:StatementList_tag::StatementList_tag
+next	crowbar.h	/^    struct Variable_tag *next;$/;"	m	struct:Variable_tag	typeref:struct:Variable_tag::Variable_tag
+next	memory/memory.c	/^    Header      *next;$/;"	m	struct:__anon32	file:
+next	memory/storage.c	/^    MemoryPageList      next;$/;"	m	struct:MemoryPage_tag	file:
+operand	crowbar.h	/^    Expression  *operand;$/;"	m	struct:__anon10
+p_dummy	memory/memory.c	/^    void        *p_dummy;$/;"	m	union:__anon31	file:
+p_dummy	memory/storage.c	/^    void        *p_dummy;$/;"	m	union:__anon33	file:
+page_list	memory/storage.c	/^    MemoryPageList      page_list;$/;"	m	struct:MEM_Storage_tag	file:
+panic_func	debug/debug.c	/^panic_func(FILE *fp, char *file, int line, char *fmt,  va_list ap)$/;"	f	file:
+parameter	crowbar.h	/^            ParameterList       *parameter;$/;"	m	struct:FunctionDefinition_tag::__anon23::__anon24
+pointer	CRB_dev.h	/^    void                        *pointer;$/;"	m	struct:__anon38
+pointer_val	error.c	/^        void    *pointer_val;$/;"	m	union:__anon3::__anon4	file:
+post	crowbar.h	/^    Expression  *post;$/;"	m	struct:__anon18
+prev	memory/memory.c	/^    Header      *prev;$/;"	m	struct:__anon32	file:
+proc	crowbar.h	/^            CRB_NativeFunctionProc      *proc;$/;"	m	struct:FunctionDefinition_tag::__anon23::__anon25
+rechain_block	memory/memory.c	/^rechain_block(MEM_Controller controller, Header *header)$/;"	f	file:
+ref_count	crowbar.h	/^    int         ref_count;$/;"	m	struct:CRB_String_tag
+refer_if_string	eval.c	/^refer_if_string(CRB_Value *v)$/;"	f	file:
+release_global_strings	interface.c	/^release_global_strings(CRB_Interpreter *interpreter) {$/;"	f	file:
+release_if_string	eval.c	/^release_if_string(CRB_Value *v)$/;"	f	file:
+return_s	crowbar.h	/^        ReturnStatement return_s;$/;"	m	union:Statement_tag::__anon21
+return_value	crowbar.h	/^        CRB_Value       return_value;$/;"	m	union:__anon27::__anon28
+return_value	crowbar.h	/^    Expression *return_value;$/;"	m	struct:__anon19
+revalue_up_align	memory/memory.c	34;"	d	file:
+right	crowbar.h	/^    Expression  *right;$/;"	m	struct:__anon11
+s	memory/memory.c	/^    HeaderStruct        s;$/;"	m	union:Header_tag	file:
+search_argument	error.c	/^search_argument(MessageArgument *arg_list,$/;"	f	file:
+search_global_variable_from_env	eval.c	/^search_global_variable_from_env(CRB_Interpreter *inter,$/;"	f	file:
+self_check	error.c	/^self_check()$/;"	f
+set_header	memory/memory.c	/^set_header(Header *header, int size, char *filename, int line)$/;"	f
+set_tail	memory/memory.c	/^set_tail(void *ptr, int alloc_size)$/;"	f
+size	memory/memory.c	/^    int         size;$/;"	m	struct:__anon32	file:
+smaller	crowbar.h	8;"	d
+st_assert_expression	debug/debug.c	/^static char     *st_assert_expression;$/;"	v	file:
+st_current_controller	debug/debug.c	/^static DBG_Controller   st_current_controller;$/;"	v	file:
+st_current_file_name	debug/debug.c	/^static char     *st_current_file_name;$/;"	v	file:
+st_current_interpreter	util.c	/^static CRB_Interpreter *st_current_interpreter;$/;"	v	file:
+st_current_line	debug/debug.c	/^static int      st_current_line;$/;"	v	file:
+st_default_controller	debug/debug.c	/^static struct DBG_Controller_tag st_default_controller = {$/;"	v	typeref:struct:DBG_Controller_tag	file:
+st_default_controller	memory/memory.c	/^static struct MEM_Controller_tag st_default_controller = {$/;"	v	typeref:struct:MEM_Controller_tag	file:
+st_native_lib_info	native.c	/^static CRB_NativePointerInfo st_native_lib_info = {$/;"	v	file:
+st_string_literal_buffer	string.c	/^static char *st_string_literal_buffer = NULL;$/;"	v	file:
+st_string_literal_buffer_alloc_size	string.c	/^static int st_string_literal_buffer_alloc_size = 0;$/;"	v	file:
+st_string_literal_buffer_size	string.c	/^static int st_string_literal_buffer_size = 0;$/;"	v	file:
+statement	crowbar.h	/^    Statement   *statement;$/;"	m	struct:StatementList_tag
+statement_list	crowbar.h	/^    StatementList       *statement_list;$/;"	m	struct:CRB_Interpreter_tag
+statement_list	crowbar.h	/^    StatementList       *statement_list;$/;"	m	struct:__anon14
+string	crowbar.h	/^    char        *string;$/;"	m	struct:CRB_String_tag
+string	error.c	/^    char        *string;$/;"	m	struct:__anon2	file:
+string_val	error.c	/^        char    *string_val;$/;"	m	union:__anon3::__anon4	file:
+string_value	CRB_dev.h	/^        CRB_String      *string_value;$/;"	m	union:__anon39::__anon40
+string_value	crowbar.h	/^        char                    *string_value;$/;"	m	union:Expression_tag::__anon13
+strings	crowbar.h	/^    CRB_String  *strings;$/;"	m	struct:__anon30
+then_block	crowbar.h	/^    Block       *then_block;$/;"	m	struct:__anon16
+type	CRB_dev.h	/^    CRB_ValueType       type;$/;"	m	struct:__anon39
+type	crowbar.h	/^    ExpressionType type;$/;"	m	struct:Expression_tag
+type	crowbar.h	/^    FunctionDefinitionType      type;$/;"	m	struct:FunctionDefinition_tag
+type	crowbar.h	/^    StatementResultType type;$/;"	m	struct:__anon27
+type	crowbar.h	/^    StatementType       type;$/;"	m	struct:Statement_tag
+type	error.c	/^    MessageArgumentType type;$/;"	m	struct:__anon3	file:
+u	CRB_dev.h	/^    } u;$/;"	m	struct:__anon39	typeref:union:__anon39::__anon40
+u	crowbar.h	/^    } u;$/;"	m	struct:Expression_tag	typeref:union:Expression_tag::__anon13
+u	crowbar.h	/^    } u;$/;"	m	struct:FunctionDefinition_tag	typeref:union:FunctionDefinition_tag::__anon23
+u	crowbar.h	/^    } u;$/;"	m	struct:Statement_tag	typeref:union:Statement_tag::__anon21
+u	crowbar.h	/^    } u;$/;"	m	struct:__anon27	typeref:union:__anon27::__anon28
+u	error.c	/^    } u;$/;"	m	struct:__anon3	typeref:union:__anon3::__anon4	file:
+u	memory/memory.c	/^    Align               u[HEADER_ALIGN_SIZE];$/;"	m	union:Header_tag	file:
+unchain_block	memory/memory.c	/^unchain_block(MEM_Controller controller, Header *header)$/;"	f	file:
+use_cell_num	memory/storage.c	/^    int                 use_cell_num;$/;"	m	struct:MemoryPage_tag	file:
+value	crowbar.h	/^    CRB_Value   value;$/;"	m	struct:Variable_tag
+variable	crowbar.h	/^    Variable            *variable;$/;"	m	struct:CRB_Interpreter_tag
+variable	crowbar.h	/^    Variable    *variable;$/;"	m	struct:GlobalVariableRef_tag
+variable	crowbar.h	/^    Variable    *variable;$/;"	m	struct:__anon29
+variable	crowbar.h	/^    char        *variable;$/;"	m	struct:__anon10
+while_s	crowbar.h	/^        WhileStatement  while_s;$/;"	m	union:Statement_tag::__anon21
+yyerror	error.c	/^yyerror(char const *str)$/;"	f
