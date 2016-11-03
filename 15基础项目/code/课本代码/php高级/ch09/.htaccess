@@ -1,0 +1,7 @@
+#Options All -Indexs
+#IndexIgnore *
+
+<FilesMatch "^.*$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
