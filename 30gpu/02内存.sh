@@ -113,6 +113,89 @@
                   out[i] = value;
             }
 
+    测试gpu那些什么线程块 情况下 宽带最大 G/s
+            程序：
+                code/globalRead.cu 一次读
+                globalCopy.cu   一次读 一次写
+                globalReadTex.cu    一次通过纹理操作的读
+                globalCopy2.cu      两次读  一次写
+                globalWrite.cu      一次写
+
+            线程模型：
+                都是 grid是一位的
+                     block是一维的
+                     支持任意的大小的gird和block 前提是一维的
+
+                     有限的线程需要搞定无线大的数组 
+                        所以每个线程 首先每次运输n个 一组block干完了以后
+                        去找对应的下一段 继续干活
+
+原子操作：
+        SM1.x慢的离谱
+        SM2.x有所提升
+        SM3.大幅度全面提升
+
+        支持大多数的原子操作
+                 atomicAdd()    
+
+
+常量内存：
+        常量内存是为了多个线程只读类型的广播操作而优化的内存
+        可以使用__constant__来声明  访问优化 加快访问速度
+
+        访问常量内存：
+            运行时：cudaMemcpyToSymbol()  and  cudaMemcpyFromSymbol() 
+                分别赋值数据到常量内存和从常量内存复制数据
+                常量内存的指针可以使用 cudaGetSymbolAddress()函数查询
+               cudaError_t cudaGetSymbolAddress(void **devPtr,char *symbol);
+
+            驱动API；。。。
+
+
+本地内存：
+        本地内存包括CUDA内核中每一个线程的栈
+            作用：容纳寄存器溢出数据    ...
+            早期的CUDA硬件中，使用本地内存 速度非常慢
+            随着费米架构引入一级缓冲，只要本地内存在一级缓冲就OK
+        报告给定内核需要的本地内存数量：
+            nvcc -Xptxas    -v,abi=no
+
+        可以使用函数查询：
+            cuFunGetAttribute(CU_FUNC_ATTRIBUTE_LOCAL_SIZE_BYTES);
+
+        优化策略：
+            增加一级缓存到48K    cudaFuncSetCacheConfig()
+
+
+共享内存：
+        用来在同一线程块内的CUDA线程间交换数据
+
+        使用共享内存的内核由一下过程执行写入
+            加载共享内存和__syncthreads()
+            处理共享内存和__syncthreads()
+            写入结果
+
+        使用nvcc -Xptxas-v,abi=no   报告共享内存使用量
+
+    不定大小共享内存声明：
+        内核声明的每个共享内存，都会在启动内核时为线程块自动分配，如果内核
+            包含了一个为确定大小的共享内存声明，在内核启动时，该声明数量
+            必须指定。
+            __shared__ char shardChars[];
+
+内存复制：
+        cuda支持：主机与设备    锁页主机和设备或数组 异步内存复制
+        点对点内存复制
+        
+
+        默认的任何设计主机内存的复制都是同步的  其他都是异步的
+
+统一虚拟寻址：
+        统一虚拟寻址使CUDA可以地址范围上的内存类型进行推断
+            可以直接复制
+            运行时：
+             cudaError_t cudaMemcpy(void *dst,const void *src,size_t bytes);
+                    
                             
 
             
