@@ -13,6 +13,11 @@ alias titanx='ssh -l titanx 192.168.0.125'
 alias pycharm='~/Soft/pycharm-2016.2.1/bin/pycharm.sh'
 #启动clion
 alias clion='~/Soft/clion-2016.2.1/bin/clion.sh'
+alias xfce='sudo startxfce4 -- :1 vt6'
+
+alias titanxd='sudo Xorg -terminate -query 192.168.0.125 :4 -novtswitch'
+alias longriyao='rdesktop -f  192.168.0.115'
+
 
 #传输文件
 function trans {
