@@ -78,6 +78,24 @@ UVA从地址推断设备：
                 Error:
                     return status;
             }
+
+单线程多GPU方案：
+    一个单线程应用可以驱动多个GPU。CPU线程通过调用cudaSetDevice()来指定欲
+        控制的GPU
+
+    当前上下文栈：
+        驱动程序API的引用程序可以使用单前上下文栈管理当前上下文 
+        cuCtxPushCurrent()函数使得一个新的上下文成为当前上下文，并把他压入到
+            栈顶；cuCtxPopCurrent()弹出当前上下文，并恢复前一个上下文
+
+
+N体问题：
+    
+
+多线程多GPU方案：
+        CUDA4.0以前 每个GPU都必须由单独的CPU线程控制
+        实现一个多线程多GPU的N体问题
+
              
         
             
