@@ -4,6 +4,10 @@ alias titanx='ssh -l titanx 10.147.17.246'
 alias com='ssh -l longriyao 10.147.17.159'
 alias comcon='sudo Xorg -terminate -query 10.147.17.159 :5'
 
+#加载 ros命令 path
+source /opt/ros/kinetic/setup.zsh
+export ROS_PACKAGE_PATH=~/test/ros:${ROS_PACKAGE_PATH}
+
 
 #传输文件
 function trans {
