@@ -66,6 +66,30 @@
 图像可视化：
         我们可以创建一个节点，在节点中展示来自摄像头的图像
 
+    Visualizing a single image:
+        command:
+            rosrun image_view image_view image:=/camera
+                image_view node which shows the images in the given topic 
+                    (the image argument) in a window
+                rqt_image_view , which supports viewing multiple images 
+                    in a single window but does not allow the saving of 
+                    images by pressing the right-hand side button.
+
+3D visualization:
+    devices:
+        stereo cameras, 3D lasers, the Kinect sensor
+            provide 3D data—usually in the form of point clouds
+
+    rviz or rqt_rviz    command
+        With roscore running, start rqt_rviz with
+            rosrun rqt_rviz rqt_rviz
+
+
+
+
+Saving and playing back data:
+        
+
 
             
 
