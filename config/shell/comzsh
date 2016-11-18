@@ -3,6 +3,7 @@
 export PATH="/home/longriyao/Soft/anaconda2/bin:$PATH"
 export PYTHONPATH=/home/longriyao/Soft/caffe/python:/home/longriyao/Soft/py-faster-rcnn/lib:$PYTHONPATH
 
+source /opt/ros/indigo/setup.zsh
 
 
 #别名
