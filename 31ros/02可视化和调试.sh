@@ -88,6 +88,36 @@
 
 
 Saving and playing back data:
+        ROS can save all the messages published on any topic    bag files
+
+        Recording data in a bag file with rosbag:
+            first run some node
+                rosrun chapter3_tutorials example4
+            two options:
+                record all the topics:
+                    rosbag record -a
+                record only specific topics:
+                    rosbag record /temp /accel
+        By default, when we run the above command, the rosbag program 
+            subscribes to the node and starts recording the message in a 
+            bag file in the current directory with the data as the name.
+
+    call to rosbag record into a launch file:
+            <node pkg="rosbag" type="record" name="bag_record"
+                    args="/temp /accel"/>
+
+    Playing back a bag file:
+        First:  roscore running
+        Second: move to the folder with the bag file we want to play
+        Third:  rosbag play 2014-07-01-22-54-34.bag(bag file name)
+
+
+        rosbag info <bag_file> 
+        rqt_bag                 可以查看属性 等
+
+Using the rqt_gui and rqt plugins:
+        rosrun rqt_gui rqt_gui
+        调出来所有的插件 供你选择
         
 
 
