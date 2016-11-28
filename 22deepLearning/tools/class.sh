@@ -1,0 +1,1 @@
+~/caffe/build/examples/cpp_classification/classification.bin prototxt/deploy.prototxt models/vgg/smoke_xavier_iter_20000.caffemodel cache/mean.binaryproto prototxt/labels.txt /media/titanx/893001D115D18901/home/smoke_test/smoke_test/$1.jpg 
