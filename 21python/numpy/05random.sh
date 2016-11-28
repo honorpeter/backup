@@ -42,6 +42,15 @@ Random sampling (numpy.random):
             Generates a random sample from a given 1-D array ..
         bytes(length)	Return random bytes.
     
+random.sample(list, n):
+        可以方便的生成不重复的随机数
+            参数list: 随机数的范围，即从该list中随机取出不重复的元素
+            参数n: 随机数个数
+            输出类型为list
+            import random
+            # 从a~d中取出不重复的三个字母
+            print random.sample(['a', 'b', 'c', 'd'], 3)
+            # ['d', 'b', 'c']
 Distributions :各种分布函数 高斯分布 正太分布...
 
 Random generator:
