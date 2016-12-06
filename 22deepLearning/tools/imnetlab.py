@@ -1,3 +1,5 @@
+# coding: utf-8
+
 #__author__ = 'bing'
 import os
 import random
@@ -7,36 +9,60 @@ import re
 #
 
 def writetxt(path):
-    cls = 0
-    #test_val.append(0)
-    txt_val = open(path[:-5] + 'ful_val.txt','w')
-    txt_train = open(path[:-5] + 'ful_train.txt','w')
+    cls = 0     #class标签 分类标签
+
+    dir_name = os.path.dirname(path)
+    txt_val = open(dir_name + 'val.txt','w')
+    txt_train = open(dir_name + 'train.txt','w')
+
     for file in os.listdir(path):
-        path_t = path + file+'/'
-        n = 1
-        if cls%100==0:
-            print cls
-        if 300 < len(os.listdir(path_t)):
-            for filename in os.listdir(path_t):
-                if  n % 50 ==0:
-                    txt_val.write(filename +' '+ str(cls)+'\n')
-                else:txt_train.write(filename +' '+  str(cls)+'\n')
-                n = n + 1
-            cls = cls + 1
-        elif 25 < len(os.listdir(path_t)):
-            for filename in os.listdir(path_t):
-                if n % 5 ==0:
-                    txt_val.write(filename +' '+ str(cls)+ '\n')
-                else:txt_train.write(filename +' '+  str(cls)+'\n')
-                n = n + 1
-            cls = cls + 1
+
+        path_t = path +'/' + file+'/'
+        files = os.listdir(path_t)
+
+        if len(files) == 1:
+            filename = file + '/' + files[0]
+            txt_val.write(filename +" " + str(cls) +'\n')
+            txt_train.write(filename  +" " + str(cls) +'\n')
+        elif len(files) == 2:
+            filename = file + '/' + files[0]
+            txt_val.write(filename +" " + str(cls) +'\n')
+            filename = file + '/' + files[1]
+            txt_train.write(filename +" " + str(cls) +'\n')
+        elif len(files) == 3:
+            filename = file + '/' + files[0]
+            txt_val.write(filename +" " + str(cls) +'\n')
+            filename = file + '/' + files[1]
+            txt_train.write(filename +" " + str(cls) +'\n')
+            filename = file + '/' + files[2]
+            txt_train.write(filename +" " + str(cls) +'\n')
+        elif len(files) == 4:
+            filename = file + '/' + files[0]
+            txt_val.write(filename +" " + str(cls) +'\n')
+            filename = file + '/' + files[1]
+            txt_train.write(filename +" " + str(cls) +'\n')
+            filename = file + '/' + files[2]
+            txt_train.write(filename +" " + str(cls) +'\n')
+            filename = file + '/' + files[3]
+            txt_train.write(filename +" " + str(cls) +'\n')
+        elif len(files) >= 5:
+
+            for filename_line in files:
+                if random.randint(1,10) == 1:
+                    filename =  file + '/' + filename_line
+                    txt_val.write(filename +" " + str(cls) +'\n')
+                else:
+                    filename =  file + '/' + filename_line
+                    txt_train.write(filename +" " + str(cls) +'\n')
+        cls = cls + 1
+
     txt_train.close()
     txt_val.close()
 
 
 
 if __name__ == '__main__':
-    path = 'H:/imagenet/full/'
+    path = 'lfw'
     print os.path.split(path),len(os.listdir(path))
     start_time = time.time()
     writetxt(path)
