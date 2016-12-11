@@ -1,5 +1,7 @@
 sudo apt-get install libatlas-base-dev     
 
+16.04 complier: cmake ... -DCUDA_NVCC_FLAGS="-D_FORCE_INLINES" ..
+
 
 
 

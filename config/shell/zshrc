@@ -3,6 +3,7 @@ export PATH="$HOME/.linuxbrew/bin:$HOME/Soft/understand/scitools/bin/linux64:$PA
 export PATH=/usr/local/cuda-7.5/bin:$PATH 
 export LD_LIBRARY_PATH=/usr/local/cuda-7.5/lib64:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/home/xiaolong/Soft/cudnn-7.0/cuda/lib64:$LD_LIBRARY_PATH
+export PYTHONPATH=~/Soft/caffe-master/python:/home/xiaolong/Soft/caffe_colorizer/lib:$PYTHONPATH
 
 # 加载 .comzsh文件 如果存在的话
 if [ -f "$HOME/.comzsh" ]; then
