@@ -106,7 +106,7 @@ python基本数据类型:
                                 element in a list:
                            ['to', 'be', 'or', 'not', 'to', 'be'].count('to')
                             2
-                        extend:
+                        extend: 添加列表
                             append several values at once  it modified a
                             a = [1, 2, 3]
                             b = [4, 5, 6]
