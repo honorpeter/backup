@@ -53,6 +53,8 @@ random:   module
             random.sample:
                 random.sample(sequence, k)，从指定序列中随机获取指定长
                 度的片断。sample函数不会修改原有序列
+            random.shuffle(list)
+                随机打乱list
             
         
 
