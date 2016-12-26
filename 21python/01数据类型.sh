@@ -152,6 +152,11 @@ python基本数据类型:
                         [i for i, j in enumerate(['foo', 'bar', 'baz']) 
                                         if j == 'foo']
                         
+                列表转为字符串：
+                        list = ['1','2','3']
+                        str1 = ''.join(list)
+                        list1 = [1, 2, 3]
+                        str1 = ''.join(str(e) for e in list1)
 
                 二维列表:
                         声明方式:
