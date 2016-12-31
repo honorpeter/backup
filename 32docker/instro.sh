@@ -32,6 +32,8 @@ Attaching to a container:   可以交互式进入一个容器
 Stopping a daemonized container:
         sudo docker stop daemon_dave
         sudo docker stop c2c4e57c12c4
+open new tty:
+        sudo docker exec -it torch bash
 
 Creating daemonized containers:
         sudo docker run --name daemon_dave -d ubuntu /bin/sh -c "while ↩

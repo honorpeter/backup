@@ -38,6 +38,8 @@ Numpy库:    数组
                 arange函数  与python的range函数很相似
                     参数为 开始值 终止值 步长 类型有dtype决定
                     range()函数python built-in function 返回integer
+                    range会直接产生一个list
+                    xrange不会直接产生一个list 而是一个迭代器
 
                     linspace函数 创建等差序列数组:
                         起始值 终止值 元素数量

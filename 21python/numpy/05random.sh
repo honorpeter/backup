@@ -41,6 +41,10 @@ Random sampling (numpy.random):
         choice(a[, size, replace, p])	
             Generates a random sample from a given 1-D array ..
         bytes(length)	Return random bytes.
+
+产生均匀分布：
+        numpy.random.uniform(low=0.0, high=1.0, size=None
+                s = np.random.uniform(-1,0,1000)
     
 random.sample(list, n):
         可以方便的生成不重复的随机数
