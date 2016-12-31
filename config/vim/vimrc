@@ -102,7 +102,8 @@ set guioptions-=T                       "关闭上侧工具栏
 "字体编码相关
 "set guifont=新宋体:h18:cGB2312           "gvim字体设置    
 "set guifont=新宋体\ cGB2312\ 13           "gvim字体设置    
-set guifont=DejaVu\ Sans\ mono\ 15
+"set guifont=DejaVu\ Sans\ mono\ 15
+set guifont=DejaVu\ Sans\ mono\:h16
 "set guifont=Umpush:h20:Umpush          "gvim字体设置    
 "set langmenu=zh_CN
 "let $LANG = 'zh_CN.UTF-8'
