@@ -1,4 +1,5 @@
 tee 重定向输出到多个文件
+
 常见用例：
  
         tee file     //覆盖
@@ -81,6 +82,8 @@ linux下显示dd命令的进度:
                 mkfs -t 可以指定类型
                 也可以使用mkfs.类型 创建
 
+修改默认shell：
+	chsh -s /usr/bin/zsh
 
 
 
