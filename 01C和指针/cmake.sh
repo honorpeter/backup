@@ -1,3 +1,10 @@
+注意:
+        Make sure that your call to link_directories takes place before 
+                your call to the relevant add_executable
+
+        find_library(PROTOBUF_LIBRARY protobuf HINTS /usr/lib/x86_64-linux
+                -gnu)
+        target_link_libraries(test PUBLIC ${PROTOBUF_LIBRARY})
 概述：
         规则写在：
             CMakeLists.txt 文件  中:
