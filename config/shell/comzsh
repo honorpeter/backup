@@ -4,34 +4,32 @@
 
 #别名
 #连接 服务器
-alias titanx='ssh -l titanx 192.168.0.125'
-
-#启动pycharm
-alias pycharm='~/Soft/pycharm-2016.2.1/bin/pycharm.sh'
+alias titanx='ssh -l jixiaolong 172.16.1.99'
+#启动pycharmalias pycharm='~/Soft/pycharm-2016.2.1/bin/pycharm.sh'
 #启动clion
-alias clion='~/Soft/clion-2016.2.1/bin/clion.sh'
 alias xfce='sudo startxfce4 -- :1 vt6'
 
-alias titanxd='sudo Xorg -terminate -query 192.168.0.125 :4 -novtswitch'
+alias titanxd='sudo Xorg -terminate -query 172.16.1.99 :4 -novtswitch'
 alias longriyao='rdesktop -f  192.168.0.115'
+alias share='sudo mount -t cifs //172.16.1.99/share /home/longriyao/share -o username=jixiaolong,password=long'
 
 
 #传输文件
 function trans {
     if [ $1 = -r ]
     then
-        scp -r $2  titanx@192.168.0.125:$3  
+        scp -r $2  titanx@172.16.1.99:$3  
     else
-        scp $1  titanx@192.168.0.125:$2  
+        scp $1  titanx@172.16.1.99:$2  
     fi
 }
 #接受文件
 function download {
     if [ $1 = -r ]
     then
-        scp -r titanx@192.168.0.125:$2 $3
+        scp -r titanx@172.16.1.99:$2 $3
     else
-        scp titanx@192.168.0.125:$1 $2
+        scp titanx@172.16.1.99:$1 $2
     fi
 }
 

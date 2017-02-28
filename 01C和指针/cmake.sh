@@ -5,6 +5,8 @@
         find_library(PROTOBUF_LIBRARY protobuf HINTS /usr/lib/x86_64-linux
                 -gnu)
         target_link_libraries(test PUBLIC ${PROTOBUF_LIBRARY})
+设置编译类型：
+        cmake -DCMAKE_BUILD_TYPE=Release ..  
 概述：
         规则写在：
             CMakeLists.txt 文件  中:
