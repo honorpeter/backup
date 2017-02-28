@@ -1,3 +1,6 @@
+windows 编译成vs工程：
+    commond：
+        cmake .. -G Visual Studio 12 2013 Win64
 注意:
         Make sure that your call to link_directories takes place before 
                 your call to the relevant add_executable
