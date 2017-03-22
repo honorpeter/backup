@@ -91,6 +91,11 @@ C++类型转换分为：隐式类型转换和显式类型转换:
             //如果跟我一样是64位的系统，可能需要将unsigned int改成 
                 unsigned long才能运行。
             train_label.read(reinterpret_cast<char *>(&magic),4);
+
+字符串转为数字float：
+        float hh = atof(str.c_string)
+                    atoi
+        
             
         
 

@@ -75,7 +75,8 @@ fstream:
 去读全部文件：
     std::ifstream infile(argv[2]);
     
-    while(infile >> filename ){ // >>每次读取一行
+    while(infile >> filename ){ // >>每次读取一个字
+        std::get_line(in,buffer)每次读取一行
         std::cout << filename;
     }
         
@@ -165,6 +166,8 @@ ifstream 类继承了 istream
 ofstream ...      ostream 
 fstream ...       iostream
                     
+
+
 
 
 

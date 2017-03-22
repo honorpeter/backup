@@ -19,6 +19,7 @@
         mogrify -resize 320x *png     # don't keep image aspect ratio
 
     图像转为灰度图：
+        Gray  rgb
         convert -colorspace Gray zp.jpg zpgray.jpg
             for file in *.jpg; convert -colorspace Gray $file $file; end;
 
