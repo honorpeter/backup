@@ -60,7 +60,8 @@ def writeFile(train,test):
     fTest.close()
 
 print "读取文件 %s" % sys.argv[1]
-text = readFile(sys.argv[1]) 
+text = readFile(sys.argv[1])
+random.shuffle(text)
 
 train,test = splitData(text, 10 , 3)
 writeFile(train,test)
