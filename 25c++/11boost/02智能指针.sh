@@ -13,6 +13,8 @@ public:
     void do_something() { std::cout << "did something\n"; }
 };
 
+//`
+
 void test()
 {
     boost::shared_ptr<implementation> sp1(new implementation());

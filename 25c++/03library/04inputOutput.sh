@@ -79,6 +79,16 @@ fstream:
         std::get_line(in,buffer)每次读取一行
         std::cout << filename;
     }
+
+一行一行读取：
+    ifstream read_file;  
+    read_file.open("aaa.txt", ios::binary);  
+  
+    string line;  
+    while(getline(read_file, line))  
+    {  
+        cout<<"line:"<<line.c_str()<<endl;  
+    }
         
 状态标志符的验证(Verification of state flags):
         除了eof()以外:
