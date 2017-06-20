@@ -18,19 +18,25 @@ alias share='sudo mount -t cifs //172.16.1.99/share /home/longriyao/share -o use
 function trans {
     if [ $1 = -r ]
     then
-        scp -r $2  titanx@172.16.1.99:$3  
+        scp -r $2  xlji@192.168.1.191:$3  
     else
-        scp $1  titanx@172.16.1.99:$2  
+        scp $1  xlji@192.168.1.191:$2  
     fi
 }
 #接受文件
 function download {
     if [ $1 = -r ]
     then
-        scp -r titanx@172.16.1.99:$2 $3
+        scp -r xlji@192.168.1.191:$2 $3
     else
-        scp titanx@172.16.1.99:$1 $2
+        scp xlji@192.168.1.191:$1 $2
     fi
 }
 
+# 公司git push 命令
+alias push_nnpack='git push ssd-nnpack ssd-nnpack'
+
+#export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/old_nnpack/NNPACK
+export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/NNPACK
+export PATH="/home/longriyao/Soft/anaconda2/bin:$PATH"
 

@@ -171,6 +171,9 @@ git log:
                 便会报错  git status 可以查看
             手动修改 有冲突的文件
                 git会标出 文件中那个位置有冲突
+
+修改最近一次commit message：
+        git commit --amend   修改内容便可 #前面加一个空格符 便不是注释了
             
 
 

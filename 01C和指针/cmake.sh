@@ -426,7 +426,25 @@ windows 编译成vs工程：
                     INCLUDE_DIRECTORIES(${myHeader})
                     ENDIF(myHeader)
                     FIND_PATH 用来在指定路径中搜索文件名
+设置编译选项：
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -std=c++11")
+定义变量：
+        add_definitions(-DCAFFE_VERSION=${CAFFE_TARGET_VERSION})
 
+判断系统类型：
+        if(UNIX OR APPLE)
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -std=c++11")
+        endif( )
+列出文件所有文件：
+    .cpp文件:
+        file(GLOB_RECURSE srcs ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+
+指定：编译工具 make  ninja  -G选项来指定
+     cmake .. -DCPU_ONLY=1 -DBUILD_python=0 -DBUILD_docs=0 -DBUILD_SHARED_LIBS=0 -DBLAS="open"  -G Ninja
+
+注意：
+    当修改环境变量了  影响cmake编译的时候  
+    编译cmake .. 的时候 需要重新删除cmake缓存的文件 不然会有很大的影响
 
 
 

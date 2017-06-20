@@ -16,6 +16,12 @@ apt-file search filename -----查找filename属于哪个软件包
 apt-file list packagename -----列出软件包的内容
 
 
+sudo apt-get update
+
+    mismatch Hash :
+            sudo rm -vf /var/lib/apt/lists/*
+            sudo apt-get update
+
 
 
 

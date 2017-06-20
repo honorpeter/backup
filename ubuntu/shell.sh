@@ -84,6 +84,8 @@ linux下显示dd命令的进度:
 
 修改默认shell：
 	chsh -s /usr/bin/zsh
+参看进程树：
+    pstree -p | grep http
 
 
 
