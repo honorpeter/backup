@@ -3,6 +3,9 @@
     先下载包
         如jieba  
         然后 python setup.py install    (setup.py jieba里面自带的)
+使用pip安装：
+    安装opencv：
+        pip install opencv-python==2.4.9
 导入包:
         import jieba sa jb
                 每次应用的时候 需要加上前缀: jb or jieba

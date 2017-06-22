@@ -1,6 +1,7 @@
 install : 
         sudo apt-get install python-opencv
-        pip install python-opencv
+        pip install opencv-python
+        pip install opencv-python==2.4.9
 import cv2:
     打开图像：
         img = cv2.imread('messi5.jpg',0)

@@ -79,6 +79,7 @@ alias up='cd ..'
 alias x='chmod u+x'
 alias lm='ls -F | more'
 alias yule='sudo mount /dev/sda6 /media/xiaolong/娱乐'
+alias aliyun='ssh root@106.15.226.47'
 #git 命令
 alias push='git push origin master'
 alias pushsina='git push sae master:1'
@@ -115,6 +116,7 @@ alias sound='alsamixer'
 alias pic='rm ~/Desktop/pic/*'
 alias zshrc='vi ~/.zshrc'
 alias vimrc='vi ~/Documents/config/vim/vimrc'
+alias gpu='sudo nvidia-smi -l'
 
 
 
