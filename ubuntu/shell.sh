@@ -87,6 +87,15 @@ linux下显示dd命令的进度:
 参看进程树：
     pstree -p | grep http
 
+统计某文件夹下文件的个数
+ls -l |grep "^-"|wc -l
+
+统计某文件夹下目录的个数
+ls -l |grep "^ｄ"|wc -l
+
+统计文件夹下文件的个数，包括子文件夹里的
+ls -lR|grep "^-"|wc -l
+
 
 
 

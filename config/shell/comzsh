@@ -9,7 +9,7 @@ alias titanx='ssh -l jixiaolong 172.16.1.99'
 #启动clion
 alias xfce='sudo startxfce4 -- :1 vt6'
 
-alias titanxd='sudo Xorg -terminate -query 172.16.1.99 :4 -novtswitch'
+alias xljid='sudo Xorg -terminate -query 192.168.1.191 :4 -novtswitch'
 alias longriyao='rdesktop -f -u "whc" -p "123456" 172.16.1.98'
 alias share='sudo mount -t cifs //172.16.1.99/share /home/longriyao/share -o username=jixiaolong,password=long'
 
