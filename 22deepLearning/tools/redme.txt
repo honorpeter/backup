@@ -1,0 +1,15 @@
+使用：  
+        h_w_statistics.py统计h w这样可以选择一个合适的h w resize
+                会求出平均值
+
+        使用get_label_file.py获取不同目录下面的label和对应的路径
+
+        获取label之后使用get_label_count.py查看每个类别数量，抽样 尽量使其
+            平衡
+
+        获取label之后 使用select_label.py 来抽样 使其平横
+
+
+        split.py 分为 test.txt train.txt
+
+        get_class_img.py获取每个类别的图片 看一下图片质量

@@ -43,6 +43,13 @@ build目标：
         一个WORKSPACE中可以包含很多的包
 
 
+关于画图工具：    Graphviz  http://www.graphviz.org/
+        
+        dot -Tpng test.dot -o test.png
+        dot -Tsvg test.dot -o test.svg
+        dot test.dot -Tpdf -o test.pdf
+
+
 
 
 
