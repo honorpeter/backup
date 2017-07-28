@@ -49,7 +49,10 @@ build目标：
         dot -Tsvg test.dot -o test.svg
         dot test.dot -Tpdf -o test.pdf
 
-
+bazel run：
+    默认是 在bin中目录作为自己的当前目录进行执行：
+    bazel run --run_under="cd $PWD && " //my:target -- ARGS
+    可以尝试 使用 run_under试试
 
 
 

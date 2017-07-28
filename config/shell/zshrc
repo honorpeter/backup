@@ -93,6 +93,7 @@ alias mendeley='/home/xiaolong/Soft/mendeley/bin/mendeleydesktop'
 #地址别名
 alias soft='cd ~/Soft'
 alias down='cd ~/Downloads'
+alias work='cd ~/work'
 alias test='cd ~/test/'
 alias shell='cd ~/test/shell/'
 alias linux='cd ~/test/linux'

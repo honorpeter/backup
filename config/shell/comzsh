@@ -35,11 +35,11 @@ function download {
 
 # 公司git push 命令
 alias push_nnpack='git push ssd-nnpack ssd-nnpack'
-alias xlji='ssh xlji@192.168.1.191'
+alias xlji='ssh -Y xlji@192.168.1.191'
 alias xld='ssh extremevision@192.168.1.155'
 
 
 #export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/old_nnpack/NNPACK
 export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/NNPACK
-export PATH="/home/longriyao/Soft/anaconda2/bin:$PATH"
+export PATH="/home/longriyao/Soft/anaconda2/bin:/usr/local/MATLAB/R2015b/bin:$PATH"
 
