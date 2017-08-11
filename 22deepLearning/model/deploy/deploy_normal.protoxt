@@ -5,6 +5,21 @@ layer {
   top: "data"
   input_param { shape: { dim: 10 dim: 3 dim: 227 dim: 227 } }
 }
+
+layer {
+    bottom: "data"
+    top: "data"
+    name: "scale"
+    type: "Scale"
+    scale_param {
+        bias_term: false
+        filler {
+                type: "constant"
+                value:  0.0078125
+        }
+    }
+}
+
 layer {
   name: "conv1"
   type: "Convolution"

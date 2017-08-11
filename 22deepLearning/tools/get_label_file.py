@@ -9,6 +9,7 @@ from fileTool import *
 root = "."
 save_result = "label.txt"
 dir_label = dict()
+#dir_label = {'a':0,'b':1}
 label_begin = 0
 if __name__ == "__main__":
     result = open(save_result,"w")

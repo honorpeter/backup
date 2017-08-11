@@ -86,6 +86,9 @@ du ： 查看分区内文件的大小：
                 mkfs.vfat /dev/sdb1  
                 mkfs -t 可以指定类型
                 也可以使用mkfs.类型 创建
+            支持exfat：
+                sudo apt-get install exfat-utils
+                mkfs.exfat /dev/sdb1
 
 修改默认shell：
 	chsh -s /usr/bin/zsh
