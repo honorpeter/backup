@@ -104,6 +104,9 @@ ls -l |grep "^ｄ"|wc -l
 统计文件夹下文件的个数，包括子文件夹里的
 ls -lR|grep "^-"|wc -l
 
+sudo 直接输入密码：
+    echo long | sudo -S kill -9 13516 
+
 
 
 
