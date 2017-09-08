@@ -1,8 +1,11 @@
 opencv:
-    find_package( OpenCV REQUIRED )
+    'find_package( OpenCV REQUIRED )
 
 `   target_link_libraries(application ${OpenCV_LIBS})
     编译器会自动 在/usr/inclde文件夹中寻找 头文件
+
+make使用 -l呢
+    -lboost_system
 
 boost:  
     find_package(Boost 1.36.0)
