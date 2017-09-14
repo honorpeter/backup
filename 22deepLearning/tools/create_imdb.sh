@@ -11,7 +11,7 @@ $convert convert_imageset \
     --resize_height=$height \
     $image_dir \
     $train \
-    $target_dir train_lmdb
+    $target_dir"train_lmdb"
 
 $convert convert_imageset \
     --shuffle\
@@ -19,4 +19,4 @@ $convert convert_imageset \
     --resize_height=$height \
     $image_dir \
     $val \
-    $target_dir val_lmdb
+    $target_dir"val_lmdb"
