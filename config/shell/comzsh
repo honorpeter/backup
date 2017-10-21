@@ -9,7 +9,7 @@ alias titanx='ssh -l jixiaolong 172.16.1.99'
 #启动clion
 alias xfce='sudo startxfce4 -- :1 vt6'
 
-alias xljid='sudo Xorg -terminate -query 192.168.1.191 :4 -novtswitch'
+alias xljid='sudo Xorg -terminate -query 192.168.1.192 :4 -novtswitch'
 alias longriyao='rdesktop -f -u "whc" -p "123456" 172.16.1.98'
 alias share='sudo mount -t cifs //172.16.1.99/share /home/longriyao/share -o username=jixiaolong,password=long'
 
@@ -18,24 +18,24 @@ alias share='sudo mount -t cifs //172.16.1.99/share /home/longriyao/share -o use
 function trans {
     if [ $1 = -r ]
     then
-        scp -r $2  xlji@192.168.1.191:$3  
+        scp -r $2  xlji@192.168.1.192:$3  
     else
-        scp $1  xlji@192.168.1.191:$2  
+        scp $1  xlji@192.168.1.192:$2  
     fi
 }
 #接受文件
 function download {
     if [ $1 = -r ]
     then
-        scp -r xlji@192.168.1.191:$2 $3
+        scp -r xlji@192.168.1.192:$2 $3
     else
-        scp xlji@192.168.1.191:$1 $2
+        scp xlji@192.168.1.192:$1 $2
     fi
 }
 
 # 公司git push 命令
 alias push_nnpack='git push ssd-nnpack ssd-nnpack'
-alias xlji='ssh -Y xlji@192.168.1.191'
+alias xlji='ssh -Y xlji@192.168.1.192'
 alias xld='ssh extremevision@192.168.1.155'
 
 

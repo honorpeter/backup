@@ -1,0 +1,22 @@
+net: "model/16-8_train_val.prototxt"
+test_iter: 382
+test_interval: 1715
+
+base_lr: 0.02
+lr_policy: "step"
+gamma: 0.2
+stepsize: 27450
+momentum: 0.9
+weight_decay: 0.0005
+
+display: 20
+max_iter:  109800
+snapshot:  1715
+snapshot_prefix: "snapshot/fm"
+solver_mode: GPU
+device_id:0
+debug_info: false
+test_initialization: true
+type: "SGD"
+
+

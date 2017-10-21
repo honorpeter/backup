@@ -13,3 +13,5 @@
         split.py 分为 test.txt train.txt
 
         get_class_img.py获取每个类别的图片 看一下图片质量
+
+        move_test.p 根据val.txt移动出来 图片
