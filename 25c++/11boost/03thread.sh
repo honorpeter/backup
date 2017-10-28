@@ -14,9 +14,12 @@ C++ Boost Thread:
 
             int main(int argc, char* argv[])
             {
-                    boost::thread thrd(&hello);
+                    boost::thread thrd(&hello); //传递普通函数或者类静态函数
                     thrd.join();
                     return 0;
+
+    中断线程执行：
+        可以调用：t.interupt() 中断执行
             }
     互斥体:
             Boost线程库提供了6中互斥体类型，下面是按照效率进行排序：

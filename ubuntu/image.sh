@@ -22,6 +22,10 @@
         Gray  rgb
         convert -colorspace Gray zp.jpg zpgray.jpg
             for file in *.jpg; convert -colorspace Gray $file $file; end;
+            for file in *.jpg;do  convert -colorspace Gray $file $file; done;
+            
+
+    查看图片：eog  feh很好用的命令啊
 
     gif添加水印:
         convert  w.gif  -pointsize 14 -draw "gravity south fill black text 0,12 'qq' fill white text 1,11 'xiaolong is a good boy' " hh.gif

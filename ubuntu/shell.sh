@@ -37,6 +37,11 @@ linux下显示dd命令的进度:
                 收到信号之后就打印出自己当前的进度
                 最后是一个正则表达式
 
+df: 以磁盘分区为单位查看文件系统，可以加上参数查看磁盘剩余空间：
+        df -hl
+du ： 查看分区内文件的大小：
+        du -h *
+
 
 格式化u盘：
         lsblk   查看upan
@@ -81,11 +86,26 @@ linux下显示dd命令的进度:
                 mkfs.vfat /dev/sdb1  
                 mkfs -t 可以指定类型
                 也可以使用mkfs.类型 创建
+            支持exfat：
+                sudo apt-get install exfat-utils
+                mkfs.exfat /dev/sdb1
 
 修改默认shell：
 	chsh -s /usr/bin/zsh
 参看进程树：
     pstree -p | grep http
+
+统计某文件夹下文件的个数
+ls -l |grep "^-"|wc -l
+
+统计某文件夹下目录的个数
+ls -l |grep "^ｄ"|wc -l
+
+统计文件夹下文件的个数，包括子文件夹里的
+ls -lR|grep "^-"|wc -l
+
+sudo 直接输入密码：
+    echo long | sudo -S kill -9 13516 
 
 
 

@@ -80,6 +80,9 @@ alias x='chmod u+x'
 alias lm='ls -F | more'
 alias yule='sudo mount /dev/sda6 /media/xiaolong/娱乐'
 alias aliyun='ssh root@106.15.226.47'
+#拷贝
+alias xc='xclip'
+alias xp='xclip -o'
 #git 命令
 alias push='git push origin master'
 alias pushsina='git push sae master:1'
@@ -93,6 +96,7 @@ alias mendeley='/home/xiaolong/Soft/mendeley/bin/mendeleydesktop'
 #地址别名
 alias soft='cd ~/Soft'
 alias down='cd ~/Downloads'
+alias work='cd ~/work'
 alias test='cd ~/test/'
 alias shell='cd ~/test/shell/'
 alias linux='cd ~/test/linux'
