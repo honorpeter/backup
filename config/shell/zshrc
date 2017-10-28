@@ -117,6 +117,8 @@ alias pic='rm ~/Desktop/pic/*'
 alias zshrc='vi ~/.zshrc'
 alias vimrc='vi ~/Documents/config/vim/vimrc'
 alias gpu='sudo nvidia-smi -l'
+alias comd='sudo Xorg -terminate -query 10.147.17.117:4 -novtswitch'
+
 
 
 
