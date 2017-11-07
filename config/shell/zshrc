@@ -127,6 +127,10 @@ alias gpu='sudo nvidia-smi -l'
 function sea {
     ls | grep $1
 }
+
+function his {
+    history -1000 | grep $1
+}
 function help {
     $1 --help | more 
 }

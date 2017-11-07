@@ -428,6 +428,8 @@ windows 编译成vs工程：
                     FIND_PATH 用来在指定路径中搜索文件名
 设置编译选项：
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -std=c++11")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -o3")
+        
 定义变量：
         add_definitions(-DCAFFE_VERSION=${CAFFE_TARGET_VERSION})
 
