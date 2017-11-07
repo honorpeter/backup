@@ -27,6 +27,13 @@
 
     查看图片：eog  feh很好用的命令啊
 
+    gif添加水印:
+        convert  w.gif  -pointsize 14 -draw "gravity south fill black text 0,12 'qq' fill white text 1,11 'xiaolong is a good boy' " hh.gif
+                SouthEast
+
+        convert  w.gif  -pointsize 20 -draw "gravity SouthEast fill white text 0,12 'qq' " hh.gif
+        
+        
 
 
 
