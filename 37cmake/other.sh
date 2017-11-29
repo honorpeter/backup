@@ -1,0 +1,1 @@
+cmake -LAH | grep INSTALL
