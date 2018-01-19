@@ -177,6 +177,14 @@ git log:
             
 
 
+子模块：
+    git submodule init  
+    ....          update
+
+    修改 .gitsubmodule 文件内容 使用 git submodule sync 确认修改
+        git submodule sync 会修改.git/config里面的内容
+
+
 
         
         

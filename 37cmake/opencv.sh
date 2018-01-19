@@ -7,3 +7,7 @@ sudo apt-get -y install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavf
 sudo apt-get -y install libgtk2.0-dev
 sudo apt-get -y install libv4l-dev
 sudo apt-get -y install libatlas-base-dev gfortran
+
+build with gpu:
+    -D BUILD_opencv_gpu=OFF
+    -D WITH_CUDA=OFF

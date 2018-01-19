@@ -12,10 +12,16 @@ Building our first container:
             The -i flag keeps STDIN open from the container
             The -t flag is the other half and tells Docker to assign a 
                     pseudo-tty to the container we're about to create
+
+        sudo docker run --name deep-image -v $PWD/data1:/opt/data -i -t ubuntu /bin/bash
+          --name:设置名字    -v设置共享文件  -it交互式环境 ubuntu:latest 镜像
 To show only running containers use: 
         docker ps
     To show all containers use: 
         docker ps -a
+    docker ps 默认显示当前正在运行中的container
+    docker ps -a 查看包括已经停止的所有容器
+    docker ps -l 显示最新启动的一个容器（包括已停止的）
 
 Container naming:
         sudo docker run --name bob_the_container -i -t ubuntu /bin/bash

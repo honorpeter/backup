@@ -107,7 +107,11 @@ ls -lR|grep "^-"|wc -l
 sudo 直接输入密码：
     echo long | sudo -S kill -9 13516 
 
+download the entry html page:
+ /usr/bin/wget -e robots=off -w 1 -xq -np -nH -pk -m  -t 1 -U mozilla --span-hosts  http://www.ottdp.com/trusttw
 
+
+sftp://username@ip
 
 
 
