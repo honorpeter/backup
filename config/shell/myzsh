@@ -8,6 +8,24 @@ alias comcon='sudo Xorg -terminate -query 10.147.17.159 :5'
 source /opt/ros/kinetic/setup.zsh
 export ROS_PACKAGE_PATH=~/test/ros:${ROS_PACKAGE_PATH}
 
+#传输文件
+function transhk {
+    if [ $1 = -r ]
+    then
+        scp -r $2  root@47.52.93.232:$3  
+    else
+        scp $1 root@47.52.93.232:$2  
+    fi
+}
+#接受文件
+function downloadhk {
+    if [ $1 = -r ]
+    then
+        scp -r root@47.52.93.232:$2 $3
+    else
+        scp root@47.52.93.232:$1 $2
+    fi
+}
 
 #传输文件
 function trans {
