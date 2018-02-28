@@ -459,6 +459,14 @@ find_package() 命令原理：
 
     set(Caffe_DIR /home/wjg/projects/caffe/build)  指定Caffe寻找路径
         Caffe_DIR：这个目录需要存在  XXXConfig.cmake
+    set(OpenCV_DIR opencv/opencv-3.1.0/build/install/share/OpenCV)
+    # Requires OpenCV
+    FIND_PACKAGE( OpenCV 3.1.0 REQUIRED EXACT)
+
+修改编译器：g++
+    cmake -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ .
+    g++-5支持 c++14
+    g++-5以下 应该不支持c++14
 
 
 

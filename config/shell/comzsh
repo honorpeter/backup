@@ -1,6 +1,5 @@
-#环境变量
-# added by Anaconda2 4.1.1 installer
-
+# ssh tmux
+function ssht () {/usr/bin/ssh -t -Y $@ "tmux attach || tmux new";}
 
 #别名
 #连接 服务器

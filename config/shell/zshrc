@@ -6,6 +6,9 @@ export LD_LIBRARY_PATH=/home/xiaolong/Soft/cudnn-7.0/cuda/lib64:$LD_LIBRARY_PATH
 #export PYTHONPATH=~/Soft/caffe-master/python:/home/xiaolong/Soft/caffe_colorizer/lib:$PYTHONPATH
 export PYTHONPATH=~/Soft/ssd/caffe/python:$PYTHONPATH
 
+[[ -s /usr/share/autojump/autojump.sh ]] && . /usr/share/autojump/autojump.zsh
+
+
 # 加载 .comzsh文件 如果存在的话
 if [ -f "$HOME/.comzsh" ]; then
     . "$HOME/.comzsh"

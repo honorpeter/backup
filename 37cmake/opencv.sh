@@ -11,3 +11,8 @@ sudo apt-get -y install libatlas-base-dev gfortran
 build with gpu:
     -D BUILD_opencv_gpu=OFF
     -D WITH_CUDA=OFF
+
+指定路径opencv:
+    set(OpenCV_DIR  opencv/opencv-3.1.0/build/install/share/OpenCV)
+    # Requires OpenCV
+    FIND_PACKAGE( OpenCV 3.1.0 REQUIRED EXACT)
