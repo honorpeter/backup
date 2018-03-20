@@ -13,7 +13,10 @@ virtualenv --no-site-packages -p /home/the5fire/pypy-2.0.2/bin/pypy pypy-env
     source my_project/bin/activate
 
     停止使用
-    deactivate
+        虚拟环境：
+            deactivate
+        anaconda环境
+            source deactivate
 
 
 

@@ -60,7 +60,12 @@ Deleting a container:
         sudo docker rm 80430f8d0921
 
 
+让非root用户可以使用：
+    sudo groupadd docker
 
+    sudo gpasswd -a $USER docker
+
+    Either do a newgrp docker or log out/in to activate the changes to groups.
 
 
 

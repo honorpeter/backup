@@ -468,6 +468,13 @@ find_package() 命令原理：
     g++-5支持 c++14
     g++-5以下 应该不支持c++14
 
+    或则修改环境变量：
+        export CC=/usr/local/bin/gcc
+        export CXX=/usr/local/bin/g++
+    修改cmakelist
+        SET(CMAKE_C_COMPILER “/home/hhb/gcc-5.2.0/bin/gcc”)
+        SET(CMAKE_CXX_COMPILER “/home/hhb/gcc-5.2.0/bin/g++”)
+
 
 
 
