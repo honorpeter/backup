@@ -22,8 +22,13 @@ sudo apt-get update
             sudo rm -vf /var/lib/apt/lists/*
             sudo apt-get update
 
+ dpkg -l | grep sdl
+     查看相关sdl的包
 
 
+
+apt-cache search ^libsdl | grep 1.2
+      安装软件的时候 不知道名字的时候 搜索一下
 
 
 

@@ -8,6 +8,8 @@ gdb program
     c  next breakpoint
     b  line  function  加断电
 
+print 查看变量
+
 gdbserver:
     gdbserver :1234 ev
     

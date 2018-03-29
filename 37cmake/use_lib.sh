@@ -1,4 +1,6 @@
 opencv:
+    设置opencv查找目录： 
+    FIND_PACKAGE(OpenCV 2.4.8 EXACT REQUIRED PATHS "/home/longriyao/Soft/opencv-2.4/install")
     'find_package( OpenCV REQUIRED )
 
 `   target_link_libraries(application ${OpenCV_LIBS})

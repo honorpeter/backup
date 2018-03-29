@@ -428,6 +428,8 @@ windows 编译成vs工程：
                     FIND_PATH 用来在指定路径中搜索文件名
 设置编译选项：
         set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -std=c++11")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -o3")
+        
 定义变量：
         add_definitions(-DCAFFE_VERSION=${CAFFE_TARGET_VERSION})
 
@@ -445,6 +447,33 @@ windows 编译成vs工程：
 注意：
     当修改环境变量了  影响cmake编译的时候  
     编译cmake .. 的时候 需要重新删除cmake缓存的文件 不然会有很大的影响
+
+find_package() 命令原理：
+    cmake默认采取Module模式，如果Module模式未找到库，才会采取Config模式
+    Module模式：搜索CMAKE_MODULE_PATH指定路径下的FindXXX.cmake文件，执行
+        该文件从而找到XXX库。其中，具体查找库并给XXX_INCLUDE_DIRS和
+        XXX_LIBRARIES两个变量赋值的操作由FindXXX.cmake模块完成。
+    Config模式：搜索XXX_DIR指定路径下的XXXConfig.cmake文件，执行该文件从
+        而找到XXX库。其中具体查找库并给XXX_INCLUDE_DIRS和XXX_LIBRARIES两
+        个变量赋值的操作由XXXConfig.cmake模块完成。
+
+    set(Caffe_DIR /home/wjg/projects/caffe/build)  指定Caffe寻找路径
+        Caffe_DIR：这个目录需要存在  XXXConfig.cmake
+    set(OpenCV_DIR opencv/opencv-3.1.0/build/install/share/OpenCV)
+    # Requires OpenCV
+    FIND_PACKAGE( OpenCV 3.1.0 REQUIRED EXACT)
+
+修改编译器：g++
+    cmake -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ .
+    g++-5支持 c++14
+    g++-5以下 应该不支持c++14
+
+    或则修改环境变量：
+        export CC=/usr/local/bin/gcc
+        export CXX=/usr/local/bin/g++
+    修改cmakelist
+        SET(CMAKE_C_COMPILER “/home/hhb/gcc-5.2.0/bin/gcc”)
+        SET(CMAKE_CXX_COMPILER “/home/hhb/gcc-5.2.0/bin/g++”)
 
 
 

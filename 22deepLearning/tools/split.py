@@ -18,7 +18,7 @@ def splitData(data,N = 10,k = 1):
     test = []
     train = []
     for line in data:
-        if random.randint(0,N) == k:
+        if random.randint(0,N) <= k:
             test.append(line)
         else:
             train.append(line)
