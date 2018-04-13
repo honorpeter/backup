@@ -82,6 +82,7 @@ alias up='cd ..'
 alias x='chmod u+x'
 alias lm='ls -F | more'
 alias yule='sudo mount /dev/sda6 /media/xiaolong/娱乐'
+alias hk='ssh root@47.52.93.232'
 alias aliyun='ssh root@47.52.93.232'
 #拷贝
 alias xc='xclip'
