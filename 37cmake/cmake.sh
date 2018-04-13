@@ -475,6 +475,11 @@ find_package() 命令原理：
         SET(CMAKE_C_COMPILER “/home/hhb/gcc-5.2.0/bin/gcc”)
         SET(CMAKE_CXX_COMPILER “/home/hhb/gcc-5.2.0/bin/g++”)
 
+显示gcc g++编译选项：
+    set(CMAKE_VERBOSE_MAKEFILE ON)
+    或则在make
+        make VERBOSE=1
+
 
 
 
