@@ -35,14 +35,12 @@ function download {
 
 # 公司git push 命令
 alias push_nnpack='git push ssd-nnpack ssd-nnpack'
-alias xlji='ssh -Y xlji@192.168.1.192'
+alias hive_con='ssh -Y hive@172.17.210.128'
 alias xld='ssh extremevision@192.168.1.155'
 
 
 #export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/old_nnpack/NNPACK
 export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/NNPACK
-export PATH="/home/longriyao/anaconda2/bin:/usr/local/MATLAB/R2015b/bin:$PATH"
-export PATH="/home/longriyao/Android/Sdk/tools:/home/longriyao/Android/Sdk/platform-tools:/home/longriyao/Android/Sdk/tools/bin:${PATH}"
-export ANDROID_HOME=~/Android/Sdk
+export PATH=$PATH:/home/longriyao/Soft/jdk1.8.0_171/bin:/home/longriyao/Soft/maven/maven/bin:/usr/local/cuda-8.0/bin:/home/longriyao/Soft/cmake-3.10.3/install/bin:/home/longriyao/Soft/gecko
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64
 
-export PATH=$PATH:/opt/gradle/bin

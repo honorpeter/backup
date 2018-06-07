@@ -18,6 +18,11 @@ virtualenv --no-site-packages -p /home/the5fire/pypy-2.0.2/bin/pypy pypy-env
         anaconda环境
             source deactivate
 
+python3穿件虚拟环境：
+        python -m venv venv1   
+                venv1是name
+    
+
 
 
 

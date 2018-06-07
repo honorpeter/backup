@@ -20,5 +20,9 @@ boost:
     手动安装：
         手动安装的boost 安装到/usr/local中 但是cmake找不到
         所以使用 cmake .. -DBOOST_ROOT=/usr/local 帮他找到
+        或者
+        set( BOOST_ROOT "/home/longriyao/Soft/boost_1_67_0/install" CACHE PATH "Boost library path" )
+        set( Boost_NO_SYSTEM_PATHS on CACHE BOOL "Do not search system for Boost" )
+
     
     

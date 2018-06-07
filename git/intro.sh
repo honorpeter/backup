@@ -185,6 +185,29 @@ git log:
         git submodule sync 会修改.git/config里面的内容
 
 
+git clone：
+    指定copy 深度 以及分支
+        git clone --depth <depth> -b <branch> <repo_url>
+
+    submodules：指定深度
+        git clone url://to/source/repository --recursive --shallow-submodules
+        git submodule add --depth 1 -- repository path
+        git submodule update --depth -- [<path>...]
+
+
+安装最新版git：
+            sudo add-apt-repository ppa:git-core/ppa
+            sudo apt-get update
+            sudo apt-get install git
+
+    sudo apt-get remove git
+            
+    
+
+
+
+        
+
 
         
         
