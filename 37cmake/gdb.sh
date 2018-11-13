@@ -13,3 +13,12 @@ print 查看变量
 gdbserver:
     gdbserver :1234 ev
     
+调试core文件：
+    生成core文件
+    ulimit -c unlimited
+        or ulimit -c 100000
+
+    gdb binary core
+        如果是直接core dump可以用下面命令找原因
+            backtrace  
+        start

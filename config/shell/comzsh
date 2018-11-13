@@ -40,7 +40,4 @@ alias xld='ssh extremevision@192.168.1.155'
 
 
 #export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/old_nnpack/NNPACK
-export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/NNPACK
-export PATH=$PATH:/home/longriyao/Soft/jdk1.8.0_171/bin:/home/longriyao/Soft/maven/maven/bin:/usr/local/cuda-8.0/bin:/home/longriyao/Soft/cmake-3.10.3/install/bin:/home/longriyao/Soft/gecko
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64
-
+export PATH=$PATH:/usr/local/Cellar/cmake/3.11.3/bin
