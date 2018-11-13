@@ -30,6 +30,17 @@ sudo apt-get update
 apt-cache search ^libsdl | grep 1.2
       安装软件的时候 不知道名字的时候 搜索一下
 
+sudo apt-get update  ip not found:
+    dpkg --print-foreign-architectures
+        如果是arm64 变为arm64 
+            dpkg -l | grep arm64
+            sudo dpkg --remove-architecture arm64
+                将所有arm64 的包 全部删除
+
+            sudo dpkg --force-architecture --remove-architecture arm64
+            sudo rm -rf /var/lib/apt/lists
+            sudo apt update
+            
 
 
 

@@ -4,10 +4,9 @@ import os
 
 class fileTool:
 
-    __allFile = []
-    __root = str()
 
     def __init__(self,root):
+        selft.__allFile = []
         self.__root = root
 
     def recursiveWalk(self,folder):

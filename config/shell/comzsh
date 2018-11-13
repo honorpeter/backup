@@ -12,6 +12,8 @@ alias xljid='sudo Xorg -terminate -listen tcp -query 192.168.1.192 :4 -novtswitc
 alias longriyao='rdesktop -f -u "whc" -p "123456" 172.16.1.98'
 alias share='sudo mount -t cifs //172.16.1.99/share /home/longriyao/share -o username=jixiaolong,password=long'
 alias nauti='nautilus sftp://xlji@192.168.1.123/home/xlji'
+alias baidu='sudo openconnect -u jixiaolong01 vpn.baidu.com'
+alias hangzhou="ssh jxl@47.98.239.93 -p 10011"
 
 
 #传输文件
@@ -40,7 +42,11 @@ alias xld='ssh extremevision@192.168.1.155'
 
 
 #export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/old_nnpack/NNPACK
-export NNPACK_ROOT=/home/longriyao/work/nnpack_speedup/NNPACK
-export PATH=$PATH:/home/longriyao/Soft/jdk1.8.0_171/bin:/home/longriyao/Soft/maven/maven/bin:/usr/local/cuda-8.0/bin:/home/longriyao/Soft/cmake-3.10.3/install/bin:/home/longriyao/Soft/gecko
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64
+export PATH=$PATH:~/Soft/clion-2018.1.5/bin/:/home/longriyao/Soft/bin
 
+export PDK="pdk3"
+#export ARM64_ROOT=/home/longriyao/Soft/px2
+#export X64_ROOT=/opt
+#export PAVARO_ROOT={ARM64_ROOT}/opt/pavaro/modi
+#export PYTHONPATH=$PYTHONPATH:{ARM64_ROOT}/usr/lib/python2.7/dist-packages
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:{X64_ROOT}/protobuf_2.6.1/lib/:/usr/lib/arm64_user_lib

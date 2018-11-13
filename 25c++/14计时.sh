@@ -34,3 +34,16 @@
         编译的时候：
             g++ timer.cpp -o timer -lboost_timer -lboost_system
     
+
+使用timer计时：  运行时间
+            time_t start = 0,end = 0;
+            time(&start);
+                time(&end);
+            std::cout <<  "spend"<< (double)(end-start)  << "s" << std::endl;
+
+使用clock计时：
+        注意：这个是统计的cpu占用的时间  多个核那么是这几个核的积分
+        clock_t start = clock();
+        // do something...
+        clock_t end   = clock();
+        cout << (double)(end - start) / CLOCKS_PER_SEC << "秒" << endl;

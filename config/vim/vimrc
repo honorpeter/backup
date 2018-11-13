@@ -110,7 +110,7 @@ set guifont=DejaVu\ Sans\ mono\ 16
 set lines=26 "columns=100
 
 
-language messages zh_CN.utf-8           "解决consle输出乱码   
+"language messages zh_CN.utf-8           "解决consle输出乱码   
 source $VIMRUNTIME/delmenu.vim          "解决菜单乱码  
 source $VIMRUNTIME/menu.vim
 let &termencoding=&encoding             "设置终端编码为gvim内部编码encoding
@@ -435,3 +435,6 @@ if has("cscope")
     "set ttimeoutlen=100
 
 endif
+set noundofile
+set nobackup
+set noswapfile

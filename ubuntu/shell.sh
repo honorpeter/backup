@@ -114,4 +114,10 @@ download the entry html page:
 sftp://username@ip
 
 
+ffmpeg:
+    convet video to image
+    ffmpeg -i input.mp4 -vf fps=1 out%d.png
+    
+
+
 
