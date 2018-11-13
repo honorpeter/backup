@@ -1,16 +1,24 @@
+nm使用：
+    list symbols from object files
+    nm -D lib--.so
+        列出所有符号表
+        000000000      r      sym
+        第一列是地址 表示函数实现的地址
+            如果没有这个函数的实现为空 
+
+        第二列  r 表示 fpic
+                U 表示这个函数没有实现 引用
+                man nm  可以参数更多的表示 
+        第三列： 符号名称
+
+        --defined-only 可以使用这个参数只显示定义的符号
+        
 ldconfig -p | grep caffe2
     查看caffe2的动态库有没有添加到 环境搜索中
 
-LD_LIBRARY_PATH:
-    有时候管用 有事不管用
-
-ldd：      通过加载器 ld-linux.so 控制环境变量来实现的
-    查看依赖
-    很多现代应用都是通过动态编译链接的，当一个 需要动态链接 的应用被操作系统加载时，系统必须要 定位 然后 加载它所需要的所有动态库文件。 在Linux环境下，这项工作是由ld-linux.so.2来负责完成的，我们可以通过 ldd 命令来查看一个 应用需要哪些依赖的动态库:
-    ld-linux.so加载器将所有的动态库加载后然后再将控制权移交给ls程序的入口。
-
-
-    ld-linux.so.2 man page给我们更高一层的全局介绍， 它是在 链接器（通常是ld）在运行状态下的部件，用来定位和加载动态库到应用的运行地址（或者是运行内存）当中去。通常，动态链接是 在连接阶段当中 隐式指定的。 gcc -W1 options -L/path/included -lxxx 会将 options 传递到ld 然后指定相应的动态库加载。 ELF 文件提供了相应的加载信息， GCC包含了一个特殊的 ELF 头： INTERP， 这个 INTERP指定了 加载器的路径，我们可以用readelf 来查看相应的程序
+ldd：      
+    查看依赖的动态库
+    通过加载器 ld-linux.so 控制环境变量来实现的
 
     readelf -l a.out
 
@@ -31,9 +39,16 @@ ldd：      通过加载器 ld-linux.so 控制环境变量来实现的
             手动指定使用cmake
                 指定精确版本   或则 指定查找路径
 
+    如果已经找到了动态库 依然没有udefeined
+        查看动态库是否存在相应的函数
+            readelf -wi lib--.so | grep sym
+                
+            IBM compiler:
+                objdump -g
+
 运行时：
     寻找动态库顺序：
-        1.readefl -d hh.so 
+        1.readelf -d hh.so 
             输出RPATH  首先查找这个路径中的动态库 有的可能没有
             RPATH:是在 编译的时候 指定的
             Library rpath: [/home/xlji/xlji/xlji/caffe2/caffe2/build_ok/lib:]

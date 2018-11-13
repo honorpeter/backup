@@ -1,0 +1,11 @@
+#设置find_package的.cmake搜索路径
+SET(CMAKE_PREFIX_PATH /home/nhk/Software/Qt5.10.1/5.10.1/gcc_64/lib/cmake)
+ 
+SET(CMAKE_AUTOMOC ON)
+ 
+FIND_PACKAGE(Qt5Widgets REQUIRED)
+FIND_PACKAGE(Qt5Gui REQUIRED)
+FIND_PACKAGE(Qt5Core REQUIRED)
+FIND_PACKAGE(Qt5OpenGL REQUIRED)
+ 
+TARGET_LINK_LIBRARIES( ${TARGET} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::OpenGL)
